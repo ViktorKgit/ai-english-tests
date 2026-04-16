@@ -6,27 +6,171 @@
       "id": "c1-1",
       "difficulty": 6,
       "type": "multiple-choice",
-      "prompt": "But for your help, I ___ the project.",
-      "options": ["wouldn't complete", "wouldn't have completed", "didn't complete", "hadn't completed"],
-      "correctAnswer": 1,
-      "explanation": "'But for' acts like 'Without', triggering third conditional."
+      "prompt": "Given the complexity of the issue, a nuanced approach is ___.",
+      "options": ["called for", "needed", "required", "demanded"],
+      "correctAnswer": 0,
+      "explanation": "'Called for' is idiomatic in formal contexts."
     },
     {
       "id": "c1-2",
       "difficulty": 6,
       "type": "fill-blank",
-      "prompt": "The proposal was met with ___ criticism.",
-      "correctAnswer": "widespread",
-      "explanation": "'Widespread' is the appropriate collocation for criticism."
+      "prompt": "The hypothesis stands ___ scrutiny.",
+      "correctAnswer": "up to",
+      "explanation": "'Stand up to' means withstands."
     },
     {
       "id": "c1-3",
       "difficulty": 6,
       "type": "multiple-choice",
-      "prompt": "Rarely ___ such a brilliant performance.",
-      "options": ["we have seen", "have we seen", "we saw", "did we see"],
+      "prompt": "The evidence would suggest otherwise, ___ the latest study.",
+      "options": ["according to", "pending", "notwithstanding", "contrary to"],
+      "correctAnswer": 2,
+      "explanation": "'Notwithstanding' = despite, formal register."
+    },
+    {
+      "id": "c1-4",
+      "difficulty": 6,
+      "type": "fill-blank",
+      "prompt": "His argument fails to ___ under cross-examination.",
+      "correctAnswer": "hold",
+      "explanation": "'Hold' means remain valid or convincing."
+    },
+    {
+      "id": "c1-5",
+      "difficulty": 6,
+      "type": "multiple-choice",
+      "prompt": "The proposition is, ___ best, highly controversial.",
+      "options": ["at", "in", "on", "to"],
+      "correctAnswer": 0,
+      "explanation": "'At best' is the correct idiom."
+    },
+    {
+      "id": "c1-6",
+      "difficulty": 6,
+      "type": "fill-blank",
+      "prompt": "The committee's decision is ___ to appeal.",
+      "correctAnswer": "open",
+      "explanation": "'Open to appeal' = can be challenged."
+    },
+    {
+      "id": "c1-7",
+      "difficulty": 6,
+      "type": "multiple-choice",
+      "prompt": "___ the merit of his argument, the conclusion is flawed.",
+      "options": ["Granting", "Granted", "Allowing", "Given that"],
       "correctAnswer": 1,
-      "explanation": "Negative inversion: Rarely + auxiliary + subject + main verb."
+      "explanation": "'Granted' introduces concession in formal argument."
+    },
+    {
+      "id": "c1-8",
+      "difficulty": 6,
+      "type": "fill-blank",
+      "prompt": "The repercussions are ___ to be underestimated.",
+      "correctAnswer": "not",
+      "explanation": "'Not to be underestimated' = must be taken seriously."
+    },
+    {
+      "id": "c1-9",
+      "difficulty": 6,
+      "type": "multiple-choice",
+      "prompt": "___ mention of his name, she burst into tears.",
+      "options": ["Upon", "At", "On", "In"],
+      "correctAnswer": 0,
+      "explanation": "'Upon mention' is formal; 'At the mention' also works."
+    },
+    {
+      "id": "c1-10",
+      "difficulty": 6,
+      "type": "fill-blank",
+      "prompt": "The findings run ___ to established theory.",
+      "correctAnswer": "counter",
+      "explanation": "'Run counter to' = contradict."
+    },
+    {
+      "id": "c1-11",
+      "difficulty": 6,
+      "type": "multiple-choice",
+      "prompt": "Barring unforeseen circumstances, the project will ___ schedule.",
+      "options": ["stay on", "remain on", "keep to", "adhere to"],
+      "correctAnswer": 1,
+      "explanation": "'Remain on schedule' is idiomatic."
+    },
+    {
+      "id": "c1-12",
+      "difficulty": 6,
+      "type": "fill-blank",
+      "prompt": "His expertise lies ___ Renaissance art.",
+      "correctAnswer": "in",
+      "explanation": "'Lie in' = be found in."
+    },
+    {
+      "id": "c1-13",
+      "difficulty": 6,
+      "type": "multiple-choice",
+      "prompt": "The consequences ___ far-reaching.",
+      "options": ["proved", "were proved", "proved to be", "were proving to be"],
+      "correctAnswer": 2,
+      "explanation": "'Prove to be' = turn out to be."
+    },
+    {
+      "id": "c1-14",
+      "difficulty": 6,
+      "type": "fill-blank",
+      "prompt": "The theory rests ___ shaky assumptions.",
+      "correctAnswer": "on",
+      "explanation": "'Rest on' = be based on."
+    },
+    {
+      "id": "c1-15",
+      "difficulty": 6,
+      "type": "multiple-choice",
+      "prompt": "___ all accounts, the meeting was a success.",
+      "options": ["By", "On", "In", "At"],
+      "correctAnswer": 0,
+      "explanation": "'By all accounts' = according to everyone."
+    },
+    {
+      "id": "c1-16",
+      "difficulty": 6,
+      "type": "fill-blank",
+      "prompt": "The conclusion does not ___ from the premises.",
+      "correctAnswer": "follow",
+      "explanation": "'Follow from' = logically result from."
+    },
+    {
+      "id": "c1-17",
+      "difficulty": 6,
+      "type": "multiple-choice",
+      "prompt": "The proposal was ___ unanimously.",
+      "options": ["rejected", "denied", "refused", "declined"],
+      "correctAnswer": 0,
+      "explanation": "'Reject' is used for proposals in formal contexts."
+    },
+    {
+      "id": "c1-18",
+      "difficulty": 6,
+      "type": "fill-blank",
+      "prompt": "His argument ___ to several logical fallacies.",
+      "correctAnswer": "is prey",
+      "explanation": "'Fall prey to' = be vulnerable to."
+    },
+    {
+      "id": "c1-19",
+      "difficulty": 6,
+      "type": "multiple-choice",
+      "prompt": "___ the circumstances, we proceeded as planned.",
+      "options": ["Given", "Giving", "To give", "In giving"],
+      "correctAnswer": 0,
+      "explanation": "'Given' = considering."
+    },
+    {
+      "id": "c1-20",
+      "difficulty": 6,
+      "type": "fill-blank",
+      "prompt": "The results are ___ with previous studies.",
+      "correctAnswer": "consistent",
+      "explanation": "'Consistent with' = align with."
     }
   ]
 }
