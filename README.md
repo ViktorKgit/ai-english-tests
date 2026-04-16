@@ -4,10 +4,11 @@ A web application for testing English language proficiency according to the CEFR
 
 ## Features
 
-- **Placement Test**: Adaptive test to determine your English level automatically
-- **Level-Specific Tests**: Fixed tests for each CEFR level (A0-A1, A2, B1, B2, C1, C2)
+- **Placement Test**: Adaptive sequential test that progresses through levels A0 → A1 → A2 → B1 → B2 → C1 → C2, stopping when you fail a level (70% threshold)
+- **Level-Specific Tests**: Fixed tests for each CEFR level (A0, A1, A2, B1, B2, C1, C2)
 - **Multiple Question Types**: Multiple choice, fill in the blank, matching, and open-ended questions
-- **Instant Results**: Get your level or score immediately after completing the test
+- **Instant Results**: Get your determined level or score immediately after completing the test
+- **Randomized Questions**: Each level randomly selects 10 questions from a bank of 20+ questions
 
 ## Getting Started
 
@@ -53,18 +54,22 @@ ai-english/
 ├── app/                    # Next.js app directory
 ├── components/
 │   ├── test/              # Test-related components
+│   │   ├── AdaptivePlacementTest.tsx  # Adaptive placement test flow
+│   │   └── LevelTest.tsx              # Level-specific test flow
 │   └── ui/                # shadcn/ui components
 ├── lib/
 │   └── utils/             # Utility functions
-├── public/questions/      # Question data
+│       └── testCalculation.ts         # Test scoring and randomization
+├── public/questions/      # Question data (a0-c2.json)
 └── __tests__/             # Test files
 ```
 
 ## CEFR Levels
 
-- **A0-A1**: Beginner/Elementary
-- **A2**: Pre-Intermediate
-- **B1**: Intermediate
-- **B2**: Upper-Intermediate
-- **C1**: Advanced
-- **C2**: Proficiency
+- **A0**: Beginner - No prior knowledge
+- **A1**: Elementary - Basic phrases
+- **A2**: Pre-Intermediate - Simple communication
+- **B1**: Intermediate - Daily situations
+- **B2**: Upper-Intermediate - Complex topics
+- **C1**: Advanced - Academic/professional
+- **C2**: Proficiency - Near-native fluency
