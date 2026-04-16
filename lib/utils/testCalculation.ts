@@ -61,6 +61,23 @@ function checkAnswer(question: Question, answer: Answer): boolean {
   }
 }
 
+// Check if user passed the level threshold (70%)
+export function checkLevelPassThreshold(questions: Question[], answers: Map<string, Answer>): boolean {
+  if (questions.length === 0) return false
+
+  let correct = 0
+  for (const question of questions) {
+    const answer = answers.get(question.id)
+    if (!answer || answer.value === null || answer.value === '') continue
+
+    const isCorrect = checkAnswer(question, answer)
+    if (isCorrect) correct++
+  }
+
+  const score = correct / questions.length
+  return score >= 0.7
+}
+
 // Determine CEFR level from placement test results
 export function determinePlacementLevel(results: QuestionResult[]): CEFRLevel {
   // Group by difficulty
