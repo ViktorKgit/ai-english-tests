@@ -117,7 +117,7 @@ export function QuestionCard({ question, answer, onAnswerChange, showFeedback }:
       <CardContent>
         <div className="mb-6">
           <p className="text-lg font-medium text-slate-800">
-            {question.type !== 'fill-blank' && question.prompt}
+            {(question.type === 'multiple-choice' || question.type === 'open-ended') && question.prompt}
           </p>
         </div>
         {renderQuestion()}
