@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useState, useCallback } from 'react'
 import type { TestState, TestType, CEFRLevel, Question, Answer, TestResult } from './types'
-import { calculateLevelTestScore, determinePlacementLevel, generateRecommendations, getRandomQuestions, checkLevelPassThreshold } from '@/lib/utils/testCalculation'
+import { calculateLevelTestScore, determinePlacementLevel, generateRecommendations, getRandomQuestions as getRandomQuestionsFromUtil, checkLevelPassThreshold } from '@/lib/utils/testCalculation'
 
 interface TestContextType extends TestState {
   startTest: (testType: TestType, level?: CEFRLevel) => Promise<void>
@@ -40,28 +40,32 @@ export function TestProvider({ children }: TestProviderProps) {
     questionsBank: null,
   })
 
-  const loadAllLevelQuestions = useCallback(async (): Promise<void> => {
+  const loadAllLevelQuestions = useCallback(async (): Promise<Map<string, Question[]>> => {
     const levels: CEFRLevel[] = ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2']
     const bank = new Map<string, Question[]>()
 
-    for (const level of levels) {
-      const response = await fetch(`/questions/${level.toLowerCase()}.json`)
-      const data = await response.json()
-      bank.set(level, data.questions)
+    try {
+      for (const level of levels) {
+        const response = await fetch(`/questions/${level.toLowerCase()}.json`)
+        if (!response.ok) {
+          throw new Error(`Failed to load questions for level ${level}: ${response.statusText}`)
+        }
+        const data = await response.json()
+        bank.set(level, data.questions)
+      }
+    } catch (error) {
+      console.error('Error loading level questions:', error)
+      throw error
     }
 
-    setState(prev => ({ ...prev, questionsBank: bank }))
+    return bank
   }, [])
 
-  const getRandomQuestionsForLevel = useCallback((level: CEFRLevel, count: number): Question[] => {
+  const getRandomQuestions = useCallback((level: CEFRLevel, count: number): Question[] => {
     if (!state.questionsBank) return []
     const questions = state.questionsBank.get(level) || []
-    return getRandomQuestions(questions, count)
+    return getRandomQuestionsFromUtil(questions, count)
   }, [state.questionsBank])
-
-  const getRandomQuestions = useCallback((level: CEFRLevel, count: number): Question[] => {
-    return getRandomQuestionsForLevel(level, count)
-  }, [getRandomQuestionsForLevel])
 
   const loadNextLevel = useCallback(async () => {
     if (!state.currentLevel) return
@@ -71,7 +75,7 @@ export function TestProvider({ children }: TestProviderProps) {
 
     if (currentIndex < levels.length - 1) {
       const nextLevel = levels[currentIndex + 1]
-      const nextQuestions = getRandomQuestionsForLevel(nextLevel, 10)
+      const nextQuestions = getRandomQuestions(nextLevel, 10)
 
       setState(prev => ({
         ...prev,
@@ -82,7 +86,7 @@ export function TestProvider({ children }: TestProviderProps) {
         answers: new Map(),
       }))
     }
-  }, [state.currentLevel, getRandomQuestionsForLevel])
+  }, [state.currentLevel, getRandomQuestions])
 
   const checkLevelPassed = useCallback((): boolean => {
     return checkLevelPassThreshold(state.questions, state.answers)
@@ -93,12 +97,11 @@ export function TestProvider({ children }: TestProviderProps) {
 
     if (testType === 'placement') {
       // Load all level questions into bank
-      await loadAllLevelQuestions()
+      const bank = await loadAllLevelQuestions()
 
-      // Get A0 questions from the bank (now in state)
-      const bank = state.questionsBank
+      // Start with A0 level, select 10 random questions
       const initialLevel: CEFRLevel = 'A0'
-      const initialQuestions = bank ? getRandomQuestions(bank.get(initialLevel) || [], 10) : []
+      const initialQuestions = getRandomQuestionsFromUtil(bank.get(initialLevel) || [], 10)
 
       setState({
         testType,
@@ -132,8 +135,10 @@ export function TestProvider({ children }: TestProviderProps) {
       currentQuestionIndex: 0,
       answers: new Map(),
       isComplete: false,
+      currentLevel: null,
+      questionsBank: null,
     })
-  }, [loadAllLevelQuestions, state.questionsBank])
+  }, [loadAllLevelQuestions, getRandomQuestions])
 
   const answerQuestion = useCallback((questionId: string, answer: Answer) => {
     setState(prev => {
