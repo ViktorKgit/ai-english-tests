@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { calculateLevelTestScore, determinePlacementLevel } from '@/lib/utils/testCalculation'
+import { calculateLevelTestScore, determinePlacementLevel, getRandomQuestions } from '@/lib/utils/testCalculation'
 import type { Question, Answer } from '@/components/test/types'
 
 describe('calculateLevelTestScore', () => {
@@ -56,5 +56,35 @@ describe('determinePlacementLevel', () => {
     ])
 
     expect(result).toBe('B1')
+  })
+})
+
+describe('getRandomQuestions', () => {
+  it('should return specified count of questions', () => {
+    const questions = [
+      { id: '1' }, { id: '2' }, { id: '3' },
+      { id: '4' }, { id: '5' }
+    ]
+    const result = getRandomQuestions(questions, 3)
+
+    expect(result).toHaveLength(3)
+  })
+
+  it('should not return duplicate questions', () => {
+    const questions = [
+      { id: '1' }, { id: '2' }, { id: '3' }
+    ]
+    const result = getRandomQuestions(questions, 3)
+
+    const ids = result.map(q => q.id)
+    const uniqueIds = new Set(ids)
+    expect(uniqueIds.size).toBe(ids.length)
+  })
+
+  it('should handle count larger than array length', () => {
+    const questions = [{ id: '1' }, { id: '2' }]
+    const result = getRandomQuestions(questions, 5)
+
+    expect(result).toHaveLength(2)
   })
 })
