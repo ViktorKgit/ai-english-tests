@@ -59,8 +59,8 @@
       "type": "multiple-choice",
       "prompt": "The proposal, ___ accepted, would revolutionize the industry.",
       "options": ["were it to be", "if it were", "should it be", "were it"],
-      "correctAnswer": 0,
-      "explanation": "Conditional inversion with passive construction."
+      "correctAnswer": 2,
+      "explanation": "Conditional inversion: 'Should it be accepted' is the correct form (inversion of 'If it should be accepted')."
     },
     {
       "id": "c2-8",
@@ -126,7 +126,7 @@
       "difficulty": 7,
       "type": "multiple-choice",
       "prompt": "___ claim, the evidence suggests otherwise.",
-      "options": ["Contrary to his", "Opposing his", "Against his", "Not withstanding his"],
+      "options": ["Contrary to his", "Opposing his", "Against his", "Notwithstanding his"],
       "correctAnswer": 0,
       "explanation": "'Contrary to' = opposing."
     },
