@@ -1,0 +1,176 @@
+{
+  "name": "A1 English Test",
+  "level": "A1",
+  "questions": [
+    {
+      "id": "a1-1",
+      "difficulty": 2,
+      "type": "multiple-choice",
+      "prompt": "Where ___ yesterday?",
+      "options": ["you went", "did you go", "did you went", "you go"],
+      "correctAnswer": 1,
+      "explanation": "Past simple questions use auxiliary 'did' + base verb."
+    },
+    {
+      "id": "a1-2",
+      "difficulty": 2,
+      "type": "fill-blank",
+      "prompt": "I ___ to the store yesterday.",
+      "correctAnswer": "went",
+      "explanation": "Irregular past tense of 'go' is 'went'."
+    },
+    {
+      "id": "a1-3",
+      "difficulty": 2,
+      "type": "multiple-choice",
+      "prompt": "She ___ to London last week.",
+      "options": ["go", "goes", "went", "going"],
+      "correctAnswer": 2,
+      "explanation": "Past tense of 'go' is 'went'."
+    },
+    {
+      "id": "a1-4",
+      "difficulty": 2,
+      "type": "fill-blank",
+      "prompt": "They ___ TV every evening.",
+      "correctAnswer": "watch",
+      "explanation": "Present simple uses base form for 'they'."
+    },
+    {
+      "id": "a1-5",
+      "difficulty": 2,
+      "type": "multiple-choice",
+      "prompt": "I ___ my homework tomorrow.",
+      "options": ["do", "will do", "did", "doing"],
+      "correctAnswer": 1,
+      "explanation": "Future with 'will' + base verb."
+    },
+    {
+      "id": "a1-6",
+      "difficulty": 2,
+      "type": "fill-blank",
+      "prompt": "She ___ her keys yesterday.",
+      "correctAnswer": "lost",
+      "explanation": "Past tense of 'lose' is 'lost'."
+    },
+    {
+      "id": "a1-7",
+      "difficulty": 2,
+      "type": "multiple-choice",
+      "prompt": "We ___ breakfast at 7 AM.",
+      "options": ["eat", "eats", "eating", "ate"],
+      "correctAnswer": 3,
+      "explanation": "Past tense of 'eat' is 'ate'."
+    },
+    {
+      "id": "a1-8",
+      "difficulty": 2,
+      "type": "fill-blank",
+      "prompt": "He ___ like coffee.",
+      "correctAnswer": "doesn't",
+      "explanation": "Third person negative uses 'doesn't'."
+    },
+    {
+      "id": "a1-9",
+      "difficulty": 2,
+      "type": "multiple-choice",
+      "prompt": "What ___ doing?",
+      "options": ["are you", "you are", "do you", "you do"],
+      "correctAnswer": 0,
+      "explanation": "Present continuous question: 'are' + subject + '-ing'."
+    },
+    {
+      "id": "a1-10",
+      "difficulty": 2,
+      "type": "fill-blank",
+      "prompt": "I am ___ a book now.",
+      "correctAnswer": "reading",
+      "explanation": "Present continuous uses 'am + verb-ing'."
+    },
+    {
+      "id": "a1-11",
+      "difficulty": 2,
+      "type": "multiple-choice",
+      "prompt": "There ___ many people at the party.",
+      "options": ["was", "is", "were", "are"],
+      "correctAnswer": 2,
+      "explanation": "Past tense of 'there are' is 'there were'."
+    },
+    {
+      "id": "a1-12",
+      "difficulty": 2,
+      "type": "fill-blank",
+      "prompt": "She ___ happy yesterday.",
+      "correctAnswer": "was",
+      "explanation": "Past tense of 'is' is 'was'."
+    },
+    {
+      "id": "a1-13",
+      "difficulty": 2,
+      "type": "multiple-choice",
+      "prompt": "I ___ football when I was young.",
+      "options": ["play", "played", "playing", "plays"],
+      "correctAnswer": 1,
+      "explanation": "Past simple for completed action in the past."
+    },
+    {
+      "id": "a1-14",
+      "difficulty": 2,
+      "type": "fill-blank",
+      "prompt": "We ___ tired now.",
+      "correctAnswer": "are",
+      "explanation": "Present tense of 'to be' with 'we' is 'are'."
+    },
+    {
+      "id": "a1-15",
+      "difficulty": 2,
+      "type": "multiple-choice",
+      "prompt": "___ you like chocolate?",
+      "options": ["Are", "Do", "Does", "Is"],
+      "correctAnswer": 1,
+      "explanation": "Yes/No questions with 'like' use 'Do'."
+    },
+    {
+      "id": "a1-16",
+      "difficulty": 2,
+      "type": "fill-blank",
+      "prompt": "He ___ to school every day.",
+      "correctAnswer": "goes",
+      "explanation": "Third person singular adds 'es'."
+    },
+    {
+      "id": "a1-17",
+      "difficulty": 2,
+      "type": "multiple-choice",
+      "prompt": "I ___ my keys. Can you help me find them?",
+      "options": ["lost", "lose", "have lost", "losing"],
+      "correctAnswer": 0,
+      "explanation": "Past simple for completed action."
+    },
+    {
+      "id": "a1-18",
+      "difficulty": 2,
+      "type": "fill-blank",
+      "prompt": "They ___ dinner right now.",
+      "correctAnswer": "are having",
+      "explanation": "Present continuous: 'are' + verb-ing."
+    },
+    {
+      "id": "a1-19",
+      "difficulty": 2,
+      "type": "multiple-choice",
+      "prompt": "She ___ English very well.",
+      "options": ["speak", "speaks", "speaking", "spoke"],
+      "correctAnswer": 1,
+      "explanation": "Present simple third person adds 's'."
+    },
+    {
+      "id": "a1-20",
+      "difficulty": 2,
+      "type": "fill-blank",
+      "prompt": "What did you ___ yesterday?",
+      "correctAnswer": "do",
+      "explanation": "Past simple questions use 'did' + base verb."
+    }
+  ]
+}
