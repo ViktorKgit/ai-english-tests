@@ -4,6 +4,8 @@ import React, { createContext, useContext, useState, useCallback } from 'react'
 import type { TestState, TestType, CEFRLevel, Question, Answer, TestResult } from './types'
 import { calculateLevelTestScore, determinePlacementLevel, generateRecommendations, getRandomQuestions as getRandomQuestionsFromUtil, checkLevelPassThreshold } from '@/lib/utils/testCalculation'
 
+const TIME_PER_QUESTION = 120 // 2 minutes per question in seconds
+
 interface TestContextType extends TestState {
   startTest: (testType: TestType, level?: CEFRLevel) => Promise<void>
   answerQuestion: (questionId: string, answer: Answer) => void
@@ -15,6 +17,7 @@ interface TestContextType extends TestState {
   loadNextLevel: () => void
   checkLevelPassed: () => boolean
   getRandomQuestions: (level: CEFRLevel, count: number) => Question[]
+  startTimer: () => void
 }
 
 const TestContext = createContext<TestContextType | null>(null)
@@ -38,6 +41,7 @@ export function TestProvider({ children }: TestProviderProps) {
     isComplete: false,
     currentLevel: null,
     questionsBank: null,
+    timeRemaining: TIME_PER_QUESTION,
   })
 
   const loadAllLevelQuestions = useCallback(async (): Promise<Map<string, Question[]>> => {
@@ -84,6 +88,7 @@ export function TestProvider({ children }: TestProviderProps) {
         questions: nextQuestions,
         currentQuestionIndex: 0,
         answers: new Map(),
+        timeRemaining: TIME_PER_QUESTION,
       }))
     }
   }, [state.currentLevel, getRandomQuestions])
@@ -111,6 +116,7 @@ export function TestProvider({ children }: TestProviderProps) {
         isComplete: false,
         currentLevel: initialLevel,
         questionsBank: bank,
+        timeRemaining: TIME_PER_QUESTION,
       })
       return
     } else if (level) {
@@ -128,6 +134,7 @@ export function TestProvider({ children }: TestProviderProps) {
       isComplete: false,
       currentLevel: null,
       questionsBank: null,
+      timeRemaining: TIME_PER_QUESTION,
     })
   }, [loadAllLevelQuestions, getRandomQuestions])
 
@@ -140,20 +147,22 @@ export function TestProvider({ children }: TestProviderProps) {
   }, [])
 
   const goToQuestion = useCallback((index: number) => {
-    setState(prev => ({ ...prev, currentQuestionIndex: index }))
+    setState(prev => ({ ...prev, currentQuestionIndex: index, timeRemaining: TIME_PER_QUESTION }))
   }, [])
 
   const nextQuestion = useCallback(() => {
     setState(prev => ({
       ...prev,
-      currentQuestionIndex: Math.min(prev.currentQuestionIndex + 1, prev.questions.length - 1)
+      currentQuestionIndex: Math.min(prev.currentQuestionIndex + 1, prev.questions.length - 1),
+      timeRemaining: TIME_PER_QUESTION
     }))
   }, [])
 
   const previousQuestion = useCallback(() => {
     setState(prev => ({
       ...prev,
-      currentQuestionIndex: Math.max(prev.currentQuestionIndex - 1, 0)
+      currentQuestionIndex: Math.max(prev.currentQuestionIndex - 1, 0),
+      timeRemaining: TIME_PER_QUESTION
     }))
   }, [])
 
@@ -211,7 +220,12 @@ export function TestProvider({ children }: TestProviderProps) {
       result: undefined,
       currentLevel: null,
       questionsBank: null,
+      timeRemaining: TIME_PER_QUESTION,
     })
+  }, [])
+
+  const startTimer = useCallback(() => {
+    setState(prev => ({ ...prev, timeRemaining: TIME_PER_QUESTION }))
   }, [])
 
   return (
@@ -228,6 +242,7 @@ export function TestProvider({ children }: TestProviderProps) {
         loadNextLevel,
         checkLevelPassed,
         getRandomQuestions,
+        startTimer,
       }}
     >
       {children}

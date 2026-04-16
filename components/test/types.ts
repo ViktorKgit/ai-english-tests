@@ -62,6 +62,7 @@ export interface TestState {
   result?: TestResult
   currentLevel: CEFRLevel | null  // Currently testing level (for placement test only)
   questionsBank: Map<string, Question[]> | null  // All loaded questions by level
+  timeRemaining?: number  // Seconds remaining for current question
 }
 
 export interface QuestionSet {

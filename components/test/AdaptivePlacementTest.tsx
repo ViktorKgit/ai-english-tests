@@ -6,8 +6,9 @@ import { ProgressBar } from './ProgressBar'
 import { NavigationButtons } from './NavigationButtons'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
-import { Home, Check } from 'lucide-react'
+import { Home, Check, Clock } from 'lucide-react'
 import { ThemeToggle } from '@/components/ThemeToggle'
+import { Timer } from './Timer'
 import type { CEFRLevel } from './types'
 
 const LEVEL_ORDER: CEFRLevel[] = ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2']
@@ -24,7 +25,9 @@ export function AdaptivePlacementTest() {
     currentLevel,
     loadNextLevel,
     checkLevelPassed,
-    restart
+    restart,
+    timeRemaining,
+    startTimer
   } = useTest()
 
   if (questions.length === 0) {
@@ -59,7 +62,7 @@ export function AdaptivePlacementTest() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900 py-12 px-4">
       <div className="max-w-2xl mx-auto">
-        {/* Header with theme toggle and exit button */}
+        {/* Header with theme toggle, timer, and exit button */}
         <div className="mb-8 flex items-start justify-between gap-4">
           <div className="flex-1">
             <h1 className="text-2xl font-bold text-slate-800 dark:text-slate-100 mb-2">
@@ -69,7 +72,13 @@ export function AdaptivePlacementTest() {
               Answer each question to determine your level.
             </p>
           </div>
-          <div className="flex gap-2">
+          <div className="flex items-center gap-3">
+            {timeRemaining !== undefined && timeRemaining > 0 && (
+              <Timer
+                timeRemaining={timeRemaining}
+                onTimeUp={() => {/* Time's up - could auto-advance or show warning */}}
+              />
+            )}
             <ThemeToggle />
             <Button
               onClick={restart}
