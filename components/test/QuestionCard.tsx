@@ -107,11 +107,11 @@ export function QuestionCard({ question, answer, onAnswerChange, showFeedback }:
   }
 
   return (
-    <Card className="border-2 border-slate-200">
+    <Card className="border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800">
       <CardHeader>
         <CardTitle className="flex items-center justify-between">
-          <span>Question</span>
-          <span className="text-sm font-normal text-slate-500">
+          <span className="dark:text-slate-100">Question</span>
+          <span className="text-sm font-normal text-slate-500 dark:text-slate-400">
             {question.type === 'multiple-choice' && 'Select one answer'}
             {question.type === 'fill-blank' && 'Fill in the blank'}
             {question.type === 'matching' && 'Match the pairs'}
@@ -121,7 +121,7 @@ export function QuestionCard({ question, answer, onAnswerChange, showFeedback }:
       </CardHeader>
       <CardContent>
         <div className="mb-6">
-          <p className="text-lg font-medium text-slate-800">
+          <p className="text-lg font-medium text-slate-800 dark:text-slate-100">
             {(question.type === 'multiple-choice' || question.type === 'open-ended') && question.prompt}
           </p>
         </div>
