@@ -11,6 +11,12 @@ export interface QuestionResult {
   difficulty: number
 }
 
+// Get random items from array without duplicates
+export function getRandomQuestions<T>(items: T[], count: number): T[] {
+  const shuffled = [...items].sort(() => Math.random() - 0.5)
+  return shuffled.slice(0, Math.min(count, shuffled.length))
+}
+
 // Calculate score for level tests (pass = 70%)
 export function calculateLevelTestScore(questions: Question[], answers: Map<string, Answer>): ScoreResult {
   let correct = 0
