@@ -1,0 +1,49 @@
+{
+  "name": "A0-A1 English Test",
+  "level": "A1",
+  "questions": [
+    {
+      "id": "a1-1",
+      "difficulty": 1,
+      "type": "multiple-choice",
+      "prompt": "___ you like pizza?",
+      "options": ["Does", "Do", "Are", "Is"],
+      "correctAnswer": 1,
+      "explanation": "Use 'Do' for questions with 'you'."
+    },
+    {
+      "id": "a1-2",
+      "difficulty": 1,
+      "type": "fill-blank",
+      "prompt": "She ___ a teacher.",
+      "correctAnswer": "is",
+      "explanation": "Use 'is' with 'she'."
+    },
+    {
+      "id": "a1-3",
+      "difficulty": 1,
+      "type": "multiple-choice",
+      "prompt": "I have ___ apple.",
+      "options": ["a", "an", "the", "two"],
+      "correctAnswer": 1,
+      "explanation": "Use 'an' before words starting with a vowel sound."
+    },
+    {
+      "id": "a1-4",
+      "difficulty": 2,
+      "type": "multiple-choice",
+      "prompt": "Where ___ yesterday?",
+      "options": ["you went", "did you go", "did you went", "you go"],
+      "correctAnswer": 1,
+      "explanation": "Past simple question uses auxiliary 'did'."
+    },
+    {
+      "id": "a1-5",
+      "difficulty": 1,
+      "type": "fill-blank",
+      "prompt": "They ___ football every Sunday.",
+      "correctAnswer": "play",
+      "explanation": "Present simple uses base form for 'they'."
+    }
+  ]
+}
