@@ -6,27 +6,172 @@
       "id": "b1-1",
       "difficulty": 4,
       "type": "multiple-choice",
-      "prompt": "I wish I ___ speak Spanish.",
-      "options": ["can", "could", "will", "would"],
+      "prompt": "By the time you arrive, I ___ my homework.",
+      "options": ["will finish", "will have finished", "finish", "have finished"],
       "correctAnswer": 1,
-      "explanation": "'Wish' + past tense expresses regret about a present ability."
+      "explanation": "Future perfect for action completed before a future time."
     },
     {
       "id": "b1-2",
       "difficulty": 4,
       "type": "fill-blank",
-      "prompt": "The film ___ by Spielberg.",
-      "correctAnswer": "was directed",
-      "explanation": "Passive voice in past tense: was/were + past participle."
+      "prompt": "If I had known, I ___ you.",
+      "options": ["would tell", "would have told", "told", "will tell"],
+      "correctAnswer": 1,
+      "explanation": "Third conditional: 'would have + past participle'."
     },
     {
       "id": "b1-3",
       "difficulty": 4,
       "type": "multiple-choice",
-      "prompt": "She denied ___ the money.",
-      "options": ["take", "to take", "taking", "taken"],
-      "correctAnswer": 2,
-      "explanation": "'Deny' is followed by a gerund (-ing)."
+      "prompt": "The new policy, ___ was implemented last month, has caused controversy.",
+      "options": ["which", "that", "who", "what"],
+      "correctAnswer": 0,
+      "explanation": "Non-defining relative clause uses 'which'."
+    },
+    {
+      "id": "b1-4",
+      "difficulty": 4,
+      "type": "fill-blank",
+      "prompt": "I wish I ___ studied harder for the exam.",
+      "correctAnswer": "had",
+      "explanation": "'Wish + past perfect' for regret about past."
+    },
+    {
+      "id": "b1-5",
+      "difficulty": 4,
+      "type": "multiple-choice",
+      "prompt": "Despite the bad weather, they decided to ___ with the picnic.",
+      "options": ["go on", "go ahead", "carry out", "carry on"],
+      "correctAnswer": 1,
+      "explanation": "'Go ahead' means to proceed with something."
+    },
+    {
+      "id": "b1-6",
+      "difficulty": 4,
+      "type": "fill-blank",
+      "prompt": "The book ___ by millions of people worldwide.",
+      "correctAnswer": "is read",
+      "explanation": "Present passive: 'is + past participle'."
+    },
+    {
+      "id": "b1-7",
+      "difficulty": 4,
+      "type": "multiple-choice",
+      "prompt": "Not only ___ late, but he also forgot the documents.",
+      "options": ["he was", "was he", "he is", "is he"],
+      "correctAnswer": 0,
+      "explanation": "'Not only' at start requires inversion after subject."
+    },
+    {
+      "id": "b1-8",
+      "difficulty": 4,
+      "type": "fill-blank",
+      "prompt": "She accused him ___ her wallet.",
+      "correctAnswer": "of stealing",
+      "explanation": "'Accuse someone of + gerund'."
+    },
+    {
+      "id": "b1-9",
+      "difficulty": 4,
+      "type": "multiple-choice",
+      "prompt": "Hardly had we stepped outside ___ it started raining.",
+      "options": ["than", "when", "then", "that"],
+      "correctAnswer": 1,
+      "explanation": "'Hardly...when' structure for sequential events."
+    },
+    {
+      "id": "b1-10",
+      "difficulty": 4,
+      "type": "fill-blank",
+      "prompt": "The project was ___ due to lack of funding.",
+      "correctAnswer": "abandoned",
+      "explanation": "Past passive: 'was + past participle'."
+    },
+    {
+      "id": "b1-11",
+      "difficulty": 4,
+      "type": "multiple-choice",
+      "prompt": "___ I was tired, I continued working.",
+      "options": ["Despite", "Although", "However", "Even"],
+      "correctAnswer": 1,
+      "explanation": "'Although' introduces a concession clause."
+    },
+    {
+      "id": "b1-12",
+      "difficulty": 4,
+      "type": "fill-blank",
+      "prompt": "She objects ___ treated unfairly.",
+      "correctAnswer": "to being",
+      "explanation": "'Object to + being' (passive gerund)."
+    },
+    {
+      "id": "b1-13",
+      "difficulty": 4,
+      "type": "multiple-choice",
+      "prompt": "It's high time you ___ to bed.",
+      "options": ["go", "went", "will go", "gone"],
+      "correctAnswer": 1,
+      "explanation": "'It's time' + past subjunctive for immediate action needed."
+    },
+    {
+      "id": "b1-14",
+      "difficulty": 4,
+      "type": "fill-blank",
+      "prompt": "The report ___ by the committee tomorrow.",
+      "correctAnswer": "will be published",
+      "explanation": "Future passive: 'will be + past participle'."
+    },
+    {
+      "id": "b1-15",
+      "difficulty": 4,
+      "type": "multiple-choice",
+      "prompt": "___ having read the book, she failed the test.",
+      "options": ["Although", "Despite", "Even though", "Spite of"],
+      "correctAnswer": 1,
+      "explanation": "'Despite + gerund' for concession."
+    },
+    {
+      "id": "b1-16",
+      "difficulty": 4,
+      "type": "fill-blank",
+      "prompt": "He was ___ of stealing the money.",
+      "correctAnswer": "accused",
+      "explanation": "Past passive: 'was + past participle'."
+    },
+    {
+      "id": "b1-17",
+      "difficulty": 4,
+      "type": "multiple-choice",
+      "prompt": "Scarcely ___ entered the room when the phone rang.",
+      "options": ["I had", "had I", "I did", "did I"],
+      "correctAnswer": 1,
+      "explanation": "'Scarcely...when' with inversion."
+    },
+    {
+      "id": "b1-18",
+      "difficulty": 4,
+      "type": "fill-blank",
+      "prompt": "They succeeded in ___ the problem.",
+      "correctAnswer": "solving",
+      "explanation": "'Succeed in + gerund'."
+    },
+    {
+      "id": "b1-19",
+      "difficulty": 4,
+      "type": "multiple-choice",
+      "prompt": "The more you practice, ___ you'll become.",
+      "options": ["the better", "better", "the best", "best"],
+      "correctAnswer": 0,
+      "explanation": "'The more...the better' comparative structure."
+    },
+    {
+      "id": "b1-20",
+      "difficulty": 4,
+      "type": "fill-blank",
+      "prompt": "Unless you ___ harder, you won't pass.",
+      "correctAnswer": "study",
+      "explanation": "'Unless' + present tense for future condition."
     }
   ]
 }
