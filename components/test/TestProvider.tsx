@@ -39,7 +39,7 @@ export function TestProvider({ children }: TestProviderProps) {
     let questions: Question[] = []
 
     if (testType === 'placement') {
-      const response = await fetch('/lib/questions/placement-test.json')
+      const response = await fetch('/questions/placement-test.json')
       const data = await response.json()
       questions = data.questions
     } else if (level) {
@@ -52,7 +52,7 @@ export function TestProvider({ children }: TestProviderProps) {
         'C1': 'c1',
         'C2': 'c2',
       }
-      const response = await fetch(`/lib/questions/${levelMap[level]}.json`)
+      const response = await fetch(`/questions/${levelMap[level]}.json`)
       const data = await response.json()
       questions = data.questions
     }
