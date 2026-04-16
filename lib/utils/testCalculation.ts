@@ -11,25 +11,47 @@ export interface QuestionResult {
   difficulty: number
 }
 
-// Get random items from array without duplicates
+/**
+ * Get random items from array without duplicates using Fisher-Yates shuffle algorithm
+ * @param items - The array to shuffle and sample from
+ * @param count - The number of items to return
+ * @returns A random subset of items from the input array
+ */
 export function getRandomQuestions<T>(items: T[], count: number): T[] {
-  const shuffled = [...items].sort(() => Math.random() - 0.5)
+  const shuffled = [...items]
+  // Fisher-Yates shuffle algorithm
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+  }
   return shuffled.slice(0, Math.min(count, shuffled.length))
 }
 
-// Calculate score for level tests (pass = 70%)
-export function calculateLevelTestScore(questions: Question[], answers: Map<string, Answer>): ScoreResult {
+/**
+ * Calculate the number of correct answers from questions and user responses
+ * @param questions - Array of questions to check
+ * @param answers - Map of question IDs to user answers
+ * @returns The count of correctly answered questions
+ */
+function calculateCorrectCount(questions: Question[], answers: Map<string, Answer>): number {
   let correct = 0
-  const total = questions.length
-
   for (const question of questions) {
     const answer = answers.get(question.id)
     if (!answer || answer.value === null || answer.value === '') continue
-
-    const isCorrect = checkAnswer(question, answer)
-    if (isCorrect) correct++
+    if (checkAnswer(question, answer)) correct++
   }
+  return correct
+}
 
+/**
+ * Calculate score for level tests (pass = 70%)
+ * @param questions - Array of questions in the test
+ * @param answers - Map of question IDs to user answers
+ * @returns Score result with percentage and pass status
+ */
+export function calculateLevelTestScore(questions: Question[], answers: Map<string, Answer>): ScoreResult {
+  const correct = calculateCorrectCount(questions, answers)
+  const total = questions.length
   const score = Math.round((correct / total) * 100)
   return {
     score,
@@ -37,7 +59,12 @@ export function calculateLevelTestScore(questions: Question[], answers: Map<stri
   }
 }
 
-// Check if answer is correct
+/**
+ * Check if an answer is correct for a given question
+ * @param question - The question to check against
+ * @param answer - The user's answer to validate
+ * @returns True if the answer is correct, false otherwise
+ */
 function checkAnswer(question: Question, answer: Answer): boolean {
   switch (question.type) {
     case 'multiple-choice':
@@ -61,24 +88,25 @@ function checkAnswer(question: Question, answer: Answer): boolean {
   }
 }
 
-// Check if user passed the level threshold (70%)
+/**
+ * Check if user passed the level threshold (70%)
+ * @param questions - Array of questions in the test
+ * @param answers - Map of question IDs to user answers
+ * @returns True if the user scored 70% or higher, false otherwise
+ */
 export function checkLevelPassThreshold(questions: Question[], answers: Map<string, Answer>): boolean {
   if (questions.length === 0) return false
 
-  let correct = 0
-  for (const question of questions) {
-    const answer = answers.get(question.id)
-    if (!answer || answer.value === null || answer.value === '') continue
-
-    const isCorrect = checkAnswer(question, answer)
-    if (isCorrect) correct++
-  }
-
+  const correct = calculateCorrectCount(questions, answers)
   const score = correct / questions.length
   return score >= 0.7
 }
 
-// Determine CEFR level from placement test results
+/**
+ * Determine CEFR level from placement test results
+ * @param results - Array of question results with correctness and difficulty
+ * @returns The appropriate CEFR level based on performance
+ */
 export function determinePlacementLevel(results: QuestionResult[]): CEFRLevel {
   // Group by difficulty
   const byDifficulty = new Map<number, { correct: number; total: number }>()
@@ -101,6 +129,11 @@ export function determinePlacementLevel(results: QuestionResult[]): CEFRLevel {
   return 'A1'
 }
 
+/**
+ * Convert difficulty number to CEFR level
+ * @param difficulty - The difficulty rating (1-6)
+ * @returns The corresponding CEFR level
+ */
 function difficultyToLevel(difficulty: number): CEFRLevel {
   switch (difficulty) {
     case 1: return 'A0'
@@ -113,7 +146,11 @@ function difficultyToLevel(difficulty: number): CEFRLevel {
   }
 }
 
-// Generate recommendations based on results
+/**
+ * Generate recommendations based on test results
+ * @param result - Either a score result from level tests or a CEFR level from placement test
+ * @returns Array of recommendation strings based on the result
+ */
 export function generateRecommendations(result: ScoreResult | CEFRLevel): string[] {
   if (typeof result === 'string') {
     // Placement result
