@@ -6,6 +6,7 @@ import { ProgressBar } from './ProgressBar'
 import { NavigationButtons } from './NavigationButtons'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
+import { Home } from 'lucide-react'
 import type { CEFRLevel } from './types'
 
 const LEVEL_ORDER: CEFRLevel[] = ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2']
@@ -21,7 +22,8 @@ export function AdaptivePlacementTest() {
     completeTest,
     currentLevel,
     loadNextLevel,
-    checkLevelPassed
+    checkLevelPassed,
+    restart
   } = useTest()
 
   if (questions.length === 0) {
@@ -52,14 +54,25 @@ export function AdaptivePlacementTest() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100 py-12 px-4">
       <div className="max-w-2xl mx-auto">
-        {/* Level-aware header */}
-        <div className="mb-8">
-          <h1 className="text-2xl font-bold text-slate-800 mb-2">
-            {currentLevel} Level • Question {currentQuestionIndex + 1} of {questions.length}
-          </h1>
-          <p className="text-slate-600">
-            Answer each question to determine your level.
-          </p>
+        {/* Level-aware header with exit button */}
+        <div className="mb-8 flex items-start justify-between">
+          <div className="flex-1">
+            <h1 className="text-2xl font-bold text-slate-800 mb-2">
+              {currentLevel} Level • Question {currentQuestionIndex + 1} of {questions.length}
+            </h1>
+            <p className="text-slate-600">
+              Answer each question to determine your level.
+            </p>
+          </div>
+          <Button
+            onClick={restart}
+            variant="outline"
+            size="sm"
+            className="gap-2"
+          >
+            <Home className="h-4 w-4" />
+            Exit Test
+          </Button>
         </div>
 
         <ProgressBar questions={questions} currentIndex={currentQuestionIndex} />
