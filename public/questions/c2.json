@@ -171,6 +171,176 @@
       "prompt": "His resignation speaks ___ about the company's state.",
       "correctAnswer": "volumes",
       "explanation": "'Speak volumes' = convey a lot (idiom)."
+    },
+    {
+      "id": "c2-21",
+      "difficulty": 7,
+      "type": "multiple-choice",
+      "prompt": "Never ___ such a masterful display of oratory.",
+      "options": ["have I witnessed", "I have witnessed", "did I witness", "I witnessed"],
+      "correctAnswer": 0,
+      "explanation": "Inversion with negative adverb 'Never': auxiliary + subject + main verb."
+    },
+    {
+      "id": "c2-22",
+      "difficulty": 7,
+      "type": "fill-blank",
+      "prompt": "The committee recommended that the proposal ___ immediately.",
+      "correctAnswer": "be implemented",
+      "explanation": "Subjunctive mood after 'recommend' uses base form 'be' instead of 'should be' or 'is'."
+    },
+    {
+      "id": "c2-23",
+      "difficulty": 7,
+      "type": "multiple-choice",
+      "prompt": "Had I known about the repercussions, I ___ differently.",
+      "options": ["would have acted", "would act", "acted", "had acted"],
+      "correctAnswer": 0,
+      "explanation": "Third conditional inversion: 'Had I known' = 'If I had known', requires 'would have + past participle'."
+    },
+    {
+      "id": "c2-24",
+      "difficulty": 7,
+      "type": "fill-blank",
+      "prompt": "The ambassador ___ that the embassy be fortified.",
+      "correctAnswer": "requested",
+      "explanation": "Subjunctive after 'request' uses base form 'be' in the that-clause."
+    },
+    {
+      "id": "c2-25",
+      "difficulty": 7,
+      "type": "multiple-choice",
+      "prompt": "Scarcely ___ the stage when the audience erupted in applause.",
+      "options": ["had she entered", "she entered", "she had entered", "did she enter"],
+      "correctAnswer": 0,
+      "explanation": "Inversion with 'Scarcely': had + subject + past participle (past perfect)."
+    },
+    {
+      "id": "c2-26",
+      "difficulty": 7,
+      "type": "fill-blank",
+      "prompt": "It is imperative that all participants ___ the guidelines.",
+      "correctAnswer": "follow",
+      "explanation": "Subjunctive mood after 'imperative' uses base form 'follow', not 'follows' or 'should follow'."
+    },
+    {
+      "id": "c2-27",
+      "difficulty": 7,
+      "type": "multiple-choice",
+      "prompt": "Not only ___ the exam, but he also achieved the highest score.",
+      "options": ["did he pass", "he passed", "he did pass", "had he passed"],
+      "correctAnswer": 0,
+      "explanation": "Inversion with 'Not only': auxiliary + subject + verb."
+    },
+    {
+      "id": "c2-28",
+      "difficulty": 7,
+      "type": "fill-blank",
+      "prompt": "The professor insisted that the students ___ their sources meticulously.",
+      "correctAnswer": "cite",
+      "explanation": "Subjunctive after 'insist' uses base form 'cite'."
+    },
+    {
+      "id": "c2-29",
+      "difficulty": 7,
+      "type": "multiple-choice",
+      "prompt": "___ the financial crisis, the company remained profitable.",
+      "options": ["For all", "In spite of", "Notwithstanding", "Despite of"],
+      "correctAnswer": 2,
+      "explanation": "'Notwithstanding' is formal and means 'despite'. 'Despite of' is incorrect."
+    },
+    {
+      "id": "c2-30",
+      "difficulty": 7,
+      "type": "fill-blank",
+      "prompt": "His testimony was ___ to the case.",
+      "correctAnswer": "germane",
+      "explanation": "'Germane' = relevant/applicable (formal/legal register)."
+    },
+    {
+      "id": "c2-31",
+      "difficulty": 7,
+      "type": "multiple-choice",
+      "prompt": "The queen's ___ was evident in her refusal to compromise.",
+      "options": ["intransigence", "intransigency", "intransigence", "intransigency"],
+      "correctAnswer": 0,
+      "explanation": "'Intransigence' = stubborn refusal to compromise (formal). Both 'intransigence' and 'intransigency' exist, but 'intransigence' is more common."
+    },
+    {
+      "id": "c2-32",
+      "difficulty": 7,
+      "type": "fill-blank",
+      "prompt": "The scholar's erudition was truly ___.",
+      "correctAnswer": "prodigious",
+      "explanation": "'Prodigious' = impressively great/abundant (formal/literary)."
+    },
+    {
+      "id": "c2-33",
+      "difficulty": 7,
+      "type": "multiple-choice",
+      "prompt": "Only after the investigation ___ come to light.",
+      "options": ["did the truth", "the truth", "had the truth", "the truth did"],
+      "correctAnswer": 0,
+      "explanation": "Inversion with 'Only after': auxiliary + subject + verb."
+    },
+    {
+      "id": "c2-34",
+      "difficulty": 7,
+      "type": "fill-blank",
+      "prompt": "The contract is ___ ratification by the board.",
+      "correctAnswer": "subject to",
+      "explanation": "'Subject to' = dependent on/conditional upon (legal/formal)."
+    },
+    {
+      "id": "c2-35",
+      "difficulty": 7,
+      "type": "multiple-choice",
+      "prompt": "Were he to accept the position, he ___ significant changes.",
+      "options": ["would implement", "will implement", "implemented", "implements"],
+      "correctAnswer": 0,
+      "explanation": "Second conditional inversion: 'Were he' = 'If he were', requires 'would + base verb'."
+    },
+    {
+      "id": "c2-36",
+      "difficulty": 7,
+      "type": "fill-blank",
+      "prompt": "The appellant ___ the decision on procedural grounds.",
+      "correctAnswer": "challenged",
+      "explanation": "In legal contexts, 'challenge' formally means to question/contest."
+    },
+    {
+      "id": "c2-37",
+      "difficulty": 7,
+      "type": "multiple-choice",
+      "prompt": "___ such a phenomenon been documented in scientific literature.",
+      "options": ["Rarely has", "Rarely have", "Seldom has", "Seldom have"],
+      "correctAnswer": 0,
+      "explanation": "Inversion with negative frequency adverb: 'Rarely has' + singular noun 'phenomenon'."
+    },
+    {
+      "id": "c2-38",
+      "difficulty": 7,
+      "type": "fill-blank",
+      "prompt": "The magistrate ___ the defendant's habeas corpus petition.",
+      "correctAnswer": "granted",
+      "explanation": "'Grant a petition' = approve/formally accept (legal terminology)."
+    },
+    {
+      "id": "c2-39",
+      "difficulty": 7,
+      "type": "multiple-choice",
+      "prompt": "The senator ___ that the committee be convened immediately.",
+      "options": ["moved", "suggested", "requested", "demanded"],
+      "correctAnswer": 0,
+      "explanation": "In parliamentary procedure, 'move' is the formal term for proposing an action (subjunctive follows)."
+    },
+    {
+      "id": "c2-40",
+      "difficulty": 7,
+      "type": "fill-blank",
+      "prompt": "The verdict was ___ by the weight of circumstantial evidence.",
+      "correctAnswer": "predicated",
+      "explanation": "'Predicated on' = based on/founded upon (formal/legal)."
     }
   ]
 }

@@ -171,6 +171,176 @@
       "prompt": "What did you ___ yesterday?",
       "correctAnswer": "do",
       "explanation": "Past simple questions use 'did' + base verb."
+    },
+    {
+      "id": "a1-21",
+      "difficulty": 2,
+      "type": "multiple-choice",
+      "prompt": "I ___ my grandmother next weekend.",
+      "options": ["visit", "visited", "am visiting", "visiting"],
+      "correctAnswer": 2,
+      "explanation": "Present continuous for future arrangements."
+    },
+    {
+      "id": "a1-22",
+      "difficulty": 2,
+      "type": "fill-blank",
+      "prompt": "She ___ tired yesterday because she worked hard.",
+      "correctAnswer": "was",
+      "explanation": "Past tense of 'is' is 'was'."
+    },
+    {
+      "id": "a1-23",
+      "difficulty": 2,
+      "type": "multiple-choice",
+      "prompt": "We ___ to the cinema tomorrow.",
+      "options": ["will go", "go", "went", "going"],
+      "correctAnswer": 0,
+      "explanation": "Future with 'will' + base verb."
+    },
+    {
+      "id": "a1-24",
+      "difficulty": 2,
+      "type": "fill-blank",
+      "prompt": "This book is ___ than that one.",
+      "correctAnswer": "more interesting",
+      "explanation": "Comparative of long adjectives uses 'more'."
+    },
+    {
+      "id": "a1-25",
+      "difficulty": 2,
+      "type": "multiple-choice",
+      "prompt": "I ___ to the doctor tomorrow morning.",
+      "options": ["will go", "am going", "go", "went"],
+      "correctAnswer": 1,
+      "explanation": "'Going to' for planned future actions."
+    },
+    {
+      "id": "a1-26",
+      "difficulty": 2,
+      "type": "fill-blank",
+      "prompt": "She ___ visits her grandmother on Sundays.",
+      "correctAnswer": "sometimes",
+      "explanation": "Adverbs of frequency show how often something happens."
+    },
+    {
+      "id": "a1-27",
+      "difficulty": 2,
+      "type": "multiple-choice",
+      "prompt": "I ___ swim when I was five years old.",
+      "options": ["can", "could", "will", "may"],
+      "correctAnswer": 1,
+      "explanation": "Past ability uses 'could'."
+    },
+    {
+      "id": "a1-28",
+      "difficulty": 2,
+      "type": "fill-blank",
+      "prompt": "___ you play the guitar?",
+      "correctAnswer": "Can",
+      "explanation": "'Can' questions about ability start with the modal."
+    },
+    {
+      "id": "a1-29",
+      "difficulty": 2,
+      "type": "multiple-choice",
+      "prompt": "They ___ at home last night.",
+      "options": ["was", "were", "are", "be"],
+      "correctAnswer": 1,
+      "explanation": "Past tense of 'are' is 'were'."
+    },
+    {
+      "id": "a1-30",
+      "difficulty": 2,
+      "type": "fill-blank",
+      "prompt": "I have ___ apples in the fridge.",
+      "correctAnswer": "some",
+      "explanation": "Use 'some' in positive sentences."
+    },
+    {
+      "id": "a1-31",
+      "difficulty": 2,
+      "type": "multiple-choice",
+      "prompt": "Do you have ___ questions?",
+      "options": ["some", "any", "a", "an"],
+      "correctAnswer": 1,
+      "explanation": "Use 'any' in questions and negatives."
+    },
+    {
+      "id": "a1-32",
+      "difficulty": 2,
+      "type": "fill-blank",
+      "prompt": "What time ___ you get up this morning?",
+      "correctAnswer": "did",
+      "explanation": "Past simple questions use 'did'."
+    },
+    {
+      "id": "a1-33",
+      "difficulty": 2,
+      "type": "multiple-choice",
+      "prompt": "My house is ___ than your house.",
+      "options": ["big", "bigger", "biggest", "more big"],
+      "correctAnswer": 1,
+      "explanation": "Comparative of short adjectives adds '-er'."
+    },
+    {
+      "id": "a1-34",
+      "difficulty": 2,
+      "type": "fill-blank",
+      "prompt": "We don't have ___ milk.",
+      "correctAnswer": "any",
+      "explanation": "Use 'any' in negative sentences with uncountable nouns."
+    },
+    {
+      "id": "a1-35",
+      "difficulty": 2,
+      "type": "multiple-choice",
+      "prompt": "She ___ her homework every evening.",
+      "options": ["do", "does", "is doing", "did"],
+      "correctAnswer": 1,
+      "explanation": "Present simple third person adds 'es'."
+    },
+    {
+      "id": "a1-36",
+      "difficulty": 2,
+      "type": "fill-blank",
+      "prompt": "I ___ breakfast at 7 o'clock tomorrow.",
+      "correctAnswer": "will have",
+      "explanation": "Future with 'will' for predictions or decisions."
+    },
+    {
+      "id": "a1-37",
+      "difficulty": 2,
+      "type": "multiple-choice",
+      "prompt": "Where ___ you go on holiday last year?",
+      "options": ["do", "did", "were", "are"],
+      "correctAnswer": 1,
+      "explanation": "Past simple questions use 'did'."
+    },
+    {
+      "id": "a1-38",
+      "difficulty": 2,
+      "type": "fill-blank",
+      "prompt": "He ___ speak three languages.",
+      "correctAnswer": "can",
+      "explanation": "'Can' expresses ability."
+    },
+    {
+      "id": "a1-39",
+      "difficulty": 2,
+      "type": "multiple-choice",
+      "prompt": "I ___ my friends tonight.",
+      "options": ["meet", "met", "am meeting", "meeting"],
+      "correctAnswer": 2,
+      "explanation": "Present continuous for fixed future arrangements."
+    },
+    {
+      "id": "a1-40",
+      "difficulty": 2,
+      "type": "fill-blank",
+      "prompt": "They ___ happy about the news yesterday.",
+      "correctAnswer": "were",
+      "explanation": "Past tense of 'are' is 'were'."
     }
   ]
 }

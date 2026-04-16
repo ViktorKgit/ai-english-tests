@@ -171,6 +171,177 @@
       "prompt": "The results are ___ with previous studies.",
       "correctAnswer": "consistent",
       "explanation": "'Consistent with' = align with."
+    },
+    {
+      "id": "c1-21",
+      "difficulty": 6,
+      "type": "multiple-choice",
+      "prompt": "Little ___ that this decision would have such far-reaching consequences.",
+      "options": ["I knew", "did I know", "I did know", "knew I"],
+      "correctAnswer": 1,
+      "explanation": "Inversion with negative adverb 'little' requires auxiliary inversion: 'Little did I know'."
+    },
+    {
+      "id": "c1-22",
+      "difficulty": 6,
+      "type": "fill-blank",
+      "prompt": "No sooner ___ the door than the phone rang.",
+      "correctAnswer": "had I closed",
+      "explanation": "Inversion with 'no sooner' requires past perfect: 'No sooner had I closed...'."
+    },
+    {
+      "id": "c1-23",
+      "difficulty": 6,
+      "type": "multiple-choice",
+      "prompt": "Were I to accept this position, I ___ significant changes to the department.",
+      "options": ["would implement", "will implement", "implemented", "had implemented"],
+      "correctAnswer": 0,
+      "explanation": "Inverted conditional: 'Were I to' = 'If I were to', requires would + infinitive."
+    },
+    {
+      "id": "c1-24",
+      "difficulty": 6,
+      "type": "fill-blank",
+      "prompt": "Had I known about the traffic, I ___ earlier.",
+      "correctAnswer": "would have left",
+      "explanation": "Third conditional inverted: 'Had I known' = 'If I had known', requires would have + past participle."
+    },
+    {
+      "id": "c1-25",
+      "difficulty": 6,
+      "type": "multiple-choice",
+      "prompt": "The proposal was rejected, ___ having strong support from several board members.",
+      "options": ["despite", "in spite", "although", "though"],
+      "correctAnswer": 0,
+      "explanation": "'Despite' + gerund phrase; 'in spite of' would require 'of'."
+    },
+    {
+      "id": "c1-26",
+      "difficulty": 6,
+      "type": "fill-blank",
+      "prompt": "She must ___ the news by now; it was all over social media yesterday.",
+      "correctAnswer": "have heard",
+      "explanation": "Modal perfect for logical deduction about past: 'must have heard'."
+    },
+    {
+      "id": "c1-27",
+      "difficulty": 6,
+      "type": "multiple-choice",
+      "prompt": "He can't ___ to the conference; I saw him at the office during those exact hours.",
+      "options": ["have gone", "have been", "go", "be going"],
+      "correctAnswer": 1,
+      "explanation": "Modal perfect for negative deduction: 'can't have been' (present perfect infinitive for state)."
+    },
+    {
+      "id": "c1-28",
+      "difficulty": 6,
+      "type": "fill-blank",
+      "prompt": "The changes are being implemented ___ of the current opposition.",
+      "options": ["regardless", "despite", "irrespective", "notwithstanding"],
+      "correctAnswer": 3,
+      "explanation": "'Notwithstanding' can function as a preposition meaning 'despite'."
+    },
+    {
+      "id": "c1-29",
+      "difficulty": 6,
+      "type": "multiple-choice",
+      "prompt": "Not only ___ the deadline, but he also produced exceptional work.",
+      "options": ["he met", "did he meet", "he did meet", "met he"],
+      "correctAnswer": 1,
+      "explanation": "Inversion with 'not only': auxiliary inversion required."
+    },
+    {
+      "id": "c1-30",
+      "difficulty": 6,
+      "type": "fill-blank",
+      "prompt": "Rarely ___ such a comprehensive analysis of the problem.",
+      "correctAnswer": "have we seen",
+      "explanation": "Inversion with negative adverb 'rarely': present perfect auxiliary inversion."
+    },
+    {
+      "id": "c1-31",
+      "difficulty": 6,
+      "type": "multiple-choice",
+      "prompt": "The investigation concluded that the failure ___ inadequate safety protocols.",
+      "options": ["stemmed from", "came from", "originated from", "resulted because"],
+      "correctAnswer": 0,
+      "explanation": "'Stem from' is formal register indicating origin or cause."
+    },
+    {
+      "id": "c1-32",
+      "difficulty": 6,
+      "type": "fill-blank",
+      "prompt": "Under no circumstances ___ to disclose this information to unauthorized parties.",
+      "correctAnswer": "are you",
+      "explanation": "Inversion with negative phrase: 'Under no circumstances are you...'."
+    },
+    {
+      "id": "c1-33",
+      "difficulty": 6,
+      "type": "multiple-choice",
+      "prompt": "Only after extensive testing ___ the drug approved for public use.",
+      "options": ["was", "it was", "it had been", "had been"],
+      "correctAnswer": 0,
+      "explanation": "Inversion with 'Only after': auxiliary inversion before main verb."
+    },
+    {
+      "id": "c1-34",
+      "difficulty": 6,
+      "type": "fill-blank",
+      "prompt": "I'd rather you ___ that information with anyone else.",
+      "correctAnswer": "didn't share",
+      "explanation": "'Would rather' + past tense for present/future preference about others' actions."
+    },
+    {
+      "id": "c1-35",
+      "difficulty": 6,
+      "type": "multiple-choice",
+      "prompt": "It's high time you ___ taking your responsibilities more seriously.",
+      "options": ["started", "start", "would start", "had started"],
+      "correctAnswer": 0,
+      "explanation": "'It's high time' + past tense for urgent recommendation."
+    },
+    {
+      "id": "c1-36",
+      "difficulty": 6,
+      "type": "fill-blank",
+      "prompt": "But for your intervention, the situation ___ much worse.",
+      "correctAnswer": "would have been",
+      "explanation": "'But for' = 'If it hadn't been for', third conditional."
+    },
+    {
+      "id": "c1-37",
+      "difficulty": 6,
+      "type": "multiple-choice",
+      "prompt": "The committee's recommendation is that the proposal ___ immediately.",
+      "options": ["be implemented", "is implemented", "should implement", "implement"],
+      "correctAnswer": 0,
+      "explanation": "Subjunctive after 'recommendation that': base form 'be implemented'."
+    },
+    {
+      "id": "c1-38",
+      "difficulty": 6,
+      "type": "fill-blank",
+      "prompt": "What ___ the manager's attention was the discrepancy in the quarterly report.",
+      "correctAnswer": "caught",
+      "explanation": "Cleft sentence with 'what': relative clause as subject."
+    },
+    {
+      "id": "c1-39",
+      "difficulty": 6,
+      "type": "multiple-choice",
+      "prompt": "Seldom ___ such passionate debates in our quarterly meetings.",
+      "options": ["we have seen", "have we seen", "we saw", "did we see"],
+      "correctAnswer": 1,
+      "explanation": "Inversion with negative adverb 'seldom': auxiliary inversion."
+    },
+    {
+      "id": "c1-40",
+      "difficulty": 6,
+      "type": "fill-blank",
+      "prompt": "The proposal, ___ support from several key stakeholders, was ultimately withdrawn.",
+      "correctAnswer": "despite",
+      "explanation": "Reduced concessive clause: 'despite' + noun phrase (ellipsis of 'having received')."
     }
   ]
 }

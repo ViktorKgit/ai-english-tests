@@ -172,6 +172,176 @@
       "options": ["What", "Who", "Where", "When"],
       "correctAnswer": 2,
       "explanation": "Use 'Where' for asking about origin/place."
+    },
+    {
+      "id": "a0-21",
+      "difficulty": 1,
+      "type": "multiple-choice",
+      "prompt": "I have two ___.",
+      "options": ["sister", "sisters", "sisteres", "sistser"],
+      "correctAnswer": 1,
+      "explanation": "Add 's' to make plural: sister → sisters."
+    },
+    {
+      "id": "a0-22",
+      "difficulty": 1,
+      "type": "fill-blank",
+      "prompt": "This is my mother. ___ is a doctor.",
+      "correctAnswer": "She",
+      "explanation": "Use 'She' for female people."
+    },
+    {
+      "id": "a0-23",
+      "difficulty": 1,
+      "type": "multiple-choice",
+      "prompt": "___ is your favourite colour?",
+      "options": ["What", "Who", "Where", "When"],
+      "correctAnswer": 0,
+      "explanation": "Use 'What' to ask about things/preferences."
+    },
+    {
+      "id": "a0-24",
+      "difficulty": 1,
+      "type": "fill-blank",
+      "prompt": "I have got ___ orange.",
+      "correctAnswer": "an",
+      "explanation": "Use 'an' before words starting with a vowel sound."
+    },
+    {
+      "id": "a0-25",
+      "difficulty": 1,
+      "type": "multiple-choice",
+      "prompt": "The sky is ___.",
+      "options": ["blue", "red", "green", "yellow"],
+      "correctAnswer": 0,
+      "explanation": "The sky is blue."
+    },
+    {
+      "id": "a0-26",
+      "difficulty": 1,
+      "type": "fill-blank",
+      "prompt": "Look at ___ birds!",
+      "correctAnswer": "those",
+      "explanation": "Use 'those' for things far away (plural)."
+    },
+    {
+      "id": "a0-27",
+      "difficulty": 1,
+      "type": "multiple-choice",
+      "prompt": "___ old are you?",
+      "options": ["What", "Who", "How", "Where"],
+      "correctAnswer": 2,
+      "explanation": "Use 'How' to ask about age."
+    },
+    {
+      "id": "a0-28",
+      "difficulty": 1,
+      "type": "fill-blank",
+      "prompt": "My brother ___ got a car.",
+      "correctAnswer": "has",
+      "explanation": "Use 'has' with he/she/it in 'have got'."
+    },
+    {
+      "id": "a0-29",
+      "difficulty": 1,
+      "type": "multiple-choice",
+      "prompt": "There ___ three books on the desk.",
+      "options": ["is", "are", "am", "be"],
+      "correctAnswer": 1,
+      "explanation": "Use 'are' with plural subjects."
+    },
+    {
+      "id": "a0-30",
+      "difficulty": 1,
+      "type": "fill-blank",
+      "prompt": "I like ___ pizza.",
+      "correctAnswer": "Ø",
+      "explanation": "No article needed with general plural/uncountable nouns. (You can also accept 'some' or 'the')"
+    },
+    {
+      "id": "a0-31",
+      "difficulty": 1,
+      "type": "multiple-choice",
+      "prompt": "She is ___ sister.",
+      "options": ["my", "I", "me", "mine"],
+      "correctAnswer": 0,
+      "explanation": "Use possessive adjective 'my' before nouns."
+    },
+    {
+      "id": "a0-32",
+      "difficulty": 1,
+      "type": "fill-blank",
+      "prompt": "We ___ English every day.",
+      "correctAnswer": "study",
+      "explanation": "Present simple uses base form for 'we'."
+    },
+    {
+      "id": "a0-33",
+      "difficulty": 1,
+      "type": "multiple-choice",
+      "prompt": "___ is that man?",
+      "options": ["What", "Who", "Where", "How"],
+      "correctAnswer": 1,
+      "explanation": "Use 'Who' to ask about people."
+    },
+    {
+      "id": "a0-34",
+      "difficulty": 1,
+      "type": "fill-blank",
+      "prompt": "This is ___ book.",
+      "correctAnswer": "a",
+      "explanation": "Use 'a' before consonant sounds."
+    },
+    {
+      "id": "a0-35",
+      "difficulty": 1,
+      "type": "multiple-choice",
+      "prompt": "My father ___ in a hospital.",
+      "options": ["work", "works", "working", "is work"],
+      "correctAnswer": 1,
+      "explanation": "Third person singular adds 's' in present simple."
+    },
+    {
+      "id": "a0-36",
+      "difficulty": 1,
+      "type": "fill-blank",
+      "prompt": "___ you happy?",
+      "correctAnswer": "Are",
+      "explanation": "Yes/No questions with 'you' start with 'Are'."
+    },
+    {
+      "id": "a0-37",
+      "difficulty": 1,
+      "type": "multiple-choice",
+      "prompt": "I have ___ friends at school.",
+      "options": ["much", "many", "a", "an"],
+      "correctAnswer": 1,
+      "explanation": "Use 'many' with countable nouns like friends."
+    },
+    {
+      "id": "a0-38",
+      "difficulty": 1,
+      "type": "fill-blank",
+      "prompt": "These are ___ children.",
+      "correctAnswer": "our",
+      "explanation": "Use possessive adjective 'our' before nouns."
+    },
+    {
+      "id": "a0-39",
+      "difficulty": 1,
+      "type": "multiple-choice",
+      "prompt": "The sun is ___ today.",
+      "options": ["shine", "shining", "shines", "shining"],
+      "correctAnswer": 1,
+      "explanation": "Present continuous uses 'is + -ing'."
+    },
+    {
+      "id": "a0-40",
+      "difficulty": 1,
+      "type": "fill-blank",
+      "prompt": "What is it? It is ___ egg.",
+      "correctAnswer": "an",
+      "explanation": "Use 'an' before words starting with a vowel sound."
     }
   ]
 }

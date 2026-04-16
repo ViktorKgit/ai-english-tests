@@ -171,6 +171,176 @@
       "prompt": "My computer needs ___.",
       "correctAnswer": "repairing",
       "explanation": "'Need' + -ing (passive meaning)."
+    },
+    {
+      "id": "a2-21",
+      "difficulty": 3,
+      "type": "multiple-choice",
+      "prompt": "I ___ to Paris twice in my life.",
+      "options": ["have been", "has been", "am", "was"],
+      "correctAnswer": 0,
+      "explanation": "Present perfect for experiences: 'have/has + past participle'."
+    },
+    {
+      "id": "a2-22",
+      "difficulty": 3,
+      "type": "fill-blank",
+      "prompt": "She ___ in London for 10 years.",
+      "correctAnswer": "has lived",
+      "explanation": "Present perfect for actions continuing from past to present."
+    },
+    {
+      "id": "a2-23",
+      "difficulty": 3,
+      "type": "multiple-choice",
+      "prompt": "When I was young, I ___ play outside every day.",
+      "options": ["used to", "use to", "am used to", "was use to"],
+      "correctAnswer": 0,
+      "explanation": "'Used to + infinitive' for past habits that no longer happen."
+    },
+    {
+      "id": "a2-24",
+      "difficulty": 3,
+      "type": "fill-blank",
+      "prompt": "I want ___ a new car next year.",
+      "correctAnswer": "to buy",
+      "explanation": "'Want' is followed by infinitive (to + verb)."
+    },
+    {
+      "id": "a2-25",
+      "difficulty": 3,
+      "type": "multiple-choice",
+      "prompt": "You ___ wear a seatbelt in the car.",
+      "options": ["must", "can", "might", "could"],
+      "correctAnswer": 0,
+      "explanation": "'Must' for obligation and rules."
+    },
+    {
+      "id": "a2-26",
+      "difficulty": 3,
+      "type": "fill-blank",
+      "prompt": "We ___ leave now if we want to catch the train.",
+      "correctAnswer": "have to",
+      "explanation": "'Have to' for external obligation."
+    },
+    {
+      "id": "a2-27",
+      "difficulty": 3,
+      "type": "multiple-choice",
+      "prompt": "This book is ___ than that one.",
+      "options": ["more exciting", "exciting", "most exciting", "excitinger"],
+      "correctAnswer": 0,
+      "explanation": "Comparative form: 'more + adjective' for longer words."
+    },
+    {
+      "id": "a2-28",
+      "difficulty": 3,
+      "type": "fill-blank",
+      "prompt": "She is ___ student in the class.",
+      "correctAnswer": "the best",
+      "explanation": "Superlative: 'the + best' (irregular form)."
+    },
+    {
+      "id": "a2-29",
+      "difficulty": 3,
+      "type": "multiple-choice",
+      "prompt": "Look at those clouds! It ___ rain.",
+      "options": ["is going to", "will", "shall", "might to"],
+      "correctAnswer": 0,
+      "explanation": "'Going to' for predictions based on present evidence."
+    },
+    {
+      "id": "a2-30",
+      "difficulty": 3,
+      "type": "fill-blank",
+      "prompt": "I think I ___ stay home tonight.",
+      "correctAnswer": "will",
+      "explanation": "'Will' for instant decisions or predictions."
+    },
+    {
+      "id": "a2-31",
+      "difficulty": 3,
+      "type": "multiple-choice",
+      "prompt": "What time ___ the meeting start?",
+      "options": ["does", "is", "do", "are"],
+      "correctAnswer": 0,
+      "explanation": "Present simple for schedules and timetables."
+    },
+    {
+      "id": "a2-32",
+      "difficulty": 3,
+      "type": "fill-blank",
+      "prompt": "She ___ very hard at the moment.",
+      "correctAnswer": "is working",
+      "explanation": "Present continuous for actions happening now."
+    },
+    {
+      "id": "a2-33",
+      "difficulty": 3,
+      "type": "multiple-choice",
+      "prompt": "I have been studying English ___ three months.",
+      "options": ["for", "since", "from", "during"],
+      "correctAnswer": 0,
+      "explanation": "Use 'for' with a duration of time."
+    },
+    {
+      "id": "a2-34",
+      "difficulty": 3,
+      "type": "fill-blank",
+      "prompt": "They have been friends ___ childhood.",
+      "correctAnswer": "since",
+      "explanation": "Use 'since' with a starting point in time."
+    },
+    {
+      "id": "a2-35",
+      "difficulty": 3,
+      "type": "multiple-choice",
+      "prompt": "I ___ my homework yet.",
+      "options": ["haven't finished", "didn't finish", "don't finish", "not finish"],
+      "correctAnswer": 0,
+      "explanation": "Present perfect with 'yet' for unfinished actions."
+    },
+    {
+      "id": "a2-36",
+      "difficulty": 3,
+      "type": "fill-blank",
+      "prompt": "She has ___ visited Italy.",
+      "correctAnswer": "already",
+      "explanation": "Present perfect with 'already' for completed actions."
+    },
+    {
+      "id": "a2-37",
+      "difficulty": 3,
+      "type": "multiple-choice",
+      "prompt": "I ___ tired lately.",
+      "options": ["have been", "has been", "am being", "was"],
+      "correctAnswer": 0,
+      "explanation": "Present perfect with 'lately' for recent continuing situations."
+    },
+    {
+      "id": "a2-38",
+      "difficulty": 3,
+      "type": "fill-blank",
+      "prompt": "We ___ for two hours when the phone rang.",
+      "correctAnswer": "had been waiting",
+      "explanation": "Past perfect continuous for an action that was ongoing before another past action."
+    },
+    {
+      "id": "a2-39",
+      "difficulty": 3,
+      "type": "multiple-choice",
+      "prompt": "I can't afford ___ that car.",
+      "options": ["to buy", "buying", "buy", "bought"],
+      "correctAnswer": 0,
+      "explanation": "'Afford' is followed by infinitive (to + verb)."
+    },
+    {
+      "id": "a2-40",
+      "difficulty": 3,
+      "type": "fill-blank",
+      "prompt": "My father made me ___ my room.",
+      "correctAnswer": "clean",
+      "explanation": "'Make' is followed by object + base verb (no 'to')."
     }
   ]
 }

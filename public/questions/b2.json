@@ -171,6 +171,176 @@
       "prompt": "We are committed ___ the highest standards.",
       "correctAnswer": "to maintaining",
       "explanation": "'Committed to + gerund'."
+    },
+    {
+      "id": "b2-21",
+      "difficulty": 5,
+      "type": "multiple-choice",
+      "prompt": "She ___ have studied harder for the exam.",
+      "options": ["should", "must", "would", "could"],
+      "correctAnswer": 0,
+      "explanation": "'Should have' expresses past criticism or regret about something that didn't happen."
+    },
+    {
+      "id": "b2-22",
+      "difficulty": 5,
+      "type": "fill-blank",
+      "prompt": "It was John who ___ the mistake, not anyone else.",
+      "correctAnswer": "made",
+      "explanation": "Cleft sentence: 'It was [subject] who [verb]' for emphasis."
+    },
+    {
+      "id": "b2-23",
+      "difficulty": 5,
+      "type": "multiple-choice",
+      "prompt": "The man ___ car was stolen called the police.",
+      "options": ["who", "which", "whose", "that"],
+      "correctAnswer": 2,
+      "explanation": "'Whose' shows possession in relative clauses."
+    },
+    {
+      "id": "b2-24",
+      "difficulty": 5,
+      "type": "fill-blank",
+      "prompt": "He said he ___ visit us the following week.",
+      "correctAnswer": "would",
+      "explanation": "Future in the past: 'would' for future actions from a past perspective."
+    },
+    {
+      "id": "b2-25",
+      "difficulty": 5,
+      "type": "multiple-choice",
+      "prompt": "The robbery is thought ___ by an insider.",
+      "options": ["to have been committed", "to be committed", "to commit", "being committed"],
+      "correctAnswer": 0,
+      "explanation": "Passive with reporting verb: 'is thought + perfect infinitive' for past action."
+    },
+    {
+      "id": "b2-26",
+      "difficulty": 5,
+      "type": "fill-blank",
+      "prompt": "___ worked harder, I would have passed the exam.",
+      "correctAnswer": "Had I",
+      "explanation": "Inverted conditional: 'Had I' instead of 'If I had'."
+    },
+    {
+      "id": "b2-27",
+      "difficulty": 5,
+      "type": "multiple-choice",
+      "prompt": "Not only ___ late, but he also forgot the documents.",
+      "options": ["he arrived", "did he arrive", "arrived he", "he did arrive"],
+      "correctAnswer": 1,
+      "explanation": "'Not only' triggers inversion with auxiliary before subject."
+    },
+    {
+      "id": "b2-28",
+      "difficulty": 5,
+      "type": "fill-blank",
+      "prompt": "Having finished the report, she ___ home.",
+      "correctAnswer": "went",
+      "explanation": "Participle clause showing completed action before main clause."
+    },
+    {
+      "id": "b2-29",
+      "difficulty": 5,
+      "type": "multiple-choice",
+      "prompt": "You ___ have bought tickets; they were free.",
+      "options": ["mustn't", "needn't", "shouldn't", "wouldn't"],
+      "correctAnswer": 1,
+      "explanation": "'Needn't have' means you did something unnecessary."
+    },
+    {
+      "id": "b2-30",
+      "difficulty": 5,
+      "type": "fill-blank",
+      "prompt": "What I need is a long holiday, not more work.",
+      "correctAnswer": "more work",
+      "explanation": "Cleft sentence: 'What I need is X' for emphasis."
+    },
+    {
+      "id": "b2-31",
+      "difficulty": 5,
+      "type": "multiple-choice",
+      "prompt": "They denied ___ the confidential data.",
+      "options": ["to leak", "leaking", "having leaked", "leak"],
+      "correctAnswer": 2,
+      "explanation": "'Deny + perfect gerund' for action before the time of denying."
+    },
+    {
+      "id": "b2-32",
+      "difficulty": 5,
+      "type": "fill-blank",
+      "prompt": "The house, ___ was built in 1920, needs renovation.",
+      "correctAnswer": "which",
+      "explanation": "Non-defining relative clause with 'which'."
+    },
+    {
+      "id": "b2-33",
+      "difficulty": 5,
+      "type": "multiple-choice",
+      "prompt": "Rarely ___ such a beautiful sunset.",
+      "options": ["I have seen", "have I seen", "I saw", "did I see"],
+      "correctAnswer": 1,
+      "explanation": "Negative inversion with 'Rarely'."
+    },
+    {
+      "id": "b2-34",
+      "difficulty": 5,
+      "type": "fill-blank",
+      "prompt": "I remember ___ to the park as a child.",
+      "correctAnswer": "being taken",
+      "explanation": "Passive gerund after 'remember' for past memory."
+    },
+    {
+      "id": "b2-35",
+      "difficulty": 5,
+      "type": "multiple-choice",
+      "prompt": "If you ___ me, I would have helped you.",
+      "options": ["asked", "had asked", "would ask", "were asking"],
+      "correctAnswer": 1,
+      "explanation": "Third conditional: past perfect in if-clause."
+    },
+    {
+      "id": "b2-36",
+      "difficulty": 5,
+      "type": "fill-blank",
+      "prompt": "We objected ___ treated so rudely.",
+      "correctAnswer": "to being",
+      "explanation": "'Object to + being + past participle' (passive gerund)."
+    },
+    {
+      "id": "b2-37",
+      "difficulty": 5,
+      "type": "multiple-choice",
+      "prompt": "Seldom ___ such dedication from employees.",
+      "options": ["we see", "do we see", "we saw", "did we saw"],
+      "correctAnswer": 1,
+      "explanation": "Negative inversion with 'Seldom'."
+    },
+    {
+      "id": "b2-38",
+      "difficulty": 5,
+      "type": "fill-blank",
+      "prompt": "___ accept their offer, I would have regretted it.",
+      "correctAnswer": "Had I",
+      "explanation": "Inverted third conditional: 'Had I' instead of 'If I had'."
+    },
+    {
+      "id": "b2-39",
+      "difficulty": 5,
+      "type": "multiple-choice",
+      "prompt": "The project is believed ___ over budget.",
+      "options": ["to have gone", "to go", "going", "to be going"],
+      "correctAnswer": 0,
+      "explanation": "Passive reporting verb with perfect infinitive for past result."
+    },
+    {
+      "id": "b2-40",
+      "difficulty": 5,
+      "type": "fill-blank",
+      "prompt": "It was in Paris that they first ___.",
+      "correctAnswer": "met",
+      "explanation": "Cleft sentence emphasizing place with 'It was...that...'"
     }
   ]
 }

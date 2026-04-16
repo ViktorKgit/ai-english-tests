@@ -172,6 +172,176 @@
       "prompt": "Unless you ___ harder, you won't pass.",
       "correctAnswer": "study",
       "explanation": "'Unless' + present tense for future condition."
+    },
+    {
+      "id": "b1-21",
+      "difficulty": 4,
+      "type": "multiple-choice",
+      "prompt": "She said that she ___ to London the following week.",
+      "options": ["will go", "would go", "goes", "went"],
+      "correctAnswer": 1,
+      "explanation": "Reported speech: 'will' changes to 'would'."
+    },
+    {
+      "id": "b1-22",
+      "difficulty": 4,
+      "type": "fill-blank",
+      "prompt": "I ___ for three hours when you called.",
+      "correctAnswer": "had been waiting",
+      "explanation": "Past perfect continuous for action continuing up to a past moment."
+    },
+    {
+      "id": "b1-23",
+      "difficulty": 4,
+      "type": "multiple-choice",
+      "prompt": "You ___ have called me before arriving.",
+      "options": ["should", "would", "could", "might"],
+      "correctAnswer": 0,
+      "explanation": "'Should have' expresses past criticism or advice."
+    },
+    {
+      "id": "b1-24",
+      "difficulty": 4,
+      "type": "fill-blank",
+      "prompt": "The letter ___ yesterday.",
+      "correctAnswer": "was sent",
+      "explanation": "Past passive: 'was + past participle'."
+    },
+    {
+      "id": "b1-25",
+      "difficulty": 4,
+      "type": "multiple-choice",
+      "prompt": "Never ___ such a beautiful sunset.",
+      "options": ["I have seen", "have I seen", "I saw", "did I see"],
+      "correctAnswer": 1,
+      "explanation": "Inversion after negative adverb at sentence start."
+    },
+    {
+      "id": "b1-26",
+      "difficulty": 4,
+      "type": "fill-blank",
+      "prompt": "They denied ___ the mistake.",
+      "correctAnswer": "making",
+      "explanation": "'Deny + gerund' pattern."
+    },
+    {
+      "id": "b1-27",
+      "difficulty": 4,
+      "type": "multiple-choice",
+      "prompt": "The man ___ car was stolen called the police.",
+      "options": ["who", "which", "whose", "that"],
+      "correctAnswer": 2,
+      "explanation": "'Whose' indicates possession in relative clauses."
+    },
+    {
+      "id": "b1-28",
+      "difficulty": 4,
+      "type": "fill-blank",
+      "prompt": "She looks forward ___ you again.",
+      "correctAnswer": "to seeing",
+      "explanation": "'Look forward to + gerund'."
+    },
+    {
+      "id": "b1-29",
+      "difficulty": 4,
+      "type": "multiple-choice",
+      "prompt": "___ you be available for a meeting tomorrow?",
+      "options": ["May", "Shall", "Would", "Should"],
+      "correctAnswer": 2,
+      "explanation": "'Would' is polite for requests."
+    },
+    {
+      "id": "b1-30",
+      "difficulty": 4,
+      "type": "fill-blank",
+      "prompt": "The building ___ by the end of next year.",
+      "correctAnswer": "will have been completed",
+      "explanation": "Future perfect passive: 'will have been + past participle'."
+    },
+    {
+      "id": "b1-31",
+      "difficulty": 4,
+      "type": "multiple-choice",
+      "prompt": "You haven't finished yet, ___?",
+      "options": ["have you", "haven't you", "do you", "don't you"],
+      "correctAnswer": 0,
+      "explanation": "Question tag: negative after positive statement."
+    },
+    {
+      "id": "b1-32",
+      "difficulty": 4,
+      "type": "fill-blank",
+      "prompt": "I regret ___ that information to him.",
+      "correctAnswer": "giving",
+      "explanation": "'Regret + gerund' for past actions."
+    },
+    {
+      "id": "b1-33",
+      "difficulty": 4,
+      "type": "multiple-choice",
+      "prompt": "Only after the meeting ___ about the changes.",
+      "options": ["we learned", "did we learn", "learned we", "we did learn"],
+      "correctAnswer": 1,
+      "explanation": "Inversion after 'Only + prepositional phrase'."
+    },
+    {
+      "id": "b1-34",
+      "difficulty": 4,
+      "type": "fill-blank",
+      "prompt": "She insisted ___ the bill.",
+      "correctAnswer": "on paying",
+      "explanation": "'Insist on + gerund' pattern."
+    },
+    {
+      "id": "b1-35",
+      "difficulty": 4,
+      "type": "multiple-choice",
+      "prompt": "The children ___ to the zoo by their teacher.",
+      "options": ["were taken", "took", "are taken", "take"],
+      "correctAnswer": 0,
+      "explanation": "Past passive: 'were + past participle'."
+    },
+    {
+      "id": "b1-36",
+      "difficulty": 4,
+      "type": "fill-blank",
+      "prompt": "If she hadn't helped me, I ___ the exam.",
+      "correctAnswer": "wouldn't have passed",
+      "explanation": "Third conditional: 'wouldn't have + past participle'."
+    },
+    {
+      "id": "b1-37",
+      "difficulty": 4,
+      "type": "multiple-choice",
+      "prompt": "The hotel ___ we stayed was very comfortable.",
+      "options": ["which", "that", "where", "when"],
+      "correctAnswer": 2,
+      "explanation": "'Where' for place in relative clauses."
+    },
+    {
+      "id": "b1-38",
+      "difficulty": 4,
+      "type": "fill-blank",
+      "prompt": "They are used ___ early every morning.",
+      "correctAnswer": "to getting up",
+      "explanation": "'Be used to + gerund' for accustomed actions."
+    },
+    {
+      "id": "b1-39",
+      "difficulty": 4,
+      "type": "multiple-choice",
+      "prompt": "She ___ have been more careful with the documents.",
+      "options": ["should", "would", "could", "might"],
+      "correctAnswer": 0,
+      "explanation": "'Should have' for past criticism."
+    },
+    {
+      "id": "b1-40",
+      "difficulty": 4,
+      "type": "fill-blank",
+      "prompt": "By next month, I ___ this book.",
+      "correctAnswer": "will have finished",
+      "explanation": "Future perfect for action completed before future time."
     }
   ]
 }
