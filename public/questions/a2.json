@@ -32,18 +32,18 @@
       "id": "a2-4",
       "difficulty": 3,
       "type": "fill-blank",
-      "prompt": "If I ___ rich, I would travel the world.",
-      "correctAnswer": "were",
-      "explanation": "Second conditional uses 'were' for all subjects."
+      "prompt": "If it ___ tomorrow, we will stay at home.",
+      "correctAnswer": "rains",
+      "explanation": "First conditional: if + present simple, will + verb."
     },
     {
       "id": "a2-5",
       "difficulty": 3,
       "type": "multiple-choice",
-      "prompt": "By next year, I ___ my degree.",
-      "options": ["will finish", "will have finished", "finish", "have finished"],
+      "prompt": "I ___ my grandmother tomorrow.",
+      "options": ["visit", "am visiting", "visiting", "visited"],
       "correctAnswer": 1,
-      "explanation": "Future perfect for action completed before a future time."
+      "explanation": "Present continuous tense can be used for future arrangements."
     },
     {
       "id": "a2-6",
@@ -144,8 +144,8 @@
       "type": "multiple-choice",
       "prompt": "I'm looking forward ___ your reply.",
       "options": ["to receive", "receiving", "receive", "to receiving"],
-      "correctAnswer": 0,
-      "explanation": "'Look forward to' + object (not -ing)."
+      "correctAnswer": 3,
+      "explanation": "'Look forward to' is always followed by the gerund (-ing form). The 'to' is a preposition, not part of the infinitive."
     },
     {
       "id": "a2-18",
