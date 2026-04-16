@@ -49,16 +49,6 @@ export function LevelTest() {
             </Button>
           </div>
         </div>
-          <Button
-            onClick={restart}
-            variant="outline"
-            size="sm"
-            className="gap-2"
-          >
-            <Home className="h-4 w-4" />
-            Exit Test
-          </Button>
-        </div>
 
         <ProgressBar questions={questions} currentIndex={currentQuestionIndex} />
 

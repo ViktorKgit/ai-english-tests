@@ -6,7 +6,7 @@ import { ProgressBar } from './ProgressBar'
 import { NavigationButtons } from './NavigationButtons'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
-import { Home, Check, Clock } from 'lucide-react'
+import { Home, Check } from 'lucide-react'
 import { ThemeToggle } from '@/components/ThemeToggle'
 import { Timer } from './Timer'
 import type { CEFRLevel } from './types'
@@ -40,13 +40,11 @@ export function AdaptivePlacementTest() {
 
   const currentQuestion = questions[currentQuestionIndex]
   const isLevelComplete = currentQuestionIndex === questions.length - 1
-  const allQuestionsAnswered = isLevelComplete && questions.every(q => answers.has(q.id))
 
   const isLastLevel = currentLevel === 'C2'
   const hasNextLevel = LEVEL_ORDER.indexOf(currentLevel!) < LEVEL_ORDER.length - 1
 
   const handleFinishLevel = () => {
-    // Check level passed only when user explicitly finishes
     const passed = checkLevelPassed()
     return passed
   }
@@ -76,7 +74,7 @@ export function AdaptivePlacementTest() {
             {timeRemaining !== undefined && timeRemaining > 0 && (
               <Timer
                 timeRemaining={timeRemaining}
-                onTimeUp={() => {/* Time's up - could auto-advance or show warning */}}
+                onTimeUp={() => {/* Time's up */}}
               />
             )}
             <ThemeToggle />
@@ -90,16 +88,6 @@ export function AdaptivePlacementTest() {
               Exit
             </Button>
           </div>
-        </div>
-          <Button
-            onClick={restart}
-            variant="outline"
-            size="sm"
-            className="gap-2"
-          >
-            <Home className="h-4 w-4" />
-            Exit Test
-          </Button>
         </div>
 
         <ProgressBar questions={questions} currentIndex={currentQuestionIndex} />
