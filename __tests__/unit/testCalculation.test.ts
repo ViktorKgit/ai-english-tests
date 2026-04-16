@@ -51,7 +51,8 @@ describe('determinePlacementLevel', () => {
     const result = determinePlacementLevel([
       { questionId: '1', correct: true, difficulty: 4 },
       { questionId: '2', correct: true, difficulty: 4 },
-      { questionId: '3', correct: false, difficulty: 4 },
+      { questionId: '3', correct: true, difficulty: 4 },
+      { questionId: '4', correct: false, difficulty: 4 },
     ])
 
     expect(result).toBe('B1')

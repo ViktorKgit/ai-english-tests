@@ -67,9 +67,9 @@ export function determinePlacementLevel(results: QuestionResult[]): CEFRLevel {
     byDifficulty.set(result.difficulty, current)
   }
 
-  // Find highest level with >=65% accuracy
+  // Find highest level with >=70% accuracy
   for (const [difficulty, stats] of Array.from(byDifficulty.entries()).sort((a, b) => b[0] - a[0])) {
-    if (stats.total >= 3 && (stats.correct / stats.total) >= 0.65) {
+    if (stats.total >= 3 && (stats.correct / stats.total) >= 0.7) {
       return difficultyToLevel(difficulty)
     }
   }
