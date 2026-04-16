@@ -6,27 +6,171 @@
       "id": "a2-1",
       "difficulty": 3,
       "type": "multiple-choice",
-      "prompt": "I used to ___ tennis every weekend.",
-      "options": ["play", "playing", "played", "plays"],
-      "correctAnswer": 0,
-      "explanation": "'Used to' is followed by the infinitive without 'to'."
+      "prompt": "I ___ to the store yesterday.",
+      "options": ["go", "went", "gone", "going"],
+      "correctAnswer": 1,
+      "explanation": "Past tense of 'go' is 'went'."
     },
     {
       "id": "a2-2",
       "difficulty": 3,
       "type": "fill-blank",
-      "prompt": "If it rains, we ___ stay at home.",
-      "correctAnswer": "will",
-      "explanation": "First conditional: if + present, will + infinitive."
+      "prompt": "She has been working here ___ 2020.",
+      "correctAnswer": "since",
+      "explanation": "Use 'since' with a specific point in time."
     },
     {
       "id": "a2-3",
       "difficulty": 3,
       "type": "multiple-choice",
-      "prompt": "You ___ wear a uniform at work.",
-      "options": ["must", "should", "can", "may"],
+      "prompt": "I look forward to ___ from you.",
+      "options": ["hear", "hearing", "heard", "hears"],
+      "correctAnswer": 1,
+      "explanation": "'Look forward to' is followed by a gerund (-ing)."
+    },
+    {
+      "id": "a2-4",
+      "difficulty": 3,
+      "type": "fill-blank",
+      "prompt": "If I ___ rich, I would travel the world.",
+      "correctAnswer": "were",
+      "explanation": "Second conditional uses 'were' for all subjects."
+    },
+    {
+      "id": "a2-5",
+      "difficulty": 3,
+      "type": "multiple-choice",
+      "prompt": "By next year, I ___ my degree.",
+      "options": ["will finish", "will have finished", "finish", "have finished"],
+      "correctAnswer": 1,
+      "explanation": "Future perfect for action completed before a future time."
+    },
+    {
+      "id": "a2-6",
+      "difficulty": 3,
+      "type": "fill-blank",
+      "prompt": "I wish I ___ speak French.",
+      "correctAnswer": "could",
+      "explanation": "'Wish + could' for imaginary ability."
+    },
+    {
+      "id": "a2-7",
+      "difficulty": 3,
+      "type": "multiple-choice",
+      "prompt": "The movie was ___ than I expected.",
+      "options": ["more interesting", "interesting", "most interesting", "interestinger"],
       "correctAnswer": 0,
-      "explanation": "'Must' expresses obligation."
+      "explanation": "Comparative: 'more + adjective' for longer words."
+    },
+    {
+      "id": "a2-8",
+      "difficulty": 3,
+      "type": "fill-blank",
+      "prompt": "You ___ have told me earlier!",
+      "correctAnswer": "should",
+      "explanation": "'Should have' for past criticism/regret."
+    },
+    {
+      "id": "a2-9",
+      "difficulty": 3,
+      "type": "multiple-choice",
+      "prompt": "I'm used to ___ up early.",
+      "options": ["get", "getting", "got", "gotten"],
+      "correctAnswer": 1,
+      "explanation": "'Used to + -ing' for accustomed habits."
+    },
+    {
+      "id": "a2-10",
+      "difficulty": 3,
+      "type": "fill-blank",
+      "prompt": "She suggested ___ to the cinema.",
+      "correctAnswer": "going",
+      "explanation": "'Suggest' is followed by gerund (-ing)."
+    },
+    {
+      "id": "a2-11",
+      "difficulty": 3,
+      "type": "multiple-choice",
+      "prompt": "I have lived here ___ five years.",
+      "options": ["since", "for", "from", "during"],
+      "correctAnswer": 1,
+      "explanation": "Use 'for' with a duration of time."
+    },
+    {
+      "id": "a2-12",
+      "difficulty": 3,
+      "type": "fill-blank",
+      "prompt": "If it rains, we ___ inside.",
+      "correctAnswer": "will stay",
+      "explanation": "First conditional: 'if + present, will + verb'."
+    },
+    {
+      "id": "a2-13",
+      "difficulty": 3,
+      "type": "multiple-choice",
+      "prompt": "This is the ___ restaurant in the city.",
+      "options": ["good", "better", "best", "more good"],
+      "correctAnswer": 2,
+      "explanation": "Superlative: 'the + -est' for short adjectives."
+    },
+    {
+      "id": "a2-14",
+      "difficulty": 3,
+      "type": "fill-blank",
+      "prompt": "I enjoy ___ books in my free time.",
+      "correctAnswer": "reading",
+      "explanation": "'Enjoy' is followed by gerund (-ing)."
+    },
+    {
+      "id": "a2-15",
+      "difficulty": 3,
+      "type": "multiple-choice",
+      "prompt": "She denied ___ the cake.",
+      "options": ["eat", "to eat", "eating", "ate"],
+      "correctAnswer": 2,
+      "explanation": "'Deny' is followed by gerund (-ing)."
+    },
+    {
+      "id": "a2-16",
+      "difficulty": 3,
+      "type": "fill-blank",
+      "prompt": "You should ___ to your doctor.",
+      "correctAnswer": "talk",
+      "explanation": "'Should' is followed by base verb."
+    },
+    {
+      "id": "a2-17",
+      "difficulty": 3,
+      "type": "multiple-choice",
+      "prompt": "I'm looking forward ___ your reply.",
+      "options": ["to receive", "receiving", "receive", "to receiving"],
+      "correctAnswer": 0,
+      "explanation": "'Look forward to' + object (not -ing)."
+    },
+    {
+      "id": "a2-18",
+      "difficulty": 3,
+      "type": "fill-blank",
+      "prompt": "They let me ___ the car.",
+      "correctAnswer": "drive",
+      "explanation": "'Let' is followed by object + base verb (no 'to')."
+    },
+    {
+      "id": "a2-19",
+      "difficulty": 3,
+      "type": "multiple-choice",
+      "prompt": "I regret ___ that to you.",
+      "options": ["to say", "saying", "say", "said"],
+      "correctAnswer": 1,
+      "explanation": "'Regret' + gerund for something you did."
+    },
+    {
+      "id": "a2-20",
+      "difficulty": 3,
+      "type": "fill-blank",
+      "prompt": "My computer needs ___.",
+      "correctAnswer": "repairing",
+      "explanation": "'Need' + -ing (passive meaning)."
     }
   ]
 }
