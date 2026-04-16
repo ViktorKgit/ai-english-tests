@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { calculateLevelTestScore, determinePlacementLevel, getRandomQuestions } from '@/lib/utils/testCalculation'
+import { calculateLevelTestScore, determinePlacementLevel, getRandomQuestions, checkLevelPassThreshold } from '@/lib/utils/testCalculation'
 import type { Question, Answer } from '@/components/test/types'
 
 describe('calculateLevelTestScore', () => {
@@ -86,5 +86,52 @@ describe('getRandomQuestions', () => {
     const result = getRandomQuestions(questions, 5)
 
     expect(result).toHaveLength(2)
+  })
+})
+
+describe('checkLevelPassThreshold', () => {
+  it('should return true for 70% (7 of 10)', () => {
+    const questions = Array(10).fill(null).map((_, i) => ({
+      id: `q${i}`,
+      difficulty: 1,
+      type: 'multiple-choice' as const,
+      prompt: 'Test?',
+      options: ['A', 'B'],
+      correctAnswer: 0
+    }))
+    const answers = new Map(
+      questions.slice(0, 7).map(q => [q.id, { type: 'multiple-choice' as const, value: 0 }])
+    )
+
+    const result = checkLevelPassThreshold(questions, answers)
+
+    expect(result).toBe(true)
+  })
+
+  it('should return false for 60% (6 of 10)', () => {
+    const questions = Array(10).fill(null).map((_, i) => ({
+      id: `q${i}`,
+      difficulty: 1,
+      type: 'multiple-choice' as const,
+      prompt: 'Test?',
+      options: ['A', 'B'],
+      correctAnswer: 0
+    }))
+    const answers = new Map(
+      questions.slice(0, 6).map(q => [q.id, { type: 'multiple-choice' as const, value: 0 }])
+    )
+
+    const result = checkLevelPassThreshold(questions, answers)
+
+    expect(result).toBe(false)
+  })
+
+  it('should handle empty answers', () => {
+    const questions = [{ id: 'q1', difficulty: 1, type: 'multiple-choice' as const, prompt: '?', options: ['A'], correctAnswer: 0 }]
+    const answers = new Map()
+
+    const result = checkLevelPassThreshold(questions, answers)
+
+    expect(result).toBe(false)
   })
 })
