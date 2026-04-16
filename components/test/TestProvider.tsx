@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useState, useCallback } from 'react'
 import type { TestState, TestType, CEFRLevel, Question, Answer, TestResult } from './types'
-import { calculateLevelTestScore, determinePlacementLevel, generateRecommendations } from '@/lib/utils/testCalculation'
+import { calculateLevelTestScore, determinePlacementLevel, generateRecommendations, getRandomQuestions, checkLevelPassThreshold } from '@/lib/utils/testCalculation'
 
 interface TestContextType extends TestState {
   startTest: (testType: TestType, level?: CEFRLevel) => Promise<void>
@@ -12,6 +12,9 @@ interface TestContextType extends TestState {
   previousQuestion: () => void
   completeTest: () => void
   restart: () => void
+  loadNextLevel: () => void
+  checkLevelPassed: () => boolean
+  getRandomQuestions: (level: CEFRLevel, count: number) => Question[]
 }
 
 const TestContext = createContext<TestContextType | null>(null)
@@ -33,15 +36,80 @@ export function TestProvider({ children }: TestProviderProps) {
     currentQuestionIndex: 0,
     answers: new Map(),
     isComplete: false,
+    currentLevel: null,
+    questionsBank: null,
   })
+
+  const loadAllLevelQuestions = useCallback(async (): Promise<void> => {
+    const levels: CEFRLevel[] = ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2']
+    const bank = new Map<string, Question[]>()
+
+    for (const level of levels) {
+      const response = await fetch(`/questions/${level.toLowerCase()}.json`)
+      const data = await response.json()
+      bank.set(level, data.questions)
+    }
+
+    setState(prev => ({ ...prev, questionsBank: bank }))
+  }, [])
+
+  const getRandomQuestionsForLevel = useCallback((level: CEFRLevel, count: number): Question[] => {
+    if (!state.questionsBank) return []
+    const questions = state.questionsBank.get(level) || []
+    return getRandomQuestions(questions, count)
+  }, [state.questionsBank])
+
+  const getRandomQuestions = useCallback((level: CEFRLevel, count: number): Question[] => {
+    return getRandomQuestionsForLevel(level, count)
+  }, [getRandomQuestionsForLevel])
+
+  const loadNextLevel = useCallback(async () => {
+    if (!state.currentLevel) return
+
+    const levels: CEFRLevel[] = ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2']
+    const currentIndex = levels.indexOf(state.currentLevel)
+
+    if (currentIndex < levels.length - 1) {
+      const nextLevel = levels[currentIndex + 1]
+      const nextQuestions = getRandomQuestionsForLevel(nextLevel, 10)
+
+      setState(prev => ({
+        ...prev,
+        level: nextLevel,
+        currentLevel: nextLevel,
+        questions: nextQuestions,
+        currentQuestionIndex: 0,
+        answers: new Map(),
+      }))
+    }
+  }, [state.currentLevel, getRandomQuestionsForLevel])
+
+  const checkLevelPassed = useCallback((): boolean => {
+    return checkLevelPassThreshold(state.questions, state.answers)
+  }, [state.questions, state.answers])
 
   const startTest = useCallback(async (testType: TestType, level?: CEFRLevel) => {
     let questions: Question[] = []
 
     if (testType === 'placement') {
-      const response = await fetch('/questions/placement-test.json')
-      const data = await response.json()
-      questions = data.questions
+      // Load all level questions into bank
+      await loadAllLevelQuestions()
+
+      // Get A0 questions from the bank (now in state)
+      const bank = state.questionsBank
+      const initialLevel: CEFRLevel = 'A0'
+      const initialQuestions = bank ? getRandomQuestions(bank.get(initialLevel) || [], 10) : []
+
+      setState({
+        testType,
+        questions: initialQuestions,
+        currentQuestionIndex: 0,
+        answers: new Map(),
+        isComplete: false,
+        currentLevel: initialLevel,
+        questionsBank: bank,
+      })
+      return
     } else if (level) {
       const levelMap: Record<CEFRLevel, string> = {
         'A0': 'a0-a1',
@@ -65,7 +133,7 @@ export function TestProvider({ children }: TestProviderProps) {
       answers: new Map(),
       isComplete: false,
     })
-  }, [])
+  }, [loadAllLevelQuestions, state.questionsBank])
 
   const answerQuestion = useCallback((questionId: string, answer: Answer) => {
     setState(prev => {
@@ -145,6 +213,8 @@ export function TestProvider({ children }: TestProviderProps) {
       answers: new Map(),
       isComplete: false,
       result: undefined,
+      currentLevel: null,
+      questionsBank: null,
     })
   }, [])
 
@@ -159,6 +229,9 @@ export function TestProvider({ children }: TestProviderProps) {
         previousQuestion,
         completeTest,
         restart,
+        loadNextLevel,
+        checkLevelPassed,
+        getRandomQuestions,
       }}
     >
       {children}

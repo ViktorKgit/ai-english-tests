@@ -60,6 +60,8 @@ export interface TestState {
   answers: Map<string, Answer>
   isComplete: boolean
   result?: TestResult
+  currentLevel: CEFRLevel | null  // Currently testing level (for placement test only)
+  questionsBank: Map<string, Question[]> | null  // All loaded questions by level
 }
 
 export interface QuestionSet {
