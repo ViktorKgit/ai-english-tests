@@ -1,20 +1,13 @@
 {
   "name": "C1 English Test",
   "level": "C1",
-  "description": "Advanced English test covering formal register, complex grammar structures, inversions, subjunctive, and sophisticated vocabulary",
   "questions": [
     {
       "id": "c1-1",
       "difficulty": 6,
       "type": "multiple-choice",
-      "skill": "formal-idioms",
       "prompt": "Given the complexity of the issue, a nuanced approach is ___.",
-      "options": [
-        "called for",
-        "needed",
-        "required",
-        "demanded"
-      ],
+      "options": ["called for", "needed", "required", "demanded"],
       "correctAnswer": 0,
       "explanation": "'Called for' is idiomatic in formal contexts."
     },
@@ -22,23 +15,16 @@
       "id": "c1-2",
       "difficulty": 6,
       "type": "fill-blank",
-      "skill": "phrasal-verbs",
       "prompt": "The hypothesis stands ___ scrutiny.",
       "correctAnswer": "up to",
-      "explanation": "'Stand up to' means withstands examination."
+      "explanation": "'Stand up to' means withstands."
     },
     {
       "id": "c1-3",
       "difficulty": 6,
       "type": "multiple-choice",
-      "skill": "formal-register",
       "prompt": "The evidence would suggest otherwise, ___ the latest study.",
-      "options": [
-        "according to",
-        "pending",
-        "notwithstanding",
-        "contrary to"
-      ],
+      "options": ["according to", "pending", "notwithstanding", "contrary to"],
       "correctAnswer": 2,
       "explanation": "'Notwithstanding' = despite, formal register."
     },
@@ -46,7 +32,6 @@
       "id": "c1-4",
       "difficulty": 6,
       "type": "fill-blank",
-      "skill": "formal-verbs",
       "prompt": "His argument fails to ___ under cross-examination.",
       "correctAnswer": "hold",
       "explanation": "'Hold' means remain valid or convincing."
@@ -55,14 +40,8 @@
       "id": "c1-5",
       "difficulty": 6,
       "type": "multiple-choice",
-      "skill": "fixed-expressions",
       "prompt": "The proposition is, ___ best, highly controversial.",
-      "options": [
-        "at",
-        "in",
-        "on",
-        "to"
-      ],
+      "options": ["at", "in", "on", "to"],
       "correctAnswer": 0,
       "explanation": "'At best' is the correct idiom."
     },
@@ -70,7 +49,6 @@
       "id": "c1-6",
       "difficulty": 6,
       "type": "fill-blank",
-      "skill": "adjective-patterns",
       "prompt": "The committee's decision is ___ to appeal.",
       "correctAnswer": "open",
       "explanation": "'Open to appeal' = can be challenged."
@@ -79,14 +57,8 @@
       "id": "c1-7",
       "difficulty": 6,
       "type": "multiple-choice",
-      "skill": "concessive-structures",
       "prompt": "___ the merit of his argument, the conclusion is flawed.",
-      "options": [
-        "Granting",
-        "Granted",
-        "Allowing",
-        "Given that"
-      ],
+      "options": ["Granting", "Granted", "Allowing", "Given that"],
       "correctAnswer": 1,
       "explanation": "'Granted' introduces concession in formal argument."
     },
@@ -94,7 +66,6 @@
       "id": "c1-8",
       "difficulty": 6,
       "type": "fill-blank",
-      "skill": "passive-infinitive",
       "prompt": "The repercussions are ___ to be underestimated.",
       "correctAnswer": "not",
       "explanation": "'Not to be underestimated' = must be taken seriously."
@@ -103,14 +74,8 @@
       "id": "c1-9",
       "difficulty": 6,
       "type": "multiple-choice",
-      "skill": "formal-prepositions",
       "prompt": "___ mention of his name, she burst into tears.",
-      "options": [
-        "Upon",
-        "At",
-        "On",
-        "In"
-      ],
+      "options": ["Upon", "At", "On", "In"],
       "correctAnswer": 0,
       "explanation": "'Upon mention' is formal; 'At the mention' also works."
     },
@@ -118,7 +83,6 @@
       "id": "c1-10",
       "difficulty": 6,
       "type": "fill-blank",
-      "skill": "formal-verbs",
       "prompt": "The findings run ___ to established theory.",
       "correctAnswer": "counter",
       "explanation": "'Run counter to' = contradict."
@@ -127,14 +91,8 @@
       "id": "c1-11",
       "difficulty": 6,
       "type": "multiple-choice",
-      "skill": "formal-register",
       "prompt": "Barring unforeseen circumstances, the project will ___ schedule.",
-      "options": [
-        "stay on",
-        "remain on",
-        "keep to",
-        "adhere to"
-      ],
+      "options": ["stay on", "remain on", "keep to", "adhere to"],
       "correctAnswer": 1,
       "explanation": "'Remain on schedule' is idiomatic."
     },
@@ -142,23 +100,16 @@
       "id": "c1-12",
       "difficulty": 6,
       "type": "fill-blank",
-      "skill": "formal-verbs",
-      "prompt": "The professor's reputation is ___ upon decades of groundbreaking research.",
-      "correctAnswer": "predicated",
-      "explanation": "'Be predicated upon' = based on, formal C1 register."
+      "prompt": "His expertise lies ___ Renaissance art.",
+      "correctAnswer": "in",
+      "explanation": "'Lie in' = be found in."
     },
     {
       "id": "c1-13",
       "difficulty": 6,
       "type": "multiple-choice",
-      "skill": "linking-verbs",
       "prompt": "The consequences ___ far-reaching.",
-      "options": [
-        "proved",
-        "were proved",
-        "proved to be",
-        "were proving to be"
-      ],
+      "options": ["proved", "were proved", "proved to be", "were proving to be"],
       "correctAnswer": 2,
       "explanation": "'Prove to be' = turn out to be."
     },
@@ -166,7 +117,6 @@
       "id": "c1-14",
       "difficulty": 6,
       "type": "fill-blank",
-      "skill": "phrasal-verbs",
       "prompt": "The theory rests ___ shaky assumptions.",
       "correctAnswer": "on",
       "explanation": "'Rest on' = be based on."
@@ -175,14 +125,8 @@
       "id": "c1-15",
       "difficulty": 6,
       "type": "multiple-choice",
-      "skill": "fixed-expressions",
       "prompt": "___ all accounts, the meeting was a success.",
-      "options": [
-        "By",
-        "On",
-        "In",
-        "At"
-      ],
+      "options": ["By", "On", "In", "At"],
       "correctAnswer": 0,
       "explanation": "'By all accounts' = according to everyone."
     },
@@ -190,7 +134,6 @@
       "id": "c1-16",
       "difficulty": 6,
       "type": "fill-blank",
-      "skill": "formal-verbs",
       "prompt": "The conclusion does not ___ from the premises.",
       "correctAnswer": "follow",
       "explanation": "'Follow from' = logically result from."
@@ -199,14 +142,8 @@
       "id": "c1-17",
       "difficulty": 6,
       "type": "multiple-choice",
-      "skill": "formal-vocabulary",
       "prompt": "The proposal was ___ unanimously.",
-      "options": [
-        "rejected",
-        "denied",
-        "refused",
-        "declined"
-      ],
+      "options": ["rejected", "denied", "refused", "declined"],
       "correctAnswer": 0,
       "explanation": "'Reject' is used for proposals in formal contexts."
     },
@@ -214,7 +151,6 @@
       "id": "c1-18",
       "difficulty": 6,
       "type": "fill-blank",
-      "skill": "formal-idioms",
       "prompt": "His argument ___ to several logical fallacies.",
       "correctAnswer": "is prey",
       "explanation": "'Fall prey to' = be vulnerable to."
@@ -223,38 +159,25 @@
       "id": "c1-19",
       "difficulty": 6,
       "type": "multiple-choice",
-      "skill": "participle-clauses",
       "prompt": "___ the circumstances, we proceeded as planned.",
-      "options": [
-        "Given",
-        "Giving",
-        "To give",
-        "In giving"
-      ],
+      "options": ["Given", "Giving", "To give", "In giving"],
       "correctAnswer": 0,
-      "explanation": "'Given' = considering, participial preposition."
+      "explanation": "'Given' = considering."
     },
     {
       "id": "c1-20",
       "difficulty": 6,
       "type": "fill-blank",
-      "skill": "formal-adjectives",
-      "prompt": "The findings are ___ with the hypothesis put forward in our previous study.",
-      "correctAnswer": "congruent",
-      "explanation": "'Congruent with' = in agreement with, formal C1 register."
+      "prompt": "The results are ___ with previous studies.",
+      "correctAnswer": "consistent",
+      "explanation": "'Consistent with' = align with."
     },
     {
       "id": "c1-21",
       "difficulty": 6,
       "type": "multiple-choice",
-      "skill": "inversion",
       "prompt": "Little ___ that this decision would have such far-reaching consequences.",
-      "options": [
-        "I knew",
-        "did I know",
-        "I did know",
-        "knew I"
-      ],
+      "options": ["I knew", "did I know", "I did know", "knew I"],
       "correctAnswer": 1,
       "explanation": "Inversion with negative adverb 'little' requires auxiliary inversion: 'Little did I know'."
     },
@@ -262,7 +185,6 @@
       "id": "c1-22",
       "difficulty": 6,
       "type": "fill-blank",
-      "skill": "inversion",
       "prompt": "No sooner ___ the door than the phone rang.",
       "correctAnswer": "had I closed",
       "explanation": "Inversion with 'no sooner' requires past perfect: 'No sooner had I closed...'."
@@ -271,14 +193,8 @@
       "id": "c1-23",
       "difficulty": 6,
       "type": "multiple-choice",
-      "skill": "inversion",
       "prompt": "Were I to accept this position, I ___ significant changes to the department.",
-      "options": [
-        "would implement",
-        "will implement",
-        "implemented",
-        "had implemented"
-      ],
+      "options": ["would implement", "will implement", "implemented", "had implemented"],
       "correctAnswer": 0,
       "explanation": "Inverted conditional: 'Were I to' = 'If I were to', requires would + infinitive."
     },
@@ -286,7 +202,6 @@
       "id": "c1-24",
       "difficulty": 6,
       "type": "fill-blank",
-      "skill": "inversion",
       "prompt": "Had I known about the traffic, I ___ earlier.",
       "correctAnswer": "would have left",
       "explanation": "Third conditional inverted: 'Had I known' = 'If I had known', requires would have + past participle."
@@ -295,14 +210,8 @@
       "id": "c1-25",
       "difficulty": 6,
       "type": "multiple-choice",
-      "skill": "concessive-structures",
       "prompt": "The proposal was rejected, ___ having strong support from several board members.",
-      "options": [
-        "despite",
-        "in spite",
-        "although",
-        "though"
-      ],
+      "options": ["despite", "in spite", "although", "though"],
       "correctAnswer": 0,
       "explanation": "'Despite' + gerund phrase; 'in spite of' would require 'of'."
     },
@@ -310,7 +219,6 @@
       "id": "c1-26",
       "difficulty": 6,
       "type": "fill-blank",
-      "skill": "modal-perfect",
       "prompt": "She must ___ the news by now; it was all over social media yesterday.",
       "correctAnswer": "have heard",
       "explanation": "Modal perfect for logical deduction about past: 'must have heard'."
@@ -319,29 +227,17 @@
       "id": "c1-27",
       "difficulty": 6,
       "type": "multiple-choice",
-      "skill": "modal-perfect",
       "prompt": "He can't ___ to the conference; I saw him at the office during those exact hours.",
-      "options": [
-        "have gone",
-        "have been",
-        "go",
-        "be going"
-      ],
+      "options": ["have gone", "have been", "go", "be going"],
       "correctAnswer": 1,
       "explanation": "Modal perfect for negative deduction: 'can't have been' (present perfect infinitive for state)."
     },
     {
       "id": "c1-28",
       "difficulty": 6,
-      "type": "multiple-choice",
-      "skill": "formal-prepositions",
+      "type": "fill-blank",
       "prompt": "The changes are being implemented ___ of the current opposition.",
-      "options": [
-        "regardless",
-        "despite",
-        "irrespective",
-        "notwithstanding"
-      ],
+      "options": ["regardless", "despite", "irrespective", "notwithstanding"],
       "correctAnswer": 3,
       "explanation": "'Notwithstanding' can function as a preposition meaning 'despite'."
     },
@@ -349,14 +245,8 @@
       "id": "c1-29",
       "difficulty": 6,
       "type": "multiple-choice",
-      "skill": "inversion",
       "prompt": "Not only ___ the deadline, but he also produced exceptional work.",
-      "options": [
-        "he met",
-        "did he meet",
-        "he did meet",
-        "met he"
-      ],
+      "options": ["he met", "did he meet", "he did meet", "met he"],
       "correctAnswer": 1,
       "explanation": "Inversion with 'not only': auxiliary inversion required."
     },
@@ -364,7 +254,6 @@
       "id": "c1-30",
       "difficulty": 6,
       "type": "fill-blank",
-      "skill": "inversion",
       "prompt": "Rarely ___ such a comprehensive analysis of the problem.",
       "correctAnswer": "have we seen",
       "explanation": "Inversion with negative adverb 'rarely': present perfect auxiliary inversion."
@@ -373,14 +262,8 @@
       "id": "c1-31",
       "difficulty": 6,
       "type": "multiple-choice",
-      "skill": "formal-verbs",
       "prompt": "The investigation concluded that the failure ___ inadequate safety protocols.",
-      "options": [
-        "stemmed from",
-        "came from",
-        "originated from",
-        "resulted because"
-      ],
+      "options": ["stemmed from", "came from", "originated from", "resulted because"],
       "correctAnswer": 0,
       "explanation": "'Stem from' is formal register indicating origin or cause."
     },
@@ -388,7 +271,6 @@
       "id": "c1-32",
       "difficulty": 6,
       "type": "fill-blank",
-      "skill": "inversion",
       "prompt": "Under no circumstances ___ to disclose this information to unauthorized parties.",
       "correctAnswer": "are you",
       "explanation": "Inversion with negative phrase: 'Under no circumstances are you...'."
@@ -397,22 +279,15 @@
       "id": "c1-33",
       "difficulty": 6,
       "type": "multiple-choice",
-      "skill": "inversion",
       "prompt": "Only after extensive testing ___ the drug approved for public use.",
-      "options": [
-        "was it",
-        "it was",
-        "it had been",
-        "had it been"
-      ],
+      "options": ["was", "it was", "it had been", "had been"],
       "correctAnswer": 0,
-      "explanation": "Inversion with 'Only after': auxiliary + subject + main verb."
+      "explanation": "Inversion with 'Only after': auxiliary inversion before main verb."
     },
     {
       "id": "c1-34",
       "difficulty": 6,
       "type": "fill-blank",
-      "skill": "subjunctive",
       "prompt": "I'd rather you ___ that information with anyone else.",
       "correctAnswer": "didn't share",
       "explanation": "'Would rather' + past tense for present/future preference about others' actions."
@@ -421,14 +296,8 @@
       "id": "c1-35",
       "difficulty": 6,
       "type": "multiple-choice",
-      "skill": "subjunctive",
       "prompt": "It's high time you ___ taking your responsibilities more seriously.",
-      "options": [
-        "started",
-        "start",
-        "would start",
-        "had started"
-      ],
+      "options": ["started", "start", "would start", "had started"],
       "correctAnswer": 0,
       "explanation": "'It's high time' + past tense for urgent recommendation."
     },
@@ -436,7 +305,6 @@
       "id": "c1-36",
       "difficulty": 6,
       "type": "fill-blank",
-      "skill": "complex-conditionals",
       "prompt": "But for your intervention, the situation ___ much worse.",
       "correctAnswer": "would have been",
       "explanation": "'But for' = 'If it hadn't been for', third conditional."
@@ -445,14 +313,8 @@
       "id": "c1-37",
       "difficulty": 6,
       "type": "multiple-choice",
-      "skill": "subjunctive",
       "prompt": "The committee's recommendation is that the proposal ___ immediately.",
-      "options": [
-        "be implemented",
-        "is implemented",
-        "should implement",
-        "implement"
-      ],
+      "options": ["be implemented", "is implemented", "should implement", "implement"],
       "correctAnswer": 0,
       "explanation": "Subjunctive after 'recommendation that': base form 'be implemented'."
     },
@@ -460,7 +322,6 @@
       "id": "c1-38",
       "difficulty": 6,
       "type": "fill-blank",
-      "skill": "cleft-sentences",
       "prompt": "What ___ the manager's attention was the discrepancy in the quarterly report.",
       "correctAnswer": "caught",
       "explanation": "Cleft sentence with 'what': relative clause as subject."
@@ -469,14 +330,8 @@
       "id": "c1-39",
       "difficulty": 6,
       "type": "multiple-choice",
-      "skill": "inversion",
       "prompt": "Seldom ___ such passionate debates in our quarterly meetings.",
-      "options": [
-        "we have seen",
-        "have we seen",
-        "we saw",
-        "did we see"
-      ],
+      "options": ["we have seen", "have we seen", "we saw", "did we see"],
       "correctAnswer": 1,
       "explanation": "Inversion with negative adverb 'seldom': auxiliary inversion."
     },
@@ -484,73 +339,9 @@
       "id": "c1-40",
       "difficulty": 6,
       "type": "fill-blank",
-      "skill": "ellipsis",
       "prompt": "The proposal, ___ support from several key stakeholders, was ultimately withdrawn.",
       "correctAnswer": "despite",
       "explanation": "Reduced concessive clause: 'despite' + noun phrase (ellipsis of 'having received')."
-    },
-    {
-      "id": "c1-41",
-      "difficulty": 6,
-      "type": "multiple-choice",
-      "skill": "participle-clauses",
-      "prompt": "___, the report was submitted ahead of schedule.",
-      "options": [
-        "Having completed",
-        "Having been completed",
-        "Being completed",
-        "To be completed"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Perfect passive participle for completed prior action: 'Having been completed'."
-    },
-    {
-      "id": "c1-42",
-      "difficulty": 6,
-      "type": "fill-blank",
-      "skill": "ellipsis",
-      "prompt": "The first proposal was rejected, and the second ___.",
-      "correctAnswer": "too",
-      "explanation": "Ellipsis: 'the second was rejected too' - omission of repeated verb phrase."
-    },
-    {
-      "id": "c1-43",
-      "difficulty": 6,
-      "type": "multiple-choice",
-      "skill": "subjunctive",
-      "prompt": "It is imperative that he ___ informed of any changes immediately.",
-      "options": [
-        "is",
-        "be",
-        "should be",
-        "would be"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Mandative subjunctive after 'imperative that': base form 'be'."
-    },
-    {
-      "id": "c1-44",
-      "difficulty": 6,
-      "type": "fill-blank",
-      "skill": "complex-conditionals",
-      "prompt": "___ you to change your mind, please let us know immediately.",
-      "correctAnswer": "Were",
-      "explanation": "Inverted conditional without 'if': 'Were you to' = 'If you were to'."
-    },
-    {
-      "id": "c1-45",
-      "difficulty": 6,
-      "type": "multiple-choice",
-      "skill": "formal-register",
-      "prompt": "The negotiations are, ___ large, proceeding as expected.",
-      "options": [
-        "by",
-        "in",
-        "at",
-        "on"
-      ],
-      "correctAnswer": 0,
-      "explanation": "'By and large' = on the whole, formal fixed expression."
     }
   ]
 }

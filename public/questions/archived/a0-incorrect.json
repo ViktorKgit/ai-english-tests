@@ -1,20 +1,13 @@
 {
   "name": "A0 English Test",
   "level": "A0",
-  "description": "Beginner/Elementary English test for absolute beginners covering basic grammar, to be verb, articles, and simple vocabulary",
   "questions": [
     {
       "id": "a0-1",
       "difficulty": 1,
       "type": "multiple-choice",
-      "skill": "introductions",
       "prompt": "What is your name?",
-      "options": [
-        "My name is John.",
-        "I name am John.",
-        "Me name is John.",
-        "I is John."
-      ],
+      "options": ["My name is John.", "I name am John.", "Me name is John.", "I is John."],
       "correctAnswer": 0,
       "explanation": "Basic introduction uses 'My name is...'"
     },
@@ -22,14 +15,8 @@
       "id": "a0-2",
       "difficulty": 1,
       "type": "multiple-choice",
-      "skill": "present-simple",
       "prompt": "___ you like pizza?",
-      "options": [
-        "Does",
-        "Do",
-        "Are",
-        "Is"
-      ],
+      "options": ["Does", "Do", "Are", "Is"],
       "correctAnswer": 1,
       "explanation": "Use 'Do' for questions with 'you'."
     },
@@ -37,7 +24,6 @@
       "id": "a0-3",
       "difficulty": 1,
       "type": "fill-blank",
-      "skill": "to-be",
       "prompt": "She ___ a teacher.",
       "correctAnswer": "is",
       "explanation": "Use 'is' with 'she'."
@@ -46,14 +32,8 @@
       "id": "a0-4",
       "difficulty": 1,
       "type": "multiple-choice",
-      "skill": "articles",
       "prompt": "I have ___ apple.",
-      "options": [
-        "a",
-        "an",
-        "the",
-        "two"
-      ],
+      "options": ["a", "an", "the", "two"],
       "correctAnswer": 1,
       "explanation": "Use 'an' before words starting with a vowel sound."
     },
@@ -61,7 +41,6 @@
       "id": "a0-5",
       "difficulty": 1,
       "type": "fill-blank",
-      "skill": "present-simple",
       "prompt": "They ___ football every Sunday.",
       "correctAnswer": "play",
       "explanation": "Present simple uses base form for 'they'."
@@ -70,14 +49,8 @@
       "id": "a0-6",
       "difficulty": 1,
       "type": "multiple-choice",
-      "skill": "to-be",
       "prompt": "The cat ___ on the table.",
-      "options": [
-        "is",
-        "are",
-        "am",
-        "be"
-      ],
+      "options": ["is", "are", "am", "be"],
       "correctAnswer": 0,
       "explanation": "Use 'is' with singular animals/things."
     },
@@ -85,7 +58,6 @@
       "id": "a0-7",
       "difficulty": 1,
       "type": "fill-blank",
-      "skill": "to-be",
       "prompt": "I ___ happy today.",
       "correctAnswer": "am",
       "explanation": "Use 'am' with 'I'."
@@ -94,14 +66,8 @@
       "id": "a0-8",
       "difficulty": 1,
       "type": "multiple-choice",
-      "skill": "to-be",
       "prompt": "We ___ students.",
-      "options": [
-        "is",
-        "am",
-        "are",
-        "be"
-      ],
+      "options": ["is", "am", "are", "be"],
       "correctAnswer": 2,
       "explanation": "Use 'are' with 'we'."
     },
@@ -109,7 +75,6 @@
       "id": "a0-9",
       "difficulty": 1,
       "type": "fill-blank",
-      "skill": "present-simple",
       "prompt": "He ___ not like coffee.",
       "correctAnswer": "does",
       "explanation": "Present simple negative uses 'doesn't' (does not) for he."
@@ -118,14 +83,8 @@
       "id": "a0-10",
       "difficulty": 1,
       "type": "multiple-choice",
-      "skill": "wh-questions",
       "prompt": "___ is your friend?",
-      "options": [
-        "What",
-        "Who",
-        "Where",
-        "When"
-      ],
+      "options": ["What", "Who", "Where", "When"],
       "correctAnswer": 1,
       "explanation": "Use 'Who' for asking about people."
     },
@@ -133,7 +92,6 @@
       "id": "a0-11",
       "difficulty": 1,
       "type": "fill-blank",
-      "skill": "present-simple",
       "prompt": "My sister ___ in London.",
       "correctAnswer": "lives",
       "explanation": "Third person singular adds 's' in present simple."
@@ -142,14 +100,8 @@
       "id": "a0-12",
       "difficulty": 1,
       "type": "multiple-choice",
-      "skill": "quantifiers",
       "prompt": "I don't have ___ money.",
-      "options": [
-        "some",
-        "any",
-        "a",
-        "an"
-      ],
+      "options": ["some", "any", "a", "an"],
       "correctAnswer": 1,
       "explanation": "Use 'any' in negative sentences."
     },
@@ -157,7 +109,6 @@
       "id": "a0-13",
       "difficulty": 1,
       "type": "fill-blank",
-      "skill": "present-simple",
       "prompt": "___ you speak English?",
       "correctAnswer": "Do",
       "explanation": "Yes/No questions start with 'Do' for 'you'."
@@ -166,14 +117,8 @@
       "id": "a0-14",
       "difficulty": 1,
       "type": "multiple-choice",
-      "skill": "there-is-there-are",
       "prompt": "There ___ a book on the table.",
-      "options": [
-        "is",
-        "are",
-        "be",
-        "am"
-      ],
+      "options": ["is", "are", "be", "am"],
       "correctAnswer": 0,
       "explanation": "Use 'is' with singular subjects."
     },
@@ -181,7 +126,6 @@
       "id": "a0-15",
       "difficulty": 1,
       "type": "fill-blank",
-      "skill": "present-simple",
       "prompt": "She ___ like tea.",
       "correctAnswer": "doesn't",
       "explanation": "Third person singular negative uses 'doesn't'."
@@ -190,14 +134,8 @@
       "id": "a0-16",
       "difficulty": 1,
       "type": "multiple-choice",
-      "skill": "to-be",
       "prompt": "What is this? It ___ a pen.",
-      "options": [
-        "is",
-        "are",
-        "am",
-        "be"
-      ],
+      "options": ["is", "are", "am", "be"],
       "correctAnswer": 0,
       "explanation": "Use 'is' for singular objects."
     },
@@ -205,7 +143,6 @@
       "id": "a0-17",
       "difficulty": 1,
       "type": "fill-blank",
-      "skill": "to-be",
       "prompt": "They ___ from Spain.",
       "correctAnswer": "are",
       "explanation": "Use 'are' with 'they'."
@@ -214,14 +151,8 @@
       "id": "a0-18",
       "difficulty": 1,
       "type": "multiple-choice",
-      "skill": "to-be",
       "prompt": "I ___ a student.",
-      "options": [
-        "is",
-        "am",
-        "are",
-        "be"
-      ],
+      "options": ["is", "am", "are", "be"],
       "correctAnswer": 1,
       "explanation": "Use 'am' with 'I'."
     },
@@ -229,7 +160,6 @@
       "id": "a0-19",
       "difficulty": 1,
       "type": "fill-blank",
-      "skill": "quantifiers",
       "prompt": "We don't have ___ time.",
       "correctAnswer": "much",
       "explanation": "Use 'much' with uncountable nouns like time."
@@ -238,14 +168,8 @@
       "id": "a0-20",
       "difficulty": 1,
       "type": "multiple-choice",
-      "skill": "wh-questions",
       "prompt": "___ are you from?",
-      "options": [
-        "What",
-        "Who",
-        "Where",
-        "When"
-      ],
+      "options": ["What", "Who", "Where", "When"],
       "correctAnswer": 2,
       "explanation": "Use 'Where' for asking about origin/place."
     },
@@ -253,14 +177,8 @@
       "id": "a0-21",
       "difficulty": 1,
       "type": "multiple-choice",
-      "skill": "plurals",
       "prompt": "I have two ___.",
-      "options": [
-        "sister",
-        "sisters",
-        "sisteres",
-        "sistser"
-      ],
+      "options": ["sister", "sisters", "sisteres", "sistser"],
       "correctAnswer": 1,
       "explanation": "Add 's' to make plural: sister → sisters."
     },
@@ -268,7 +186,6 @@
       "id": "a0-22",
       "difficulty": 1,
       "type": "fill-blank",
-      "skill": "pronouns",
       "prompt": "This is my mother. ___ is a doctor.",
       "correctAnswer": "She",
       "explanation": "Use 'She' for female people."
@@ -277,14 +194,8 @@
       "id": "a0-23",
       "difficulty": 1,
       "type": "multiple-choice",
-      "skill": "wh-questions",
       "prompt": "___ is your favourite colour?",
-      "options": [
-        "What",
-        "Who",
-        "Where",
-        "When"
-      ],
+      "options": ["What", "Who", "Where", "When"],
       "correctAnswer": 0,
       "explanation": "Use 'What' to ask about things/preferences."
     },
@@ -292,7 +203,6 @@
       "id": "a0-24",
       "difficulty": 1,
       "type": "fill-blank",
-      "skill": "articles",
       "prompt": "I have got ___ orange.",
       "correctAnswer": "an",
       "explanation": "Use 'an' before words starting with a vowel sound."
@@ -301,14 +211,8 @@
       "id": "a0-25",
       "difficulty": 1,
       "type": "multiple-choice",
-      "skill": "vocabulary",
       "prompt": "The sky is ___.",
-      "options": [
-        "blue",
-        "red",
-        "green",
-        "yellow"
-      ],
+      "options": ["blue", "red", "green", "yellow"],
       "correctAnswer": 0,
       "explanation": "The sky is blue."
     },
@@ -316,7 +220,6 @@
       "id": "a0-26",
       "difficulty": 1,
       "type": "fill-blank",
-      "skill": "demonstratives",
       "prompt": "Look at ___ birds!",
       "correctAnswer": "those",
       "explanation": "Use 'those' for things far away (plural)."
@@ -325,14 +228,8 @@
       "id": "a0-27",
       "difficulty": 1,
       "type": "multiple-choice",
-      "skill": "wh-questions",
       "prompt": "___ old are you?",
-      "options": [
-        "What",
-        "Who",
-        "How",
-        "Where"
-      ],
+      "options": ["What", "Who", "How", "Where"],
       "correctAnswer": 2,
       "explanation": "Use 'How' to ask about age."
     },
@@ -340,7 +237,6 @@
       "id": "a0-28",
       "difficulty": 1,
       "type": "fill-blank",
-      "skill": "have-got",
       "prompt": "My brother ___ got a car.",
       "correctAnswer": "has",
       "explanation": "Use 'has' with he/she/it in 'have got'."
@@ -349,14 +245,8 @@
       "id": "a0-29",
       "difficulty": 1,
       "type": "multiple-choice",
-      "skill": "there-is-there-are",
       "prompt": "There ___ three books on the desk.",
-      "options": [
-        "is",
-        "are",
-        "am",
-        "be"
-      ],
+      "options": ["is", "are", "am", "be"],
       "correctAnswer": 1,
       "explanation": "Use 'are' with plural subjects."
     },
@@ -364,7 +254,6 @@
       "id": "a0-30",
       "difficulty": 1,
       "type": "fill-blank",
-      "skill": "articles",
       "prompt": "I like ___ pizza.",
       "correctAnswer": "Ø",
       "explanation": "No article needed with general plural/uncountable nouns. (You can also accept 'some' or 'the')"
@@ -373,14 +262,8 @@
       "id": "a0-31",
       "difficulty": 1,
       "type": "multiple-choice",
-      "skill": "possessives",
       "prompt": "She is ___ sister.",
-      "options": [
-        "my",
-        "I",
-        "me",
-        "mine"
-      ],
+      "options": ["my", "I", "me", "mine"],
       "correctAnswer": 0,
       "explanation": "Use possessive adjective 'my' before nouns."
     },
@@ -388,7 +271,6 @@
       "id": "a0-32",
       "difficulty": 1,
       "type": "fill-blank",
-      "skill": "present-simple",
       "prompt": "We ___ English every day.",
       "correctAnswer": "study",
       "explanation": "Present simple uses base form for 'we'."
@@ -397,14 +279,8 @@
       "id": "a0-33",
       "difficulty": 1,
       "type": "multiple-choice",
-      "skill": "wh-questions",
       "prompt": "___ is that man?",
-      "options": [
-        "What",
-        "Who",
-        "Where",
-        "How"
-      ],
+      "options": ["What", "Who", "Where", "How"],
       "correctAnswer": 1,
       "explanation": "Use 'Who' to ask about people."
     },
@@ -412,7 +288,6 @@
       "id": "a0-34",
       "difficulty": 1,
       "type": "fill-blank",
-      "skill": "articles",
       "prompt": "This is ___ book.",
       "correctAnswer": "a",
       "explanation": "Use 'a' before consonant sounds."
@@ -421,14 +296,8 @@
       "id": "a0-35",
       "difficulty": 1,
       "type": "multiple-choice",
-      "skill": "present-simple",
       "prompt": "My father ___ in a hospital.",
-      "options": [
-        "work",
-        "works",
-        "working",
-        "is work"
-      ],
+      "options": ["work", "works", "working", "is work"],
       "correctAnswer": 1,
       "explanation": "Third person singular adds 's' in present simple."
     },
@@ -436,7 +305,6 @@
       "id": "a0-36",
       "difficulty": 1,
       "type": "fill-blank",
-      "skill": "to-be",
       "prompt": "___ you happy?",
       "correctAnswer": "Are",
       "explanation": "Yes/No questions with 'you' start with 'Are'."
@@ -445,14 +313,8 @@
       "id": "a0-37",
       "difficulty": 1,
       "type": "multiple-choice",
-      "skill": "quantifiers",
       "prompt": "I have ___ friends at school.",
-      "options": [
-        "much",
-        "many",
-        "a",
-        "an"
-      ],
+      "options": ["much", "many", "a", "an"],
       "correctAnswer": 1,
       "explanation": "Use 'many' with countable nouns like friends."
     },
@@ -460,7 +322,6 @@
       "id": "a0-38",
       "difficulty": 1,
       "type": "fill-blank",
-      "skill": "possessives",
       "prompt": "These are ___ children.",
       "correctAnswer": "our",
       "explanation": "Use possessive adjective 'our' before nouns."
@@ -469,14 +330,8 @@
       "id": "a0-39",
       "difficulty": 1,
       "type": "multiple-choice",
-      "skill": "present-continuous",
       "prompt": "The sun is ___ today.",
-      "options": [
-        "shine",
-        "shining",
-        "shines",
-        "shining"
-      ],
+      "options": ["shine", "shining", "shines", "shining"],
       "correctAnswer": 1,
       "explanation": "Present continuous uses 'is + -ing'."
     },
@@ -484,73 +339,9 @@
       "id": "a0-40",
       "difficulty": 1,
       "type": "fill-blank",
-      "skill": "articles",
       "prompt": "What is it? It is ___ egg.",
       "correctAnswer": "an",
       "explanation": "Use 'an' before words starting with a vowel sound."
-    },
-    {
-      "id": "a0-41",
-      "difficulty": 1,
-      "type": "multiple-choice",
-      "skill": "numbers",
-      "prompt": "I have ___ apples: one, two, three.",
-      "options": [
-        "one",
-        "two",
-        "three",
-        "four"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Counting: one, two, three."
-    },
-    {
-      "id": "a0-42",
-      "difficulty": 1,
-      "type": "fill-blank",
-      "skill": "prepositions",
-      "prompt": "The book is ___ the table.",
-      "correctAnswer": "on",
-      "explanation": "'On' for things resting on a surface."
-    },
-    {
-      "id": "a0-43",
-      "difficulty": 1,
-      "type": "multiple-choice",
-      "skill": "time-expressions",
-      "prompt": "I wake up ___ the morning.",
-      "options": [
-        "in",
-        "on",
-        "at",
-        "to"
-      ],
-      "correctAnswer": 0,
-      "explanation": "'In the morning' - fixed time expression."
-    },
-    {
-      "id": "a0-44",
-      "difficulty": 1,
-      "type": "fill-blank",
-      "skill": "imperatives",
-      "prompt": "___ the door, please.",
-      "correctAnswer": "Close",
-      "explanation": "Imperatives use base verb for requests."
-    },
-    {
-      "id": "a0-45",
-      "difficulty": 1,
-      "type": "multiple-choice",
-      "skill": "vocabulary",
-      "prompt": "Which is a colour?",
-      "options": [
-        "Table",
-        "Blue",
-        "Dog",
-        "Car"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Blue is a colour."
     }
   ]
 }

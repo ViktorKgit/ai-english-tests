@@ -1,20 +1,13 @@
 {
   "name": "B2 English Test",
   "level": "B2",
-  "description": "Upper-intermediate English test covering inversions, conditionals, passive reporting, cleft sentences, and complex grammar structures",
   "questions": [
     {
       "id": "b2-1",
       "difficulty": 5,
       "type": "multiple-choice",
-      "skill": "inversion",
       "prompt": "Under no circumstances ___ reveal this information.",
-      "options": [
-        "you should",
-        "should you",
-        "you must",
-        "must you"
-      ],
+      "options": ["you should", "should you", "you must", "must you"],
       "correctAnswer": 1,
       "explanation": "Negative inversion: 'should' comes before subject."
     },
@@ -22,7 +15,6 @@
       "id": "b2-2",
       "difficulty": 5,
       "type": "fill-blank",
-      "skill": "conditional-inversion",
       "prompt": "Had I known about the traffic, I ___ left earlier.",
       "correctAnswer": "would have",
       "explanation": "Third conditional inversion: 'Had I...' instead of 'If I had...'"
@@ -31,14 +23,8 @@
       "id": "b2-3",
       "difficulty": 5,
       "type": "multiple-choice",
-      "skill": "prepositions",
       "prompt": "The proposal was rejected ___ the basis of the cost.",
-      "options": [
-        "on",
-        "in",
-        "at",
-        "for"
-      ],
+      "options": ["on", "in", "at", "for"],
       "correctAnswer": 0,
       "explanation": "'On the basis of' is the correct preposition phrase."
     },
@@ -46,7 +32,6 @@
       "id": "b2-4",
       "difficulty": 5,
       "type": "fill-blank",
-      "skill": "complex-conditionals",
       "prompt": "But for your help, we ___ never succeeded.",
       "correctAnswer": "would",
       "explanation": "'But for' + noun = 'If it hadn't been for', triggers conditional."
@@ -55,14 +40,8 @@
       "id": "b2-5",
       "difficulty": 5,
       "type": "multiple-choice",
-      "skill": "inversion",
       "prompt": "Little ___ know that this decision would change everything.",
-      "options": [
-        "did I",
-        "I did",
-        "I had",
-        "had I"
-      ],
+      "options": ["did I", "I did", "I had", "had I"],
       "correctAnswer": 0,
       "explanation": "Negative inversion with 'Little'."
     },
@@ -70,7 +49,6 @@
       "id": "b2-6",
       "difficulty": 5,
       "type": "fill-blank",
-      "skill": "past-simple",
       "prompt": "Contrary to expectations, the experiment ___.",
       "correctAnswer": "failed",
       "explanation": "Past simple for completed action that surprised."
@@ -79,14 +57,8 @@
       "id": "b2-7",
       "difficulty": 5,
       "type": "multiple-choice",
-      "skill": "inversion",
       "prompt": "Not until much later ___ the truth.",
-      "options": [
-        "I learned",
-        "did I learn",
-        "I did learn",
-        "learned I"
-      ],
+      "options": ["I learned", "did I learn", "I did learn", "learned I"],
       "correctAnswer": 1,
       "explanation": "'Not until' triggers time inversion."
     },
@@ -94,7 +66,6 @@
       "id": "b2-8",
       "difficulty": 5,
       "type": "fill-blank",
-      "skill": "gerunds",
       "prompt": "There is no point ___ about the past.",
       "correctAnswer": "worrying",
       "explanation": "'There is no point (in) + gerund'."
@@ -103,14 +74,8 @@
       "id": "b2-9",
       "difficulty": 5,
       "type": "multiple-choice",
-      "skill": "concessive-structures",
       "prompt": "___ the heavy rain, the match continued.",
-      "options": [
-        "Regardless of",
-        "Despite of",
-        "In spite",
-        "Although"
-      ],
+      "options": ["Regardless", "Despite of", "In spite", "Although"],
       "correctAnswer": 0,
       "explanation": "'Regardless of' is correct; 'Despite' doesn't take 'of'."
     },
@@ -118,7 +83,6 @@
       "id": "b2-10",
       "difficulty": 5,
       "type": "fill-blank",
-      "skill": "prepositions",
       "prompt": "The findings are consistent ___ previous research.",
       "correctAnswer": "with",
       "explanation": "'Consistent with' is the correct preposition."
@@ -127,14 +91,8 @@
       "id": "b2-11",
       "difficulty": 5,
       "type": "multiple-choice",
-      "skill": "inversion",
       "prompt": "Only after careful consideration ___ our decision.",
-      "options": [
-        "we reached",
-        "did we reach",
-        "reached we",
-        "we did reach"
-      ],
+      "options": ["we reached", "did we reach", "reached we", "we did reach"],
       "correctAnswer": 1,
       "explanation": "'Only after' triggers inversion."
     },
@@ -142,7 +100,6 @@
       "id": "b2-12",
       "difficulty": 5,
       "type": "fill-blank",
-      "skill": "gerunds",
       "prompt": "She resented ___ for the mistake.",
       "correctAnswer": "being blamed",
       "explanation": "'Resent + being + past participle' (passive gerund)."
@@ -151,14 +108,8 @@
       "id": "b2-13",
       "difficulty": 5,
       "type": "multiple-choice",
-      "skill": "conditional-inversion",
       "prompt": "Were I to win the lottery, I ___ around the world.",
-      "options": [
-        "would travel",
-        "will travel",
-        "travel",
-        "traveled"
-      ],
+      "options": ["would travel", "will travel", "travel", "traveled"],
       "correctAnswer": 0,
       "explanation": "'Were I' = 'If I were', triggers conditional."
     },
@@ -166,7 +117,6 @@
       "id": "b2-14",
       "difficulty": 5,
       "type": "fill-blank",
-      "skill": "prepositions",
       "prompt": "The committee is composed ___ experts from various fields.",
       "correctAnswer": "of",
       "explanation": "'Composed of' is the correct phrase."
@@ -175,14 +125,8 @@
       "id": "b2-15",
       "difficulty": 5,
       "type": "multiple-choice",
-      "skill": "inversion",
       "prompt": "In no way ___ responsible for this outcome.",
-      "options": [
-        "I am",
-        "am I",
-        "I was",
-        "was I"
-      ],
+      "options": ["I am", "am I", "I was", "was I"],
       "correctAnswer": 1,
       "explanation": "Negative inversion with 'In no way'."
     },
@@ -190,7 +134,6 @@
       "id": "b2-16",
       "difficulty": 5,
       "type": "fill-blank",
-      "skill": "infinitives",
       "prompt": "We have no option but ___.",
       "correctAnswer": "to wait",
       "explanation": "'Have no option but + to-infinitive'."
@@ -199,14 +142,8 @@
       "id": "b2-17",
       "difficulty": 5,
       "type": "multiple-choice",
-      "skill": "result-clauses",
       "prompt": "Such was his confidence that he ___ fail.",
-      "options": [
-        "refused to",
-        "denied",
-        "rejected",
-        "declined"
-      ],
+      "options": ["refused to", "denied", "rejected", "declined"],
       "correctAnswer": 0,
       "explanation": "'Such was...that' structure with result clause."
     },
@@ -214,7 +151,6 @@
       "id": "b2-18",
       "difficulty": 5,
       "type": "fill-blank",
-      "skill": "phrasal-verbs",
       "prompt": "The theory fails to account ___ these anomalies.",
       "correctAnswer": "for",
       "explanation": "'Account for' means 'explain'."
@@ -223,14 +159,8 @@
       "id": "b2-19",
       "difficulty": 5,
       "type": "multiple-choice",
-      "skill": "inversion",
       "prompt": "Nowhere in the document ___ mentioned.",
-      "options": [
-        "this is",
-        "is this",
-        "was this",
-        "this was"
-      ],
+      "options": ["this is", "is this", "was this", "this was"],
       "correctAnswer": 1,
       "explanation": "Negative inversion with 'Nowhere'."
     },
@@ -238,7 +168,6 @@
       "id": "b2-20",
       "difficulty": 5,
       "type": "fill-blank",
-      "skill": "gerunds",
       "prompt": "We are committed ___ the highest standards.",
       "correctAnswer": "to maintaining",
       "explanation": "'Committed to + gerund'."
@@ -247,14 +176,8 @@
       "id": "b2-21",
       "difficulty": 5,
       "type": "multiple-choice",
-      "skill": "modal-perfect",
       "prompt": "She ___ have studied harder for the exam.",
-      "options": [
-        "should",
-        "must",
-        "would",
-        "could"
-      ],
+      "options": ["should", "must", "would", "could"],
       "correctAnswer": 0,
       "explanation": "'Should have' expresses past criticism or regret about something that didn't happen."
     },
@@ -262,7 +185,6 @@
       "id": "b2-22",
       "difficulty": 5,
       "type": "fill-blank",
-      "skill": "cleft-sentences",
       "prompt": "It was John who ___ the mistake, not anyone else.",
       "correctAnswer": "made",
       "explanation": "Cleft sentence: 'It was [subject] who [verb]' for emphasis."
@@ -271,14 +193,8 @@
       "id": "b2-23",
       "difficulty": 5,
       "type": "multiple-choice",
-      "skill": "relative-clauses",
       "prompt": "The man ___ car was stolen called the police.",
-      "options": [
-        "who",
-        "which",
-        "whose",
-        "that"
-      ],
+      "options": ["who", "which", "whose", "that"],
       "correctAnswer": 2,
       "explanation": "'Whose' shows possession in relative clauses."
     },
@@ -286,7 +202,6 @@
       "id": "b2-24",
       "difficulty": 5,
       "type": "fill-blank",
-      "skill": "future-in-the-past",
       "prompt": "He said he ___ visit us the following week.",
       "correctAnswer": "would",
       "explanation": "Future in the past: 'would' for future actions from a past perspective."
@@ -295,14 +210,8 @@
       "id": "b2-25",
       "difficulty": 5,
       "type": "multiple-choice",
-      "skill": "passive-reporting",
       "prompt": "The robbery is thought ___ by an insider.",
-      "options": [
-        "to have been committed",
-        "to be committed",
-        "to commit",
-        "being committed"
-      ],
+      "options": ["to have been committed", "to be committed", "to commit", "being committed"],
       "correctAnswer": 0,
       "explanation": "Passive with reporting verb: 'is thought + perfect infinitive' for past action."
     },
@@ -310,7 +219,6 @@
       "id": "b2-26",
       "difficulty": 5,
       "type": "fill-blank",
-      "skill": "conditional-inversion",
       "prompt": "___ worked harder, I would have passed the exam.",
       "correctAnswer": "Had I",
       "explanation": "Inverted conditional: 'Had I' instead of 'If I had'."
@@ -319,14 +227,8 @@
       "id": "b2-27",
       "difficulty": 5,
       "type": "multiple-choice",
-      "skill": "inversion",
       "prompt": "Not only ___ late, but he also forgot the documents.",
-      "options": [
-        "he arrived",
-        "did he arrive",
-        "arrived he",
-        "he did arrive"
-      ],
+      "options": ["he arrived", "did he arrive", "arrived he", "he did arrive"],
       "correctAnswer": 1,
       "explanation": "'Not only' triggers inversion with auxiliary before subject."
     },
@@ -334,7 +236,6 @@
       "id": "b2-28",
       "difficulty": 5,
       "type": "fill-blank",
-      "skill": "participle-clauses",
       "prompt": "Having finished the report, she ___ home.",
       "correctAnswer": "went",
       "explanation": "Participle clause showing completed action before main clause."
@@ -343,14 +244,8 @@
       "id": "b2-29",
       "difficulty": 5,
       "type": "multiple-choice",
-      "skill": "modal-perfect",
       "prompt": "You ___ have bought tickets; they were free.",
-      "options": [
-        "mustn't",
-        "needn't",
-        "shouldn't",
-        "wouldn't"
-      ],
+      "options": ["mustn't", "needn't", "shouldn't", "wouldn't"],
       "correctAnswer": 1,
       "explanation": "'Needn't have' means you did something unnecessary."
     },
@@ -358,8 +253,7 @@
       "id": "b2-30",
       "difficulty": 5,
       "type": "fill-blank",
-      "skill": "cleft-sentences",
-      "prompt": "What I need is a long holiday, not ___.",
+      "prompt": "What I need is a long holiday, not more work.",
       "correctAnswer": "more work",
       "explanation": "Cleft sentence: 'What I need is X' for emphasis."
     },
@@ -367,14 +261,8 @@
       "id": "b2-31",
       "difficulty": 5,
       "type": "multiple-choice",
-      "skill": "gerunds",
       "prompt": "They denied ___ the confidential data.",
-      "options": [
-        "to leak",
-        "leaking",
-        "having leaked",
-        "leak"
-      ],
+      "options": ["to leak", "leaking", "having leaked", "leak"],
       "correctAnswer": 2,
       "explanation": "'Deny + perfect gerund' for action before the time of denying."
     },
@@ -382,7 +270,6 @@
       "id": "b2-32",
       "difficulty": 5,
       "type": "fill-blank",
-      "skill": "relative-clauses",
       "prompt": "The house, ___ was built in 1920, needs renovation.",
       "correctAnswer": "which",
       "explanation": "Non-defining relative clause with 'which'."
@@ -391,14 +278,8 @@
       "id": "b2-33",
       "difficulty": 5,
       "type": "multiple-choice",
-      "skill": "inversion",
       "prompt": "Rarely ___ such a beautiful sunset.",
-      "options": [
-        "I have seen",
-        "have I seen",
-        "I saw",
-        "did I see"
-      ],
+      "options": ["I have seen", "have I seen", "I saw", "did I see"],
       "correctAnswer": 1,
       "explanation": "Negative inversion with 'Rarely'."
     },
@@ -406,7 +287,6 @@
       "id": "b2-34",
       "difficulty": 5,
       "type": "fill-blank",
-      "skill": "gerunds",
       "prompt": "I remember ___ to the park as a child.",
       "correctAnswer": "being taken",
       "explanation": "Passive gerund after 'remember' for past memory."
@@ -415,14 +295,8 @@
       "id": "b2-35",
       "difficulty": 5,
       "type": "multiple-choice",
-      "skill": "conditionals",
       "prompt": "If you ___ me, I would have helped you.",
-      "options": [
-        "asked",
-        "had asked",
-        "would ask",
-        "were asking"
-      ],
+      "options": ["asked", "had asked", "would ask", "were asking"],
       "correctAnswer": 1,
       "explanation": "Third conditional: past perfect in if-clause."
     },
@@ -430,7 +304,6 @@
       "id": "b2-36",
       "difficulty": 5,
       "type": "fill-blank",
-      "skill": "gerunds",
       "prompt": "We objected ___ treated so rudely.",
       "correctAnswer": "to being",
       "explanation": "'Object to + being + past participle' (passive gerund)."
@@ -439,14 +312,8 @@
       "id": "b2-37",
       "difficulty": 5,
       "type": "multiple-choice",
-      "skill": "inversion",
       "prompt": "Seldom ___ such dedication from employees.",
-      "options": [
-        "we see",
-        "do we see",
-        "we saw",
-        "did we saw"
-      ],
+      "options": ["we see", "do we see", "we saw", "did we saw"],
       "correctAnswer": 1,
       "explanation": "Negative inversion with 'Seldom'."
     },
@@ -454,7 +321,6 @@
       "id": "b2-38",
       "difficulty": 5,
       "type": "fill-blank",
-      "skill": "conditional-inversion",
       "prompt": "___ accept their offer, I would have regretted it.",
       "correctAnswer": "Had I",
       "explanation": "Inverted third conditional: 'Had I' instead of 'If I had'."
@@ -463,14 +329,8 @@
       "id": "b2-39",
       "difficulty": 5,
       "type": "multiple-choice",
-      "skill": "passive-reporting",
       "prompt": "The project is believed ___ over budget.",
-      "options": [
-        "to have gone",
-        "to go",
-        "going",
-        "to be going"
-      ],
+      "options": ["to have gone", "to go", "going", "to be going"],
       "correctAnswer": 0,
       "explanation": "Passive reporting verb with perfect infinitive for past result."
     },
@@ -478,73 +338,9 @@
       "id": "b2-40",
       "difficulty": 5,
       "type": "fill-blank",
-      "skill": "cleft-sentences",
       "prompt": "It was in Paris that they first ___.",
       "correctAnswer": "met",
       "explanation": "Cleft sentence emphasizing place with 'It was...that...'"
-    },
-    {
-      "id": "b2-41",
-      "difficulty": 5,
-      "type": "multiple-choice",
-      "skill": "discourse-markers",
-      "prompt": "___ the bad weather, we decided to go hiking anyway.",
-      "options": [
-        "In spite of",
-        "Despite of",
-        "Although",
-        "However"
-      ],
-      "correctAnswer": 0,
-      "explanation": "'In spite of' + noun phrase for concession."
-    },
-    {
-      "id": "b2-42",
-      "difficulty": 5,
-      "type": "fill-blank",
-      "skill": "phrasal-verbs",
-      "prompt": "The meeting has been ___ until next Friday.",
-      "correctAnswer": "put off",
-      "explanation": "'Put off' = postpone."
-    },
-    {
-      "id": "b2-43",
-      "difficulty": 5,
-      "type": "multiple-choice",
-      "skill": "passive-voice",
-      "prompt": "The ancient manuscript ___ in the 18th century.",
-      "options": [
-        "is discovered",
-        "was discovered",
-        "has been discovered",
-        "had discovered"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Past passive for specific time in the past."
-    },
-    {
-      "id": "b2-44",
-      "difficulty": 5,
-      "type": "fill-blank",
-      "skill": "future-forms",
-      "prompt": "By this time next year, I ___ my degree.",
-      "correctAnswer": "will have completed",
-      "explanation": "Future perfect for action completed before a specific future time."
-    },
-    {
-      "id": "b2-45",
-      "difficulty": 5,
-      "type": "multiple-choice",
-      "skill": "reported-speech",
-      "prompt": "'I didn't take the book,' she said. → She denied ___ the book.",
-      "options": [
-        "to take",
-        "taking",
-        "having taken",
-        "to have taken"
-      ],
-      "correctAnswer": 2,
-      "explanation": "'Deny + perfect gerund' for reporting past actions."
     }
   ]
 }

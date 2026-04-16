@@ -1,20 +1,13 @@
 {
   "name": "B1 English Test",
   "level": "B1",
-  "description": "Intermediate level English test covering conditionals, passive voice, reported speech, modal verbs, and common phrasal verbs",
   "questions": [
     {
       "id": "b1-1",
       "difficulty": 4,
       "type": "multiple-choice",
-      "skill": "future-perfect",
       "prompt": "By the time you arrive, I ___ my homework.",
-      "options": [
-        "will finish",
-        "will have finished",
-        "finish",
-        "have finished"
-      ],
+      "options": ["will finish", "will have finished", "finish", "have finished"],
       "correctAnswer": 1,
       "explanation": "Future perfect for action completed before a future time."
     },
@@ -22,15 +15,8 @@
       "id": "b1-2",
       "difficulty": 4,
       "type": "fill-blank",
-      "skill": "conditionals",
-      "subskill": "third-conditional",
       "prompt": "If I had known, I ___ you.",
-      "options": [
-        "would tell",
-        "would have told",
-        "told",
-        "will tell"
-      ],
+      "options": ["would tell", "would have told", "told", "will tell"],
       "correctAnswer": 1,
       "explanation": "Third conditional: 'would have + past participle'."
     },
@@ -38,14 +24,8 @@
       "id": "b1-3",
       "difficulty": 4,
       "type": "multiple-choice",
-      "skill": "relative-clauses",
       "prompt": "The new policy, ___ was implemented last month, has caused controversy.",
-      "options": [
-        "which",
-        "that",
-        "who",
-        "what"
-      ],
+      "options": ["which", "that", "who", "what"],
       "correctAnswer": 0,
       "explanation": "Non-defining relative clause uses 'which'."
     },
@@ -53,7 +33,6 @@
       "id": "b1-4",
       "difficulty": 4,
       "type": "fill-blank",
-      "skill": "wish-regrets",
       "prompt": "I wish I ___ studied harder for the exam.",
       "correctAnswer": "had",
       "explanation": "'Wish + past perfect' for regret about past."
@@ -62,14 +41,8 @@
       "id": "b1-5",
       "difficulty": 4,
       "type": "multiple-choice",
-      "skill": "phrasal-verbs",
       "prompt": "Despite the bad weather, they decided to ___ with the picnic.",
-      "options": [
-        "go on",
-        "go ahead",
-        "carry out",
-        "carry on"
-      ],
+      "options": ["go on", "go ahead", "carry out", "carry on"],
       "correctAnswer": 1,
       "explanation": "'Go ahead' means to proceed with something."
     },
@@ -77,7 +50,6 @@
       "id": "b1-6",
       "difficulty": 4,
       "type": "fill-blank",
-      "skill": "passive-voice",
       "prompt": "The book ___ by millions of people worldwide.",
       "correctAnswer": "is read",
       "explanation": "Present passive: 'is + past participle'."
@@ -86,22 +58,15 @@
       "id": "b1-7",
       "difficulty": 4,
       "type": "multiple-choice",
-      "skill": "inversion",
       "prompt": "Not only ___ late, but he also forgot the documents.",
-      "options": [
-        "he was",
-        "was he",
-        "he is",
-        "is he"
-      ],
-      "correctAnswer": 1,
-      "explanation": "'Not only' at start requires inversion: auxiliary verb before subject."
+      "options": ["he was", "was he", "he is", "is he"],
+      "correctAnswer": 0,
+      "explanation": "'Not only' at start requires inversion after subject."
     },
     {
       "id": "b1-8",
       "difficulty": 4,
       "type": "fill-blank",
-      "skill": "prepositions",
       "prompt": "She accused him ___ her wallet.",
       "correctAnswer": "of stealing",
       "explanation": "'Accuse someone of + gerund'."
@@ -110,14 +75,8 @@
       "id": "b1-9",
       "difficulty": 4,
       "type": "multiple-choice",
-      "skill": "time-expressions",
       "prompt": "Hardly had we stepped outside ___ it started raining.",
-      "options": [
-        "than",
-        "when",
-        "then",
-        "that"
-      ],
+      "options": ["than", "when", "then", "that"],
       "correctAnswer": 1,
       "explanation": "'Hardly...when' structure for sequential events."
     },
@@ -125,7 +84,6 @@
       "id": "b1-10",
       "difficulty": 4,
       "type": "fill-blank",
-      "skill": "passive-voice",
       "prompt": "The project was ___ due to lack of funding.",
       "correctAnswer": "abandoned",
       "explanation": "Past passive: 'was + past participle'."
@@ -134,22 +92,15 @@
       "id": "b1-11",
       "difficulty": 4,
       "type": "multiple-choice",
-      "skill": "conjunctions",
       "prompt": "___ I was tired, I continued working.",
-      "options": [
-        "Despite",
-        "Although",
-        "However",
-        "Even"
-      ],
+      "options": ["Despite", "Although", "However", "Even"],
       "correctAnswer": 1,
-      "explanation": "'Although' introduces a concession clause with subject + verb."
+      "explanation": "'Although' introduces a concession clause."
     },
     {
       "id": "b1-12",
       "difficulty": 4,
       "type": "fill-blank",
-      "skill": "gerunds",
       "prompt": "She objects ___ treated unfairly.",
       "correctAnswer": "to being",
       "explanation": "'Object to + being' (passive gerund)."
@@ -158,14 +109,8 @@
       "id": "b1-13",
       "difficulty": 4,
       "type": "multiple-choice",
-      "skill": "subjunctive",
       "prompt": "It's high time you ___ to bed.",
-      "options": [
-        "go",
-        "went",
-        "will go",
-        "gone"
-      ],
+      "options": ["go", "went", "will go", "gone"],
       "correctAnswer": 1,
       "explanation": "'It's time' + past subjunctive for immediate action needed."
     },
@@ -173,7 +118,6 @@
       "id": "b1-14",
       "difficulty": 4,
       "type": "fill-blank",
-      "skill": "passive-voice",
       "prompt": "The report ___ by the committee tomorrow.",
       "correctAnswer": "will be published",
       "explanation": "Future passive: 'will be + past participle'."
@@ -182,14 +126,8 @@
       "id": "b1-15",
       "difficulty": 4,
       "type": "multiple-choice",
-      "skill": "conjunctions",
       "prompt": "___ having read the book, she failed the test.",
-      "options": [
-        "Although",
-        "Despite",
-        "Even though",
-        "Spite of"
-      ],
+      "options": ["Although", "Despite", "Even though", "Spite of"],
       "correctAnswer": 1,
       "explanation": "'Despite + gerund' for concession."
     },
@@ -197,7 +135,6 @@
       "id": "b1-16",
       "difficulty": 4,
       "type": "fill-blank",
-      "skill": "passive-voice",
       "prompt": "He was ___ of stealing the money.",
       "correctAnswer": "accused",
       "explanation": "Past passive: 'was + past participle'."
@@ -206,22 +143,15 @@
       "id": "b1-17",
       "difficulty": 4,
       "type": "multiple-choice",
-      "skill": "time-clauses",
-      "prompt": "As soon as I ___ home, I'll call you.",
-      "options": [
-        "will get",
-        "get",
-        "would get",
-        "got"
-      ],
+      "prompt": "Scarcely ___ entered the room when the phone rang.",
+      "options": ["I had", "had I", "I did", "did I"],
       "correctAnswer": 1,
-      "explanation": "'As soon as' + present simple for future time clauses."
+      "explanation": "'Scarcely...when' with inversion."
     },
     {
       "id": "b1-18",
       "difficulty": 4,
       "type": "fill-blank",
-      "skill": "gerunds",
       "prompt": "They succeeded in ___ the problem.",
       "correctAnswer": "solving",
       "explanation": "'Succeed in + gerund'."
@@ -230,14 +160,8 @@
       "id": "b1-19",
       "difficulty": 4,
       "type": "multiple-choice",
-      "skill": "comparatives",
       "prompt": "The more you practice, ___ you'll become.",
-      "options": [
-        "the better",
-        "better",
-        "the best",
-        "best"
-      ],
+      "options": ["the better", "better", "the best", "best"],
       "correctAnswer": 0,
       "explanation": "'The more...the better' comparative structure."
     },
@@ -245,24 +169,16 @@
       "id": "b1-20",
       "difficulty": 4,
       "type": "fill-blank",
-      "skill": "conditionals",
-      "subskill": "first-conditional",
       "prompt": "Unless you ___ harder, you won't pass.",
       "correctAnswer": "study",
-      "explanation": "'Unless' + present tense for future condition (= if not)."
+      "explanation": "'Unless' + present tense for future condition."
     },
     {
       "id": "b1-21",
       "difficulty": 4,
       "type": "multiple-choice",
-      "skill": "reported-speech",
       "prompt": "She said that she ___ to London the following week.",
-      "options": [
-        "will go",
-        "would go",
-        "goes",
-        "went"
-      ],
+      "options": ["will go", "would go", "goes", "went"],
       "correctAnswer": 1,
       "explanation": "Reported speech: 'will' changes to 'would'."
     },
@@ -270,7 +186,6 @@
       "id": "b1-22",
       "difficulty": 4,
       "type": "fill-blank",
-      "skill": "past-perfect-continuous",
       "prompt": "I ___ for three hours when you called.",
       "correctAnswer": "had been waiting",
       "explanation": "Past perfect continuous for action continuing up to a past moment."
@@ -279,15 +194,8 @@
       "id": "b1-23",
       "difficulty": 4,
       "type": "multiple-choice",
-      "skill": "modal-verbs",
-      "subskill": "should-have",
       "prompt": "You ___ have called me before arriving.",
-      "options": [
-        "should",
-        "would",
-        "could",
-        "might"
-      ],
+      "options": ["should", "would", "could", "might"],
       "correctAnswer": 0,
       "explanation": "'Should have' expresses past criticism or advice."
     },
@@ -295,7 +203,6 @@
       "id": "b1-24",
       "difficulty": 4,
       "type": "fill-blank",
-      "skill": "passive-voice",
       "prompt": "The letter ___ yesterday.",
       "correctAnswer": "was sent",
       "explanation": "Past passive: 'was + past participle'."
@@ -304,22 +211,15 @@
       "id": "b1-25",
       "difficulty": 4,
       "type": "multiple-choice",
-      "skill": "question-tags",
-      "prompt": "I have never seen such a beautiful sunset, ___?",
-      "options": [
-        "have I",
-        "haven't I",
-        "do I",
-        "don't I"
-      ],
+      "prompt": "Never ___ such a beautiful sunset.",
+      "options": ["I have seen", "have I seen", "I saw", "did I see"],
       "correctAnswer": 1,
-      "explanation": "Question tag: positive after negative statement (never)."
+      "explanation": "Inversion after negative adverb at sentence start."
     },
     {
       "id": "b1-26",
       "difficulty": 4,
       "type": "fill-blank",
-      "skill": "gerunds",
       "prompt": "They denied ___ the mistake.",
       "correctAnswer": "making",
       "explanation": "'Deny + gerund' pattern."
@@ -328,14 +228,8 @@
       "id": "b1-27",
       "difficulty": 4,
       "type": "multiple-choice",
-      "skill": "relative-clauses",
       "prompt": "The man ___ car was stolen called the police.",
-      "options": [
-        "who",
-        "which",
-        "whose",
-        "that"
-      ],
+      "options": ["who", "which", "whose", "that"],
       "correctAnswer": 2,
       "explanation": "'Whose' indicates possession in relative clauses."
     },
@@ -343,7 +237,6 @@
       "id": "b1-28",
       "difficulty": 4,
       "type": "fill-blank",
-      "skill": "phrasal-verbs",
       "prompt": "She looks forward ___ you again.",
       "correctAnswer": "to seeing",
       "explanation": "'Look forward to + gerund'."
@@ -352,46 +245,32 @@
       "id": "b1-29",
       "difficulty": 4,
       "type": "multiple-choice",
-      "skill": "future-forms",
       "prompt": "___ you be available for a meeting tomorrow?",
-      "options": [
-        "Will",
-        "Shall",
-        "Would",
-        "Should"
-      ],
-      "correctAnswer": 0,
-      "explanation": "'Will' for future arrangements and availability."
+      "options": ["May", "Shall", "Would", "Should"],
+      "correctAnswer": 2,
+      "explanation": "'Would' is polite for requests."
     },
     {
       "id": "b1-30",
       "difficulty": 4,
       "type": "fill-blank",
-      "skill": "passive-voice",
-      "prompt": "The bridge ___ last year.",
-      "correctAnswer": "was built",
-      "explanation": "Past passive: 'was + past participle'."
+      "prompt": "The building ___ by the end of next year.",
+      "correctAnswer": "will have been completed",
+      "explanation": "Future perfect passive: 'will have been + past participle'."
     },
     {
       "id": "b1-31",
       "difficulty": 4,
       "type": "multiple-choice",
-      "skill": "question-tags",
       "prompt": "You haven't finished yet, ___?",
-      "options": [
-        "have you",
-        "haven't you",
-        "do you",
-        "don't you"
-      ],
+      "options": ["have you", "haven't you", "do you", "don't you"],
       "correctAnswer": 0,
-      "explanation": "Question tag: positive after negative statement."
+      "explanation": "Question tag: negative after positive statement."
     },
     {
       "id": "b1-32",
       "difficulty": 4,
       "type": "fill-blank",
-      "skill": "gerunds",
       "prompt": "I regret ___ that information to him.",
       "correctAnswer": "giving",
       "explanation": "'Regret + gerund' for past actions."
@@ -400,22 +279,15 @@
       "id": "b1-33",
       "difficulty": 4,
       "type": "multiple-choice",
-      "skill": "phrasal-verbs",
-      "prompt": "Please ___ the lights when you leave the room.",
-      "options": [
-        "turn off",
-        "turn on",
-        "turn up",
-        "turn down"
-      ],
-      "correctAnswer": 0,
-      "explanation": "'Turn off' means to stop electricity/light."
+      "prompt": "Only after the meeting ___ about the changes.",
+      "options": ["we learned", "did we learn", "learned we", "we did learn"],
+      "correctAnswer": 1,
+      "explanation": "Inversion after 'Only + prepositional phrase'."
     },
     {
       "id": "b1-34",
       "difficulty": 4,
       "type": "fill-blank",
-      "skill": "prepositions",
       "prompt": "She insisted ___ the bill.",
       "correctAnswer": "on paying",
       "explanation": "'Insist on + gerund' pattern."
@@ -424,14 +296,8 @@
       "id": "b1-35",
       "difficulty": 4,
       "type": "multiple-choice",
-      "skill": "passive-voice",
       "prompt": "The children ___ to the zoo by their teacher.",
-      "options": [
-        "were taken",
-        "took",
-        "are taken",
-        "take"
-      ],
+      "options": ["were taken", "took", "are taken", "take"],
       "correctAnswer": 0,
       "explanation": "Past passive: 'were + past participle'."
     },
@@ -439,8 +305,6 @@
       "id": "b1-36",
       "difficulty": 4,
       "type": "fill-blank",
-      "skill": "conditionals",
-      "subskill": "third-conditional",
       "prompt": "If she hadn't helped me, I ___ the exam.",
       "correctAnswer": "wouldn't have passed",
       "explanation": "Third conditional: 'wouldn't have + past participle'."
@@ -449,14 +313,8 @@
       "id": "b1-37",
       "difficulty": 4,
       "type": "multiple-choice",
-      "skill": "relative-clauses",
       "prompt": "The hotel ___ we stayed was very comfortable.",
-      "options": [
-        "which",
-        "that",
-        "where",
-        "when"
-      ],
+      "options": ["which", "that", "where", "when"],
       "correctAnswer": 2,
       "explanation": "'Where' for place in relative clauses."
     },
@@ -464,7 +322,6 @@
       "id": "b1-38",
       "difficulty": 4,
       "type": "fill-blank",
-      "skill": "gerunds",
       "prompt": "They are used ___ early every morning.",
       "correctAnswer": "to getting up",
       "explanation": "'Be used to + gerund' for accustomed actions."
@@ -473,15 +330,8 @@
       "id": "b1-39",
       "difficulty": 4,
       "type": "multiple-choice",
-      "skill": "modal-verbs",
-      "subskill": "should-have",
       "prompt": "She ___ have been more careful with the documents.",
-      "options": [
-        "should",
-        "would",
-        "could",
-        "might"
-      ],
+      "options": ["should", "would", "could", "might"],
       "correctAnswer": 0,
       "explanation": "'Should have' for past criticism."
     },
@@ -489,73 +339,9 @@
       "id": "b1-40",
       "difficulty": 4,
       "type": "fill-blank",
-      "skill": "future-perfect",
       "prompt": "By next month, I ___ this book.",
       "correctAnswer": "will have finished",
       "explanation": "Future perfect for action completed before future time."
-    },
-    {
-      "id": "b1-41",
-      "difficulty": 4,
-      "type": "multiple-choice",
-      "skill": "confusable-words",
-      "prompt": "Could you ___ me the time, please?",
-      "options": [
-        "say",
-        "tell",
-        "speak",
-        "talk"
-      ],
-      "correctAnswer": 1,
-      "explanation": "'Tell' needs an object (tell someone something)."
-    },
-    {
-      "id": "b1-42",
-      "difficulty": 4,
-      "type": "fill-blank",
-      "skill": "prepositions",
-      "prompt": "It depends ___ the weather.",
-      "correctAnswer": "on",
-      "explanation": "'Depend on' - fixed preposition."
-    },
-    {
-      "id": "b1-43",
-      "difficulty": 4,
-      "type": "multiple-choice",
-      "skill": "phrasal-verbs",
-      "prompt": "I need to ___ smoking. It's bad for my health.",
-      "options": [
-        "give up",
-        "give in",
-        "give away",
-        "give back"
-      ],
-      "correctAnswer": 0,
-      "explanation": "'Give up' means to stop doing something."
-    },
-    {
-      "id": "b1-44",
-      "difficulty": 4,
-      "type": "fill-blank",
-      "skill": "articles",
-      "prompt": "She's ___ university student.",
-      "correctAnswer": "a",
-      "explanation": "'A' before consonant sound (/juː/)."
-    },
-    {
-      "id": "b1-45",
-      "difficulty": 4,
-      "type": "multiple-choice",
-      "skill": "modal-verbs",
-      "prompt": "You ___ park here. It's prohibited.",
-      "options": [
-        "mustn't",
-        "don't have to",
-        "needn't",
-        "shouldn't"
-      ],
-      "correctAnswer": 0,
-      "explanation": "'Mustn't' = prohibition. 'Don't have to' = no obligation."
     }
   ]
 }
