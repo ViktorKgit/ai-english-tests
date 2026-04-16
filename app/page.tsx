@@ -2,7 +2,7 @@
 
 import { useTest } from '@/components/test/TestProvider'
 import { HomePage } from '@/components/test/HomePage'
-import { PlacementTest } from '@/components/test/PlacementTest'
+import { AdaptivePlacementTest } from '@/components/test/AdaptivePlacementTest'
 import { LevelTest } from '@/components/test/LevelTest'
 import { Results } from '@/components/test/Results'
 
@@ -18,7 +18,7 @@ export default function Home() {
   }
 
   if (testType === 'placement') {
-    return <PlacementTest />
+    return <AdaptivePlacementTest />
   }
 
   return <LevelTest />
