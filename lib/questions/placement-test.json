@@ -1,0 +1,92 @@
+{
+  "name": "English Placement Test",
+  "questions": [
+    {
+      "id": "placement-1",
+      "difficulty": 3,
+      "type": "multiple-choice",
+      "prompt": "I ___ to the store yesterday.",
+      "options": ["go", "went", "gone", "going"],
+      "correctAnswer": 1,
+      "explanation": "Yesterday indicates past tense. 'Went' is the past tense of 'go'."
+    },
+    {
+      "id": "placement-2",
+      "difficulty": 3,
+      "type": "multiple-choice",
+      "prompt": "She has been working here ___ 2020.",
+      "options": ["since", "for", "from", "during"],
+      "correctAnswer": 0,
+      "explanation": "Use 'since' with a specific point in time (2020)."
+    },
+    {
+      "id": "placement-3",
+      "difficulty": 4,
+      "type": "fill-blank",
+      "prompt": "If I ___ rich, I would travel the world.",
+      "correctAnswer": "were",
+      "explanation": "Second conditional uses 'were' for all subjects in the if-clause."
+    },
+    {
+      "id": "placement-4",
+      "difficulty": 2,
+      "type": "multiple-choice",
+      "prompt": "There ___ many students in the classroom.",
+      "options": ["is", "are", "was", "be"],
+      "correctAnswer": 1,
+      "explanation": "'Many' requires plural verb 'are'."
+    },
+    {
+      "id": "placement-5",
+      "difficulty": 5,
+      "type": "multiple-choice",
+      "prompt": "Despite the bad weather, they decided to ___ with the picnic.",
+      "options": ["go on", "go ahead", "carry out", "carry on"],
+      "correctAnswer": 1,
+      "explanation": "'Go ahead' means to proceed with something. 'Carry on' means continue doing something."
+    },
+    {
+      "id": "placement-6",
+      "difficulty": 2,
+      "type": "fill-blank",
+      "prompt": "My sister ___ like coffee.",
+      "correctAnswer": "doesn't",
+      "explanation": "Present simple negative uses 'doesn't' for third person singular."
+    },
+    {
+      "id": "placement-7",
+      "difficulty": 4,
+      "type": "multiple-choice",
+      "prompt": "By the time you arrive, I ___ my homework.",
+      "options": ["will finish", "will have finished", "finish", "have finished"],
+      "correctAnswer": 1,
+      "explanation": "Future perfect tense for action completed before a future time."
+    },
+    {
+      "id": "placement-8",
+      "difficulty": 1,
+      "type": "multiple-choice",
+      "prompt": "What is your name?",
+      "options": ["My name is John.", "I name am John.", "Me name is John.", "I is John."],
+      "correctAnswer": 0,
+      "explanation": "Basic introduction structure."
+    },
+    {
+      "id": "placement-9",
+      "difficulty": 5,
+      "type": "fill-blank",
+      "prompt": "The new policy, ___ was implemented last month, has caused controversy.",
+      "correctAnswer": "which",
+      "explanation": "Non-defining relative clause uses 'which'."
+    },
+    {
+      "id": "placement-10",
+      "difficulty": 3,
+      "type": "multiple-choice",
+      "prompt": "I look forward to ___ from you.",
+      "options": ["hear", "hearing", "heard", "hears"],
+      "correctAnswer": 1,
+      "explanation": "'Look forward to' is followed by a gerund (-ing form)."
+    }
+  ]
+}
