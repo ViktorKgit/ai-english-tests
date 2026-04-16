@@ -1,0 +1,177 @@
+{
+  "name": "A0 English Test",
+  "level": "A0",
+  "questions": [
+    {
+      "id": "a0-1",
+      "difficulty": 1,
+      "type": "multiple-choice",
+      "prompt": "What is your name?",
+      "options": ["My name is John.", "I name am John.", "Me name is John.", "I is John."],
+      "correctAnswer": 0,
+      "explanation": "Basic introduction uses 'My name is...'"
+    },
+    {
+      "id": "a0-2",
+      "difficulty": 1,
+      "type": "multiple-choice",
+      "prompt": "___ you like pizza?",
+      "options": ["Does", "Do", "Are", "Is"],
+      "correctAnswer": 1,
+      "explanation": "Use 'Do' for questions with 'you'."
+    },
+    {
+      "id": "a0-3",
+      "difficulty": 1,
+      "type": "fill-blank",
+      "prompt": "She ___ a teacher.",
+      "correctAnswer": "is",
+      "explanation": "Use 'is' with 'she'."
+    },
+    {
+      "id": "a0-4",
+      "difficulty": 1,
+      "type": "multiple-choice",
+      "prompt": "I have ___ apple.",
+      "options": ["a", "an", "the", "two"],
+      "correctAnswer": 1,
+      "explanation": "Use 'an' before words starting with a vowel sound."
+    },
+    {
+      "id": "a0-5",
+      "difficulty": 1,
+      "type": "fill-blank",
+      "prompt": "They ___ football every Sunday.",
+      "correctAnswer": "play",
+      "explanation": "Present simple uses base form for 'they'."
+    },
+    {
+      "id": "a0-6",
+      "difficulty": 1,
+      "type": "multiple-choice",
+      "prompt": "The cat ___ on the table.",
+      "options": ["is", "are", "am", "be"],
+      "correctAnswer": 0,
+      "explanation": "Use 'is' with singular animals/things."
+    },
+    {
+      "id": "a0-7",
+      "difficulty": 1,
+      "type": "fill-blank",
+      "prompt": "I ___ happy today.",
+      "correctAnswer": "am",
+      "explanation": "Use 'am' with 'I'."
+    },
+    {
+      "id": "a0-8",
+      "difficulty": 1,
+      "type": "multiple-choice",
+      "prompt": "We ___ students.",
+      "options": ["is", "am", "are", "be"],
+      "correctAnswer": 2,
+      "explanation": "Use 'are' with 'we'."
+    },
+    {
+      "id": "a0-9",
+      "difficulty": 1,
+      "type": "fill-blank",
+      "prompt": "He ___ not like coffee.",
+      "correctAnswer": "does",
+      "explanation": "Present simple negative uses 'doesn't' (does not) for he."
+    },
+    {
+      "id": "a0-10",
+      "difficulty": 1,
+      "type": "multiple-choice",
+      "prompt": "___ is your friend?",
+      "options": ["What", "Who", "Where", "When"],
+      "correctAnswer": 1,
+      "explanation": "Use 'Who' for asking about people."
+    },
+    {
+      "id": "a0-11",
+      "difficulty": 1,
+      "type": "fill-blank",
+      "prompt": "My sister ___ in London.",
+      "correctAnswer": "lives",
+      "explanation": "Third person singular adds 's' in present simple."
+    },
+    {
+      "id": "a0-12",
+      "difficulty": 1,
+      "type": "multiple-choice",
+      "prompt": "I don't have ___ money.",
+      "options": ["some", "any", "a", "an"],
+      "correctAnswer": 1,
+      "explanation": "Use 'any' in negative sentences."
+    },
+    {
+      "id": "a0-13",
+      "difficulty": 1,
+      "type": "fill-blank",
+      "prompt": "___ you speak English?",
+      "correctAnswer": "Do",
+      "explanation": "Yes/No questions start with 'Do' for 'you'."
+    },
+    {
+      "id": "a0-14",
+      "difficulty": 1,
+      "type": "multiple-choice",
+      "prompt": "There ___ a book on the table.",
+      "options": ["is", "are", "be", "am"],
+      "correctAnswer": 0,
+      "explanation": "Use 'is' with singular subjects."
+    },
+    {
+      "id": "a0-15",
+      "difficulty": 1,
+      "type": "fill-blank",
+      "prompt": "She ___ like tea.",
+      "correctAnswer": "doesn't",
+      "explanation": "Third person singular negative uses 'doesn't'."
+    },
+    {
+      "id": "a0-16",
+      "difficulty": 1,
+      "type": "multiple-choice",
+      "prompt": "What is this? It ___ a pen.",
+      "options": ["is", "are", "am", "be"],
+      "correctAnswer": 0,
+      "explanation": "Use 'is' for singular objects."
+    },
+    {
+      "id": "a0-17",
+      "difficulty": 1,
+      "type": "fill-blank",
+      "prompt": "They ___ from Spain.",
+      "correctAnswer": "are",
+      "explanation": "Use 'are' with 'they'."
+    },
+    {
+      "id": "a0-18",
+      "difficulty": 1,
+      "type": "multiple-choice",
+      "prompt": "I ___ a student.",
+      "options": ["is", "am", "are", "be"],
+      "correctAnswer": 1,
+      "explanation": "Use 'am' with 'I'."
+    },
+    {
+      "id": "a0-19",
+      "difficulty": 1,
+      "type": "fill-blank",
+      "prompt": "We don't have ___ time.",
+      "correctAnswer": "much",
+      "explanation": "Use 'much' with uncountable nouns like time."
+    },
+    {
+      "id": "a0-20",
+      "difficulty": 1,
+      "type": "multiple-choice",
+      "prompt": "___ are you from?",
+      "options": ["What", "Who", "Where", "When"],
+      "correctAnswer": 2,
+      "explanation": "Use 'Where' for asking about origin/place."
+    }
+  ]
+}
