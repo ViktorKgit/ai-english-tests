@@ -4,28 +4,173 @@
   "questions": [
     {
       "id": "c2-1",
-      "difficulty": 6,
+      "difficulty": 7,
       "type": "multiple-choice",
-      "prompt": "The distinction between the two concepts is rather ___.",
-      "options": ["subtle", "subtlely", "subtlety", "subtly"],
+      "prompt": "The politician's remarks were ___ obfuscation.",
+      "options": ["nothing more than", "nothing less than", "nothing but", "merely"],
       "correctAnswer": 0,
-      "explanation": "'Subtle' is the adjective modifying 'distinction'."
+      "explanation": "'Nothing more than' = simply, purely."
     },
     {
       "id": "c2-2",
-      "difficulty": 6,
+      "difficulty": 7,
       "type": "fill-blank",
-      "prompt": "His argument was ___ flawed.",
-      "correctAnswer": "inherently",
-      "explanation": "'Inherently' means fundamentally or intrinsically."
+      "prompt": "The philosophy ___ itself to multiple interpretations.",
+      "correctAnswer": "lends",
+      "explanation": "'Lend itself to' = be suitable for."
     },
     {
       "id": "c2-3",
-      "difficulty": 6,
-      "type": "open-ended",
-      "prompt": "Explain the difference between 'affect' and 'effect' with examples.",
-      "correctAnswer": ["affect is a verb", "effect is a noun", "influence", "result"],
-      "explanation": "Affect (verb) means to influence. Effect (noun) means result."
+      "difficulty": 7,
+      "type": "multiple-choice",
+      "prompt": "___ his reputation, his argument lacks substance.",
+      "options": ["Notwithstanding", "Beguiling", "For all", "Despite"],
+      "correctAnswer": 2,
+      "explanation": "'For all' = despite, followed by noun phrase."
+    },
+    {
+      "id": "c2-4",
+      "difficulty": 7,
+      "type": "fill-blank",
+      "prompt": "The legislation ___ far-reaching implications.",
+      "correctAnswer": "carries",
+      "explanation": "'Carry implications' = have consequences."
+    },
+    {
+      "id": "c2-5",
+      "difficulty": 7,
+      "type": "multiple-choice",
+      "prompt": "His critique ___ to the heart of the matter.",
+      "options": ["goes", "gets", "penetrates", "reaches"],
+      "correctAnswer": 1,
+      "explanation": "'Get to the heart of' = address the core issue."
+    },
+    {
+      "id": "c2-6",
+      "difficulty": 7,
+      "type": "fill-blank",
+      "prompt": "The theory ___ under close examination.",
+      "correctAnswer": "crumbles",
+      "explanation": "'Crumble under' = fail when subjected to."
+    },
+    {
+      "id": "c2-7",
+      "difficulty": 7,
+      "type": "multiple-choice",
+      "prompt": "The proposal, ___ accepted, would revolutionize the industry.",
+      "options": ["were it to be", "if it were", "should it be", "were it"],
+      "correctAnswer": 0,
+      "explanation": "Conditional inversion with passive construction."
+    },
+    {
+      "id": "c2-8",
+      "difficulty": 7,
+      "type": "fill-blank",
+      "prompt": "Her arguments ___ considerable weight.",
+      "correctAnswer": "carry",
+      "explanation": "'Carry weight' = be significant/influential."
+    },
+    {
+      "id": "c2-9",
+      "difficulty": 7,
+      "type": "multiple-choice",
+      "prompt": "___ thorough investigation, the matter remains unresolved.",
+      "options": ["Despite", "Notwithstanding", "In spite of", "After"],
+      "correctAnswer": 1,
+      "explanation": "'Notwithstanding' = despite, more formal."
+    },
+    {
+      "id": "c2-10",
+      "difficulty": 7,
+      "type": "fill-blank",
+      "prompt": "The analysis ___ several critical flaws.",
+      "correctAnswer": "lays bare",
+      "explanation": "'Lay bare' = reveal/expose."
+    },
+    {
+      "id": "c2-11",
+      "difficulty": 7,
+      "type": "multiple-choice",
+      "prompt": "The outcome is ___ ___ doubt.",
+      "options": ["beyond, reasonable", "outside, any", "without, question", "open, to"],
+      "correctAnswer": 0,
+      "explanation": "'Beyond reasonable doubt' is a legal phrase."
+    },
+    {
+      "id": "c2-12",
+      "difficulty": 7,
+      "type": "fill-blank",
+      "prompt": "His testimony ___ the prosecution's case.",
+      "correctAnswer": "undermined",
+      "explanation": "'Undermine' = weaken."
+    },
+    {
+      "id": "c2-13",
+      "difficulty": 7,
+      "type": "multiple-choice",
+      "prompt": "___ the merits of his argument, his tone was inappropriate.",
+      "options": ["Leaving aside", "Putting aside", "Disregarding", "Ignoring"],
+      "correctAnswer": 0,
+      "explanation": "'Leave aside' = temporarily not consider."
+    },
+    {
+      "id": "c2-14",
+      "difficulty": 7,
+      "type": "fill-blank",
+      "prompt": "The policy ___ itself to criticism.",
+      "correctAnswer": "opens",
+      "explanation": "'Open itself to' = make itself vulnerable to."
+    },
+    {
+      "id": "c2-15",
+      "difficulty": 7,
+      "type": "multiple-choice",
+      "prompt": "___ claim, the evidence suggests otherwise.",
+      "options": ["Contrary to his", "Opposing his", "Against his", "Not withstanding his"],
+      "correctAnswer": 0,
+      "explanation": "'Contrary to' = opposing."
+    },
+    {
+      "id": "c2-16",
+      "difficulty": 7,
+      "type": "fill-blank",
+      "prompt": "The consequences ___ his actions are severe.",
+      "correctAnswer": "attending",
+      "explanation": "'Attending' = associated with (formal)."
+    },
+    {
+      "id": "c2-17",
+      "difficulty": 7,
+      "type": "multiple-choice",
+      "prompt": "His argument ___ on several flawed assumptions.",
+      "options": ["is predicated", "predicates", "relies", "depends"],
+      "correctAnswer": 0,
+      "explanation": "'Be predicated on' = be based on (formal)."
+    },
+    {
+      "id": "c2-18",
+      "difficulty": 7,
+      "type": "fill-blank",
+      "prompt": "The debate ___ around the interpretation of the clause.",
+      "correctAnswer": "revolves",
+      "explanation": "'Revolve around' = center on."
+    },
+    {
+      "id": "c2-19",
+      "difficulty": 7,
+      "type": "multiple-choice",
+      "prompt": "___ the weight of evidence, the jury found him guilty.",
+      "options": ["Given", "Considering", "In light of", "All"],
+      "correctAnswer": 2,
+      "explanation": "'In light of' = considering (formal)."
+    },
+    {
+      "id": "c2-20",
+      "difficulty": 7,
+      "type": "fill-blank",
+      "prompt": "His resignation speaks ___ about the company's state.",
+      "correctAnswer": "volumes",
+      "explanation": "'Speak volumes' = convey a lot (idiom)."
     }
   ]
 }
