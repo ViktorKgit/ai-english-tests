@@ -1,0 +1,32 @@
+{
+  "name": "B1 English Test",
+  "level": "B1",
+  "questions": [
+    {
+      "id": "b1-1",
+      "difficulty": 4,
+      "type": "multiple-choice",
+      "prompt": "I wish I ___ speak Spanish.",
+      "options": ["can", "could", "will", "would"],
+      "correctAnswer": 1,
+      "explanation": "'Wish' + past tense expresses regret about a present ability."
+    },
+    {
+      "id": "b1-2",
+      "difficulty": 4,
+      "type": "fill-blank",
+      "prompt": "The film ___ by Spielberg.",
+      "correctAnswer": "was directed",
+      "explanation": "Passive voice in past tense: was/were + past participle."
+    },
+    {
+      "id": "b1-3",
+      "difficulty": 4,
+      "type": "multiple-choice",
+      "prompt": "She denied ___ the money.",
+      "options": ["take", "to take", "taking", "taken"],
+      "correctAnswer": 2,
+      "explanation": "'Deny' is followed by a gerund (-ing)."
+    }
+  ]
+}

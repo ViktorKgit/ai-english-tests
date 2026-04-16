@@ -1,0 +1,32 @@
+{
+  "name": "B2 English Test",
+  "level": "B2",
+  "questions": [
+    {
+      "id": "b2-1",
+      "difficulty": 5,
+      "type": "multiple-choice",
+      "prompt": "Had I known, I ___ have come earlier.",
+      "options": ["would", "will", "should", "could"],
+      "correctAnswer": 0,
+      "explanation": "Third conditional: Had + subject + past participle, would have + past participle."
+    },
+    {
+      "id": "b2-2",
+      "difficulty": 5,
+      "type": "fill-blank",
+      "prompt": "The report, ___ contains vital information, is missing.",
+      "correctAnswer": "which",
+      "explanation": "Non-defining relative clause with 'which'."
+    },
+    {
+      "id": "b2-3",
+      "difficulty": 5,
+      "type": "multiple-choice",
+      "prompt": "She suggested that we ___ a meeting.",
+      "options": ["had", "have", "would have", "having"],
+      "correctAnswer": 1,
+      "explanation": "Subjunctive after 'suggest' uses base form."
+    }
+  ]
+}

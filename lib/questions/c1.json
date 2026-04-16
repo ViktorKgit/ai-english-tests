@@ -1,0 +1,32 @@
+{
+  "name": "C1 English Test",
+  "level": "C1",
+  "questions": [
+    {
+      "id": "c1-1",
+      "difficulty": 6,
+      "type": "multiple-choice",
+      "prompt": "But for your help, I ___ the project.",
+      "options": ["wouldn't complete", "wouldn't have completed", "didn't complete", "hadn't completed"],
+      "correctAnswer": 1,
+      "explanation": "'But for' acts like 'Without', triggering third conditional."
+    },
+    {
+      "id": "c1-2",
+      "difficulty": 6,
+      "type": "fill-blank",
+      "prompt": "The proposal was met with ___ criticism.",
+      "correctAnswer": "widespread",
+      "explanation": "'Widespread' is the appropriate collocation for criticism."
+    },
+    {
+      "id": "c1-3",
+      "difficulty": 6,
+      "type": "multiple-choice",
+      "prompt": "Rarely ___ such a brilliant performance.",
+      "options": ["we have seen", "have we seen", "we saw", "did we see"],
+      "correctAnswer": 1,
+      "explanation": "Negative inversion: Rarely + auxiliary + subject + main verb."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "name": "A2 English Test",
+  "level": "A2",
+  "questions": [
+    {
+      "id": "a2-1",
+      "difficulty": 3,
+      "type": "multiple-choice",
+      "prompt": "I used to ___ tennis every weekend.",
+      "options": ["play", "playing", "played", "plays"],
+      "correctAnswer": 0,
+      "explanation": "'Used to' is followed by the infinitive without 'to'."
+    },
+    {
+      "id": "a2-2",
+      "difficulty": 3,
+      "type": "fill-blank",
+      "prompt": "If it rains, we ___ stay at home.",
+      "correctAnswer": "will",
+      "explanation": "First conditional: if + present, will + infinitive."
+    },
+    {
+      "id": "a2-3",
+      "difficulty": 3,
+      "type": "multiple-choice",
+      "prompt": "You ___ wear a uniform at work.",
+      "options": ["must", "should", "can", "may"],
+      "correctAnswer": 0,
+      "explanation": "'Must' expresses obligation."
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "name": "C2 English Test",
+  "level": "C2",
+  "questions": [
+    {
+      "id": "c2-1",
+      "difficulty": 6,
+      "type": "multiple-choice",
+      "prompt": "The distinction between the two concepts is rather ___.",
+      "options": ["subtle", "subtlely", "subtlety", "subtly"],
+      "correctAnswer": 0,
+      "explanation": "'Subtle' is the adjective modifying 'distinction'."
+    },
+    {
+      "id": "c2-2",
+      "difficulty": 6,
+      "type": "fill-blank",
+      "prompt": "His argument was ___ flawed.",
+      "correctAnswer": "inherently",
+      "explanation": "'Inherently' means fundamentally or intrinsically."
+    },
+    {
+      "id": "c2-3",
+      "difficulty": 6,
+      "type": "open-ended",
+      "prompt": "Explain the difference between 'affect' and 'effect' with examples.",
+      "correctAnswer": ["affect is a verb", "effect is a noun", "influence", "result"],
+      "explanation": "Affect (verb) means to influence. Effect (noun) means result."
+    }
+  ]
+}
