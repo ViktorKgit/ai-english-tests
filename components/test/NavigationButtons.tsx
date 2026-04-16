@@ -25,7 +25,13 @@ export function NavigationButtons({
   const currentQuestion = questions[currentIndex]
   const currentAnswer = answers.get(currentQuestion.id)
 
-  const validation = validateAnswer(currentQuestion, currentAnswer || { type: currentQuestion.type, value: null })
+  // Create a typed fallback for unanswered questions
+  const fallbackAnswer: Answer = {
+    type: currentQuestion.type,
+    value: null,
+  } as Answer
+
+  const validation = validateAnswer(currentQuestion, currentAnswer ?? fallbackAnswer)
   const canProceed = validation.valid
 
   const isLastQuestion = currentIndex === questions.length - 1

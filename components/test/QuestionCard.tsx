@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import type { Question, Answer } from './types'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -14,6 +14,11 @@ interface QuestionCardProps {
 
 export function QuestionCard({ question, answer, onAnswerChange, showFeedback }: QuestionCardProps) {
   const [localValue, setLocalValue] = useState<Answer['value']>(answer?.value ?? null)
+
+  // Reset local value when question changes
+  useEffect(() => {
+    setLocalValue(answer?.value ?? null)
+  }, [question.id, answer])
 
   const handleChange = (newValue: Answer['value']) => {
     setLocalValue(newValue)

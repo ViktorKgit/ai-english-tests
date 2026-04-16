@@ -19,13 +19,13 @@ export function validateAnswer(question: Question, answer: Answer): ValidationRe
       return { valid: true }
 
     case 'fill-blank':
-      if (!answer.value || answer.value.trim() === '') {
+      if (!answer.value || (typeof answer.value === 'string' && answer.value.trim() === '')) {
         return { valid: false, error: 'Please fill in the blank' }
       }
       return { valid: true }
 
     case 'matching':
-      if (Object.keys(answer.value).length === 0) {
+      if (!answer.value || typeof answer.value !== 'object' || Object.keys(answer.value).length === 0) {
         return { valid: false, error: 'Please match all items' }
       }
       if (Object.keys(answer.value).length !== question.pairs.length) {
@@ -34,10 +34,10 @@ export function validateAnswer(question: Question, answer: Answer): ValidationRe
       return { valid: true }
 
     case 'open-ended':
-      if (!answer.value || answer.value.trim() === '') {
+      if (!answer.value || (typeof answer.value === 'string' && answer.value.trim() === '')) {
         return { valid: false, error: 'Please provide an answer' }
       }
-      if (answer.value.trim().length < 3) {
+      if (typeof answer.value === 'string' && answer.value.trim().length < 3) {
         return { valid: false, error: 'Please provide a more detailed answer' }
       }
       return { valid: true }
