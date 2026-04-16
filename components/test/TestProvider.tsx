@@ -114,16 +114,7 @@ export function TestProvider({ children }: TestProviderProps) {
       })
       return
     } else if (level) {
-      const levelMap: Record<CEFRLevel, string> = {
-        'A0': 'a0-a1',
-        'A1': 'a0-a1',
-        'A2': 'a2',
-        'B1': 'b1',
-        'B2': 'b2',
-        'C1': 'c1',
-        'C2': 'c2',
-      }
-      const response = await fetch(`/questions/${levelMap[level]}.json`)
+      const response = await fetch(`/questions/${level.toLowerCase()}.json`)
       const data = await response.json()
       questions = data.questions
     }
