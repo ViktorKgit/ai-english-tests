@@ -38,6 +38,38 @@ Open http://localhost:3000 in your browser.
 npm run test
 ```
 
+### Building for Production
+
+```bash
+npm run build
+npm start
+```
+
+## Deployment
+
+### Netlify
+
+The project is configured for Netlify deployment:
+
+1. **Automatic deployment**: Connect your Git repository to Netlify
+2. **Build settings** (auto-configured via `netlify.toml`):
+   - Build command: `npm run build`
+   - Publish directory: `.next`
+3. **Environment variables**: None required
+
+Alternatively, deploy manually:
+```bash
+npm run build
+netlify deploy --prod
+```
+
+### Other Platforms
+
+The project works with any platform that supports Next.js:
+- **Vercel** (recommended for Next.js): Connect repo → Deploy
+- **Railway**: Works with minimal configuration
+- **Render**: Works with Docker or buildpack
+
 ## Tech Stack
 
 - Next.js 15
