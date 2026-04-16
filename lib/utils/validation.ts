@@ -6,6 +6,11 @@ export interface ValidationResult {
 }
 
 export function validateAnswer(question: Question, answer: Answer): ValidationResult {
+  // First verify answer type matches question type
+  if (answer.type !== question.type) {
+    return { valid: false, error: 'Answer type does not match question type' }
+  }
+
   switch (question.type) {
     case 'multiple-choice':
       if (answer.value === null || answer.value === undefined) {

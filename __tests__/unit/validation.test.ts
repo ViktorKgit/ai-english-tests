@@ -50,6 +50,85 @@ describe('validateAnswer', () => {
 
     expect(result.valid).toBe(false)
   })
+
+  it('should accept valid fill-blank answer', () => {
+    const question: Question = {
+      id: '1',
+      difficulty: 1,
+      type: 'fill-blank',
+      prompt: 'Test ___',
+      correctAnswer: 'word'
+    }
+    const answer: Answer = { type: 'fill-blank', value: 'test' }
+
+    const result = validateAnswer(question, answer)
+
+    expect(result.valid).toBe(true)
+  })
+
+  it('should reject incomplete matching answers', () => {
+    const question: Question = {
+      id: '1',
+      difficulty: 1,
+      type: 'matching',
+      pairs: [
+        { left: 'A', right: '1' },
+        { left: 'B', right: '2' }
+      ]
+    }
+    const answer: Answer = { type: 'matching', value: { 'A': '1' } }
+
+    const result = validateAnswer(question, answer)
+
+    expect(result.valid).toBe(false)
+  })
+
+  it('should accept valid matching answers', () => {
+    const question: Question = {
+      id: '1',
+      difficulty: 1,
+      type: 'matching',
+      pairs: [
+        { left: 'A', right: '1' },
+        { left: 'B', right: '2' }
+      ]
+    }
+    const answer: Answer = { type: 'matching', value: { 'A': '1', 'B': '2' } }
+
+    const result = validateAnswer(question, answer)
+
+    expect(result.valid).toBe(true)
+  })
+
+  it('should reject too short open-ended answers', () => {
+    const question: Question = {
+      id: '1',
+      difficulty: 1,
+      type: 'open-ended',
+      prompt: 'Explain...',
+      correctAnswer: ['answer']
+    }
+    const answer: Answer = { type: 'open-ended', value: 'ab' }
+
+    const result = validateAnswer(question, answer)
+
+    expect(result.valid).toBe(false)
+  })
+
+  it('should accept valid open-ended answers', () => {
+    const question: Question = {
+      id: '1',
+      difficulty: 1,
+      type: 'open-ended',
+      prompt: 'Explain...',
+      correctAnswer: ['answer']
+    }
+    const answer: Answer = { type: 'open-ended', value: 'This is a valid answer' }
+
+    const result = validateAnswer(question, answer)
+
+    expect(result.valid).toBe(true)
+  })
 })
 
 describe('hasValidAnswer', () => {
