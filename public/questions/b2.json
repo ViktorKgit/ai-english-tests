@@ -6,27 +6,171 @@
       "id": "b2-1",
       "difficulty": 5,
       "type": "multiple-choice",
-      "prompt": "Had I known, I ___ have come earlier.",
-      "options": ["would", "will", "should", "could"],
-      "correctAnswer": 0,
-      "explanation": "Third conditional: Had + subject + past participle, would have + past participle."
+      "prompt": "Under no circumstances ___ reveal this information.",
+      "options": ["you should", "should you", "you must", "must you"],
+      "correctAnswer": 1,
+      "explanation": "Negative inversion: 'should' comes before subject."
     },
     {
       "id": "b2-2",
       "difficulty": 5,
       "type": "fill-blank",
-      "prompt": "The report, ___ contains vital information, is missing.",
-      "correctAnswer": "which",
-      "explanation": "Non-defining relative clause with 'which'."
+      "prompt": "Had I known about the traffic, I ___ left earlier.",
+      "correctAnswer": "would have",
+      "explanation": "Third conditional inversion: 'Had I...' instead of 'If I had...'"
     },
     {
       "id": "b2-3",
       "difficulty": 5,
       "type": "multiple-choice",
-      "prompt": "She suggested that we ___ a meeting.",
-      "options": ["had", "have", "would have", "having"],
+      "prompt": "The proposal was rejected ___ the basis of the cost.",
+      "options": ["on", "in", "at", "for"],
+      "correctAnswer": 0,
+      "explanation": "'On the basis of' is the correct preposition phrase."
+    },
+    {
+      "id": "b2-4",
+      "difficulty": 5,
+      "type": "fill-blank",
+      "prompt": "But for your help, we ___ never succeeded.",
+      "correctAnswer": "would",
+      "explanation": "'But for' + noun = 'If it hadn't been for', triggers conditional."
+    },
+    {
+      "id": "b2-5",
+      "difficulty": 5,
+      "type": "multiple-choice",
+      "prompt": "Little ___ know that this decision would change everything.",
+      "options": ["did I", "I did", "I had", "had I"],
+      "correctAnswer": 0,
+      "explanation": "Negative inversion with 'Little'."
+    },
+    {
+      "id": "b2-6",
+      "difficulty": 5,
+      "type": "fill-blank",
+      "prompt": "Contrary to expectations, the experiment ___.",
+      "correctAnswer": "failed",
+      "explanation": "Past simple for completed action that surprised."
+    },
+    {
+      "id": "b2-7",
+      "difficulty": 5,
+      "type": "multiple-choice",
+      "prompt": "Not until much later ___ the truth.",
+      "options": ["I learned", "did I learn", "I did learn", "learned I"],
       "correctAnswer": 1,
-      "explanation": "Subjunctive after 'suggest' uses base form."
+      "explanation": "'Not until' triggers time inversion."
+    },
+    {
+      "id": "b2-8",
+      "difficulty": 5,
+      "type": "fill-blank",
+      "prompt": "There is no point ___ about the past.",
+      "correctAnswer": "worrying",
+      "explanation": "'There is no point (in) + gerund'."
+    },
+    {
+      "id": "b2-9",
+      "difficulty": 5,
+      "type": "multiple-choice",
+      "prompt": "___ the heavy rain, the match continued.",
+      "options": ["Regardless", "Despite of", "In spite", "Although"],
+      "correctAnswer": 0,
+      "explanation": "'Regardless of' is correct; 'Despite' doesn't take 'of'."
+    },
+    {
+      "id": "b2-10",
+      "difficulty": 5,
+      "type": "fill-blank",
+      "prompt": "The findings are consistent ___ previous research.",
+      "correctAnswer": "with",
+      "explanation": "'Consistent with' is the correct preposition."
+    },
+    {
+      "id": "b2-11",
+      "difficulty": 5,
+      "type": "multiple-choice",
+      "prompt": "Only after careful consideration ___ our decision.",
+      "options": ["we reached", "did we reach", "reached we", "we did reach"],
+      "correctAnswer": 1,
+      "explanation": "'Only after' triggers inversion."
+    },
+    {
+      "id": "b2-12",
+      "difficulty": 5,
+      "type": "fill-blank",
+      "prompt": "She resented ___ for the mistake.",
+      "correctAnswer": "being blamed",
+      "explanation": "'Resent + being + past participle' (passive gerund)."
+    },
+    {
+      "id": "b2-13",
+      "difficulty": 5,
+      "type": "multiple-choice",
+      "prompt": "Were I to win the lottery, I ___ around the world.",
+      "options": ["would travel", "will travel", "travel", "traveled"],
+      "correctAnswer": 0,
+      "explanation": "'Were I' = 'If I were', triggers conditional."
+    },
+    {
+      "id": "b2-14",
+      "difficulty": 5,
+      "type": "fill-blank",
+      "prompt": "The committee is composed ___ experts from various fields.",
+      "correctAnswer": "of",
+      "explanation": "'Composed of' is the correct phrase."
+    },
+    {
+      "id": "b2-15",
+      "difficulty": 5,
+      "type": "multiple-choice",
+      "prompt": "In no way ___ responsible for this outcome.",
+      "options": ["I am", "am I", "I was", "was I"],
+      "correctAnswer": 1,
+      "explanation": "Negative inversion with 'In no way'."
+    },
+    {
+      "id": "b2-16",
+      "difficulty": 5,
+      "type": "fill-blank",
+      "prompt": "We have no option but ___.",
+      "correctAnswer": "to wait",
+      "explanation": "'Have no option but + to-infinitive'."
+    },
+    {
+      "id": "b2-17",
+      "difficulty": 5,
+      "type": "multiple-choice",
+      "prompt": "Such was his confidence that he ___ fail.",
+      "options": ["refused to", "denied", "rejected", "declined"],
+      "correctAnswer": 0,
+      "explanation": "'Such was...that' structure with result clause."
+    },
+    {
+      "id": "b2-18",
+      "difficulty": 5,
+      "type": "fill-blank",
+      "prompt": "The theory fails to account ___ these anomalies.",
+      "correctAnswer": "for",
+      "explanation": "'Account for' means 'explain'."
+    },
+    {
+      "id": "b2-19",
+      "difficulty": 5,
+      "type": "multiple-choice",
+      "prompt": "Nowhere in the document ___ mentioned.",
+      "options": ["this is", "is this", "was this", "this was"],
+      "correctAnswer": 1,
+      "explanation": "Negative inversion with 'Nowhere'."
+    },
+    {
+      "id": "b2-20",
+      "difficulty": 5,
+      "type": "fill-blank",
+      "prompt": "We are committed ___ the highest standards.",
+      "correctAnswer": "to maintaining",
+      "explanation": "'Committed to + gerund'."
     }
   ]
 }
