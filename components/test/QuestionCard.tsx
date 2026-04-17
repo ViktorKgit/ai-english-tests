@@ -14,11 +14,19 @@ interface QuestionCardProps {
 }
 
 export function QuestionCard({ question, answer, onAnswerChange, showFeedback, onNext }: QuestionCardProps) {
-  const [localValue, setLocalValue] = useState<Answer['value']>(answer?.value ?? null)
+  // For fill-blank, use empty string as initial value instead of null
+  const getInitialValue = () => {
+    if (question.type === 'fill-blank') {
+      return answer?.value ?? ''
+    }
+    return answer?.value ?? null
+  }
+
+  const [localValue, setLocalValue] = useState<Answer['value']>(getInitialValue())
 
   // Reset local value when question changes
   useEffect(() => {
-    setLocalValue(answer?.value ?? null)
+    setLocalValue(getInitialValue())
   }, [question.id, answer])
 
   const handleChange = (newValue: Answer['value']) => {

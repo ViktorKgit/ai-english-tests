@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { CheckCircle2, XCircle, Award } from 'lucide-react'
 import { ThemeToggle } from '@/components/ThemeToggle'
+import { checkAnswer } from '@/lib/utils/testCalculation'
 import type { CEFRLevel } from './types'
 
 const CEFR_LEVELS: CEFRLevel[] = ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2']
@@ -57,19 +58,7 @@ export function Results() {
     const answer = answers.get(question.id)
     if (!answer) continue
 
-    const isCorrect = checkIsCorrect(question, answer)
-    if (isCorrect) correct++
-  }
-
-  function checkIsCorrect(question: any, answer: any): boolean {
-    switch (question.type) {
-      case 'multiple-choice':
-        return answer.value === question.correctAnswer
-      case 'fill-blank':
-        return answer.value.toLowerCase() === question.correctAnswer.toLowerCase()
-      default:
-        return false
-    }
+    if (checkAnswer(question, answer)) correct++
   }
 
   return (

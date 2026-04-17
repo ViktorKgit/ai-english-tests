@@ -19,7 +19,8 @@ export function validateAnswer(question: Question, answer: Answer): ValidationRe
       return { valid: true }
 
     case 'fill-blank':
-      if (!answer.value || (typeof answer.value === 'string' && answer.value.trim() === '')) {
+      // Allow empty answers for questions where empty is a valid option (e.g., "I like ___ pizza")
+      if (answer.value === null || answer.value === undefined) {
         return { valid: false, error: 'Please fill in the blank' }
       }
       return { valid: true }

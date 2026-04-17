@@ -15,12 +15,13 @@ export interface MultipleChoiceQuestion {
 export interface FillBlankQuestion {
   type: 'fill-blank'
   prompt: string // with __blank__ placeholder
-  correctAnswer: string
+  correctAnswer: string | string[] // single answer or multiple acceptable answers
   explanation?: string
 }
 
 export interface MatchingQuestion {
   type: 'matching'
+  prompt?: string
   pairs: Array<{ left: string; right: string }>
   explanation?: string
 }

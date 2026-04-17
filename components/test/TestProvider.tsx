@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useState, useCallback } from 'react'
 import type { TestState, TestType, CEFRLevel, Question, Answer, TestResult } from './types'
-import { calculateLevelTestScore, determinePlacementLevel, generateRecommendations, getRandomQuestions as getRandomQuestionsFromUtil, checkLevelPassThreshold } from '@/lib/utils/testCalculation'
+import { calculateLevelTestScore, determinePlacementLevel, generateRecommendations, getRandomQuestions as getRandomQuestionsFromUtil, checkLevelPassThreshold, checkAnswer } from '@/lib/utils/testCalculation'
 
 const TIME_PER_QUESTION = 120 // 2 minutes per question in seconds
 
@@ -142,6 +142,20 @@ export function TestProvider({ children }: TestProviderProps) {
     setState(prev => {
       const newAnswers = new Map(prev.answers)
       newAnswers.set(questionId, answer)
+
+      // Debug log - show answer immediately when user responds
+      const question = prev.questions.find(q => q.id === questionId)
+      if (question) {
+        console.log(`[DEBUG] Question: ${question.id} (${question.type})`)
+        if (question.prompt) {
+          console.log(`[DEBUG] Prompt: ${question.prompt}`)
+        } else if (question.type === 'matching') {
+          console.log(`[DEBUG] Matching: ${question.pairs.map(p => p.left).join(', ')}`)
+        }
+        console.log(`[DEBUG] Your answer: ${formatAnswerValue(answer)}`)
+        console.log('---')
+      }
+
       return { ...prev, answers: newAnswers }
     })
   }, [])
@@ -172,11 +186,20 @@ export function TestProvider({ children }: TestProviderProps) {
 
       if (prev.testType === 'placement') {
         // Calculate placement result
-        const results = prev.questions.map((q, i) => ({
-          questionId: q.id,
-          correct: isAnswerCorrect(q, prev.answers.get(q.id)),
-          difficulty: q.difficulty,
-        }))
+        const results = prev.questions.map((q) => {
+          let answer = prev.answers.get(q.id)
+
+          // For fill-blank questions, treat missing answer as empty string
+          if (!answer && q.type === 'fill-blank') {
+            answer = { type: 'fill-blank', value: '' } as Answer
+          }
+
+          return {
+            questionId: q.id,
+            correct: answer ? checkAnswer(q, answer) : false,
+            difficulty: q.difficulty,
+          }
+        })
         const level = determinePlacementLevel(results)
         result = {
           testType: 'placement',
@@ -250,19 +273,15 @@ export function TestProvider({ children }: TestProviderProps) {
   )
 }
 
-function isAnswerCorrect(question: Question, answer?: Answer): boolean {
-  if (!answer) return false
-
-  switch (question.type) {
+function formatAnswerValue(answer: Answer): string {
+  switch (answer.type) {
     case 'multiple-choice':
-      return answer.type === 'multiple-choice' && answer.value === question.correctAnswer
+      return answer.value === null ? '(not answered)' : `Option ${answer.value}`
     case 'fill-blank':
-      return answer.type === 'fill-blank' && answer.value.toLowerCase() === question.correctAnswer.toLowerCase()
+      return answer.value === null || answer.value === undefined ? '(empty)' : `"${answer.value}"`
     case 'matching':
-      return answer.type === 'matching' &&
-        question.pairs.every(p => answer.value[p.left] === p.right)
+      return JSON.stringify(answer.value)
     case 'open-ended':
-      return answer.type === 'open-ended' &&
-        question.correctAnswer.some(a => answer.value.toLowerCase().includes(a.toLowerCase()))
+      return answer.value === null || answer.value === undefined ? '(empty)' : answer.value
   }
 }

@@ -366,7 +366,7 @@
       "type": "fill-blank",
       "skill": "articles",
       "prompt": "I like ___ pizza.",
-      "correctAnswer": "Ø",
+      "correctAnswer": ["", "some", "the"],
       "explanation": "No article needed with general plural/uncountable nouns. (You can also accept 'some' or 'the')"
     },
     {
@@ -475,7 +475,7 @@
         "shine",
         "shining",
         "shines",
-        "shining"
+        "shined"
       ],
       "correctAnswer": 1,
       "explanation": "Present continuous uses 'is + -ing'."

@@ -28,9 +28,11 @@ export function NavigationButtons({
   const currentAnswer = answers.get(currentQuestion.id)
 
   // Create a typed fallback for unanswered questions
+  // For fill-blank, use empty string instead of null to allow empty answers
+  const fallbackValue = currentQuestion.type === 'fill-blank' ? '' : null
   const fallbackAnswer: Answer = {
     type: currentQuestion.type,
-    value: null,
+    value: fallbackValue,
   } as Answer
 
   const validation = validateAnswer(currentQuestion, currentAnswer ?? fallbackAnswer)

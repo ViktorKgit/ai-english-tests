@@ -36,15 +36,24 @@ export function getRandomQuestions<T>(items: T[], count: number): T[] {
 function calculateCorrectCount(questions: Question[], answers: Map<string, Answer>): number {
   let correct = 0
   for (const question of questions) {
-    const answer = answers.get(question.id)
-    if (!answer || answer.value === null || answer.value === '') continue
-    if (checkAnswer(question, answer)) correct++
+    let answer = answers.get(question.id)
+
+    // For fill-blank questions, treat missing answer as empty string
+    // (user left field blank and pressed Next)
+    if (!answer && question.type === 'fill-blank') {
+      answer = { type: 'fill-blank', value: '' } as Answer
+    }
+
+    // Skip if still no answer or value is null/undefined
+    if (!answer || answer.value === null || answer.value === undefined) continue
+
+    if (checkAnswerInternal(question, answer)) correct++
   }
   return correct
 }
 
 /**
- * Calculate score for level tests (pass = 70%)
+ * Calculate score with debug output for level completion
  * @param questions - Array of questions in the test
  * @param answers - Map of question IDs to user answers
  * @returns Score result with percentage and pass status
@@ -53,6 +62,14 @@ export function calculateLevelTestScore(questions: Question[], answers: Map<stri
   const correct = calculateCorrectCount(questions, answers)
   const total = questions.length
   const score = Math.round((correct / total) * 100)
+
+  // Debug log for final score
+  console.log(`[DEBUG] === LEVEL COMPLETE ===`)
+  console.log(`[DEBUG] Score: ${correct}/${total} (${score}%)`)
+  console.log(`[DEBUG] Threshold: 70%`)
+  console.log(`[DEBUG] Result: ${score >= 70 ? '✅ PASSED' : '❌ FAILED'}`)
+  console.log(`[DEBUG] ======================`)
+
   return {
     score,
     passed: score >= 70
@@ -65,13 +82,34 @@ export function calculateLevelTestScore(questions: Question[], answers: Map<stri
  * @param answer - The user's answer to validate
  * @returns True if the answer is correct, false otherwise
  */
-function checkAnswer(question: Question, answer: Answer): boolean {
+export function checkAnswer(question: Question, answer: Answer): boolean {
+  const correct = checkAnswerInternal(question, answer)
+
+  // Debug log after each answer
+  console.log(`[DEBUG] Question: ${question.id} (${question.type})`)
+  console.log(`[DEBUG] Your answer: ${formatAnswer(answer)}`)
+  console.log(`[DEBUG] Correct answer: ${formatCorrectAnswer(question)}`)
+  console.log(`[DEBUG] Result: ${correct ? '✅ CORRECT' : '❌ WRONG'}`)
+  console.log('---')
+
+  return correct
+}
+
+function checkAnswerInternal(question: Question, answer: Answer): boolean {
   switch (question.type) {
     case 'multiple-choice':
       return answer.type === 'multiple-choice' && answer.value === question.correctAnswer
 
     case 'fill-blank':
-      return answer.type === 'fill-blank' && answer.value.trim().toLowerCase() === question.correctAnswer.toLowerCase()
+      if (answer.type !== 'fill-blank') return false
+      const userAnswer = answer.value.trim().toLowerCase()
+
+      // Handle both string and array correctAnswer
+      const correctAnswers = Array.isArray(question.correctAnswer)
+        ? question.correctAnswer.map(a => a.toLowerCase())
+        : [question.correctAnswer.toLowerCase()]
+
+      return correctAnswers.some(ca => userAnswer === ca)
 
     case 'matching':
       if (answer.type !== 'matching') return false
@@ -88,6 +126,34 @@ function checkAnswer(question: Question, answer: Answer): boolean {
   }
 }
 
+function formatAnswer(answer: Answer): string {
+  switch (answer.type) {
+    case 'multiple-choice':
+      return answer.value === null ? '(not answered)' : `Option ${answer.value}`
+    case 'fill-blank':
+      return answer.value === null || answer.value === undefined ? '(empty)' : `"${answer.value}"`
+    case 'matching':
+      return JSON.stringify(answer.value)
+    case 'open-ended':
+      return answer.value === null || answer.value === undefined ? '(empty)' : answer.value
+  }
+}
+
+function formatCorrectAnswer(question: Question): string {
+  switch (question.type) {
+    case 'multiple-choice':
+      return `Option ${question.correctAnswer}`
+    case 'fill-blank':
+      return Array.isArray(question.correctAnswer)
+        ? question.correctAnswer.join(' or ')
+        : question.correctAnswer
+    case 'matching':
+      return question.pairs.map(p => `${p.left} → ${p.right}`).join(', ')
+    case 'open-ended':
+      return question.correctAnswer.join(' or ')
+  }
+}
+
 /**
  * Check if user passed the level threshold (70%)
  * @param questions - Array of questions in the test
@@ -98,8 +164,18 @@ export function checkLevelPassThreshold(questions: Question[], answers: Map<stri
   if (questions.length === 0) return false
 
   const correct = calculateCorrectCount(questions, answers)
-  const score = correct / questions.length
-  return score >= 0.5
+  const total = questions.length
+  const score = correct / total
+  const percentage = Math.round(score * 100)
+
+  // Debug log for level completion
+  console.log(`[DEBUG] === LEVEL COMPLETE ===`)
+  console.log(`[DEBUG] Score: ${correct}/${total} (${percentage}%)`)
+  console.log(`[DEBUG] Threshold: 70%`)
+  console.log(`[DEBUG] Result: ${score >= 0.7 ? '✅ PASSED' : '❌ FAILED'}`)
+  console.log(`[DEBUG] ======================`)
+
+  return score >= 0.7
 }
 
 /**
@@ -125,8 +201,9 @@ export function determinePlacementLevel(results: QuestionResult[]): CEFRLevel {
     }
   }
 
-  // Default to A1 if nothing passes
-  return 'A1'
+  // If no level passed, return the lowest tested level (not A1 default)
+  const minDifficulty = Math.min(...Array.from(byDifficulty.keys()))
+  return difficultyToLevel(minDifficulty)
 }
 
 /**
