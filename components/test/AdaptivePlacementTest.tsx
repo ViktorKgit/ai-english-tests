@@ -48,34 +48,16 @@ export function AdaptivePlacementTest() {
       // Last question - check level result
       const passed = checkLevelPassed()
 
-      // Debug: calculate score manually
-      let correct = 0
-      for (const question of questions) {
-        const answer = answers.get(question.id)
-        if (!answer || answer.value === null || answer.value === '') continue
-
-        // Simple check for multiple-choice
-        if (question.type === 'multiple-choice' && answer.type === 'multiple-choice') {
-          if (answer.value === question.correctAnswer) correct++
-        }
-      }
-      const score = Math.round((correct / questions.length) * 100)
-      console.log('[AdaptivePlacementTest] Score:', score, '% (' + correct + '/' + questions.length + ' correct)')
-      console.log('[AdaptivePlacementTest] Passed:', passed)
-      console.log('[AdaptivePlacementTest] Answers:', Array.from(answers.entries()))
-
       if (passed) {
         // Store the level that was passed before loading next
         const passedLevel = currentLevel
-        console.log('[AdaptivePlacementTest] Loading next level after passing:', passedLevel)
 
         // Load next level immediately
         loadNextLevel()
 
-        // Show success message after level loads (after brief delay for state to update)
+        // Show success message after level loads
         setTimeout(() => {
-          setLevelSuccessMessage(`🎉 ${passedLevel} level passed! (${score}%)`)
-          console.log('[AdaptivePlacementTest] Showing success message for:', passedLevel)
+          setLevelSuccessMessage(`🎉 ${passedLevel} level passed!`)
 
           // Fade out message after 3 seconds
           setTimeout(() => {
@@ -84,7 +66,6 @@ export function AdaptivePlacementTest() {
         }, 500)
       } else {
         // Failed - complete test and show results
-        console.log('[AdaptivePlacementTest] Failed, completing test')
         completeTest()
       }
     } else {
@@ -100,7 +81,7 @@ export function AdaptivePlacementTest() {
         <div className="mb-8 flex items-start justify-between gap-4">
           <div className="flex-1">
             <h1 className="text-2xl font-bold text-slate-800 dark:text-slate-100 mb-2">
-              🚀 {currentLevel} Level • Question {currentQuestionIndex + 1} of {questions.length} [ADAPTIVE]
+              {currentLevel} Level • Question {currentQuestionIndex + 1} of {questions.length}
             </h1>
             <p className="text-slate-600 dark:text-slate-400">
               Answer each question to determine your level.
