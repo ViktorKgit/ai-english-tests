@@ -10,9 +10,10 @@ interface QuestionCardProps {
   answer?: Answer
   onAnswerChange: (answer: Answer) => void
   showFeedback?: boolean
+  onNext?: () => void
 }
 
-export function QuestionCard({ question, answer, onAnswerChange, showFeedback }: QuestionCardProps) {
+export function QuestionCard({ question, answer, onAnswerChange, showFeedback, onNext }: QuestionCardProps) {
   const [localValue, setLocalValue] = useState<Answer['value']>(answer?.value ?? null)
 
   // Reset local value when question changes
@@ -54,6 +55,11 @@ export function QuestionCard({ question, answer, onAnswerChange, showFeedback }:
                 type="text"
                 value={localValue as string || ''}
                 onChange={(e) => handleChange(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' && onNext) {
+                    onNext()
+                  }
+                }}
                 className="mx-2 px-3 py-1 border-b-2 border-slate-300 focus:border-slate-600 outline-none bg-transparent w-32"
                 placeholder="..."
                 autoFocus

@@ -33,6 +33,7 @@ export function PlacementTest() {
             question={currentQuestion}
             answer={answers.get(currentQuestion.id)}
             onAnswerChange={(answer) => answerQuestion(currentQuestion.id, answer)}
+            onNext={nextQuestion}
           />
         </div>
 
