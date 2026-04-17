@@ -53,7 +53,7 @@ function calculateCorrectCount(questions: Question[], answers: Map<string, Answe
 }
 
 /**
- * Calculate score with debug output for level completion
+ * Calculate score for level tests (pass = 70%)
  * @param questions - Array of questions in the test
  * @param answers - Map of question IDs to user answers
  * @returns Score result with percentage and pass status
@@ -62,13 +62,6 @@ export function calculateLevelTestScore(questions: Question[], answers: Map<stri
   const correct = calculateCorrectCount(questions, answers)
   const total = questions.length
   const score = Math.round((correct / total) * 100)
-
-  // Debug log for final score
-  console.log(`[DEBUG] === LEVEL COMPLETE ===`)
-  console.log(`[DEBUG] Score: ${correct}/${total} (${score}%)`)
-  console.log(`[DEBUG] Threshold: 70%`)
-  console.log(`[DEBUG] Result: ${score >= 70 ? '✅ PASSED' : '❌ FAILED'}`)
-  console.log(`[DEBUG] ======================`)
 
   return {
     score,
@@ -83,16 +76,7 @@ export function calculateLevelTestScore(questions: Question[], answers: Map<stri
  * @returns True if the answer is correct, false otherwise
  */
 export function checkAnswer(question: Question, answer: Answer): boolean {
-  const correct = checkAnswerInternal(question, answer)
-
-  // Debug log after each answer
-  console.log(`[DEBUG] Question: ${question.id} (${question.type})`)
-  console.log(`[DEBUG] Your answer: ${formatAnswer(answer)}`)
-  console.log(`[DEBUG] Correct answer: ${formatCorrectAnswer(question)}`)
-  console.log(`[DEBUG] Result: ${correct ? '✅ CORRECT' : '❌ WRONG'}`)
-  console.log('---')
-
-  return correct
+  return checkAnswerInternal(question, answer)
 }
 
 function checkAnswerInternal(question: Question, answer: Answer): boolean {
@@ -126,34 +110,6 @@ function checkAnswerInternal(question: Question, answer: Answer): boolean {
   }
 }
 
-function formatAnswer(answer: Answer): string {
-  switch (answer.type) {
-    case 'multiple-choice':
-      return answer.value === null ? '(not answered)' : `Option ${answer.value}`
-    case 'fill-blank':
-      return answer.value === null || answer.value === undefined ? '(empty)' : `"${answer.value}"`
-    case 'matching':
-      return JSON.stringify(answer.value)
-    case 'open-ended':
-      return answer.value === null || answer.value === undefined ? '(empty)' : answer.value
-  }
-}
-
-function formatCorrectAnswer(question: Question): string {
-  switch (question.type) {
-    case 'multiple-choice':
-      return `Option ${question.correctAnswer}`
-    case 'fill-blank':
-      return Array.isArray(question.correctAnswer)
-        ? question.correctAnswer.join(' or ')
-        : question.correctAnswer
-    case 'matching':
-      return question.pairs.map(p => `${p.left} → ${p.right}`).join(', ')
-    case 'open-ended':
-      return question.correctAnswer.join(' or ')
-  }
-}
-
 /**
  * Check if user passed the level threshold (70%)
  * @param questions - Array of questions in the test
@@ -166,14 +122,6 @@ export function checkLevelPassThreshold(questions: Question[], answers: Map<stri
   const correct = calculateCorrectCount(questions, answers)
   const total = questions.length
   const score = correct / total
-  const percentage = Math.round(score * 100)
-
-  // Debug log for level completion
-  console.log(`[DEBUG] === LEVEL COMPLETE ===`)
-  console.log(`[DEBUG] Score: ${correct}/${total} (${percentage}%)`)
-  console.log(`[DEBUG] Threshold: 70%`)
-  console.log(`[DEBUG] Result: ${score >= 0.7 ? '✅ PASSED' : '❌ FAILED'}`)
-  console.log(`[DEBUG] ======================`)
 
   return score >= 0.7
 }

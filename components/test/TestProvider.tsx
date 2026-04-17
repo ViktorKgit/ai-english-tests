@@ -142,20 +142,6 @@ export function TestProvider({ children }: TestProviderProps) {
     setState(prev => {
       const newAnswers = new Map(prev.answers)
       newAnswers.set(questionId, answer)
-
-      // Debug log - show answer immediately when user responds
-      const question = prev.questions.find(q => q.id === questionId)
-      if (question) {
-        console.log(`[DEBUG] Question: ${question.id} (${question.type})`)
-        if (question.prompt) {
-          console.log(`[DEBUG] Prompt: ${question.prompt}`)
-        } else if (question.type === 'matching') {
-          console.log(`[DEBUG] Matching: ${question.pairs.map(p => p.left).join(', ')}`)
-        }
-        console.log(`[DEBUG] Your answer: ${formatAnswerValue(answer)}`)
-        console.log('---')
-      }
-
       return { ...prev, answers: newAnswers }
     })
   }, [])
@@ -271,17 +257,4 @@ export function TestProvider({ children }: TestProviderProps) {
       {children}
     </TestContext.Provider>
   )
-}
-
-function formatAnswerValue(answer: Answer): string {
-  switch (answer.type) {
-    case 'multiple-choice':
-      return answer.value === null ? '(not answered)' : `Option ${answer.value}`
-    case 'fill-blank':
-      return answer.value === null || answer.value === undefined ? '(empty)' : `"${answer.value}"`
-    case 'matching':
-      return JSON.stringify(answer.value)
-    case 'open-ended':
-      return answer.value === null || answer.value === undefined ? '(empty)' : answer.value
-  }
 }
