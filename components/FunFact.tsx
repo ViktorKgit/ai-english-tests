@@ -1,8 +1,6 @@
 'use client'
 
 import { useEffect, useState, useMemo } from 'react'
-import { Lightbulb } from 'lucide-react'
-import { Card, CardContent } from '@/components/ui/card'
 
 interface Fact {
   text: string
@@ -40,22 +38,10 @@ export function FunFact() {
   const displayFact = randomFact?.text || DEFAULT_FACT
 
   return (
-    <div className="max-w-2xl mx-auto mt-8">
-      <Card className="bg-muted/50 border-muted-foreground/20">
-        <CardContent className="pt-6">
-          <div className="flex items-start gap-3">
-            <Lightbulb className="h-5 w-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-            <div className="flex-1">
-              <p className="text-sm font-medium text-muted-foreground mb-1">
-                Did you know?
-              </p>
-              <p className="text-sm text-muted-foreground">
-                {loading ? 'Loading fun fact...' : displayFact}
-              </p>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
+    <div className="max-w-2xl mx-auto mt-8 text-center">
+      <p className="text-sm text-muted-foreground">
+        {loading ? 'Loading fun fact...' : `Did you know? - ${displayFact}`}
+      </p>
     </div>
   )
 }
