@@ -1,6 +1,6 @@
 'use client'
 
-import React, { createContext, useContext, useState, useCallback } from 'react'
+import React, { createContext, useContext, useState, useCallback, useEffect } from 'react'
 import type { TestState, TestType, CEFRLevel, Question, Answer, TestResult } from './types'
 import { calculateLevelTestScore, determinePlacementLevel, generateRecommendations, getRandomQuestions as getRandomQuestionsFromUtil, checkLevelPassThreshold, checkAnswer } from '@/lib/utils/testCalculation'
 
@@ -42,7 +42,25 @@ export function TestProvider({ children }: TestProviderProps) {
     currentLevel: null,
     questionsBank: null,
     timeRemaining: TIME_PER_QUESTION,
+    timeElapsed: 0,
+    testStartTime: undefined,
   })
+
+  // Update elapsed time every second
+  useEffect(() => {
+    if (!state.testStartTime || state.isComplete) {
+      return
+    }
+
+    const interval = setInterval(() => {
+      setState(prev => {
+        const elapsed = prev.testStartTime ? Math.floor((Date.now() - prev.testStartTime) / 1000) : 0
+        return { ...prev, timeElapsed: elapsed }
+      })
+    }, 1000)
+
+    return () => clearInterval(interval)
+  }, [state.testStartTime, state.isComplete])
 
   const loadAllLevelQuestions = useCallback(async (): Promise<Map<string, Question[]>> => {
     const levels: CEFRLevel[] = ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2']
@@ -117,6 +135,8 @@ export function TestProvider({ children }: TestProviderProps) {
         currentLevel: initialLevel,
         questionsBank: bank,
         timeRemaining: TIME_PER_QUESTION,
+        timeElapsed: 0,
+        testStartTime: Date.now(),
       })
       return
     } else if (level) {
@@ -135,6 +155,8 @@ export function TestProvider({ children }: TestProviderProps) {
       currentLevel: null,
       questionsBank: null,
       timeRemaining: TIME_PER_QUESTION,
+      timeElapsed: 0,
+      testStartTime: Date.now(),
     })
   }, [loadAllLevelQuestions, getRandomQuestions])
 
@@ -230,6 +252,8 @@ export function TestProvider({ children }: TestProviderProps) {
       currentLevel: null,
       questionsBank: null,
       timeRemaining: TIME_PER_QUESTION,
+      timeElapsed: 0,
+      testStartTime: undefined,
     })
   }, [])
 

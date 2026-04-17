@@ -10,6 +10,7 @@ import { Card, CardContent } from '@/components/ui/card'
 import { Home } from 'lucide-react'
 import { ThemeToggle } from '@/components/ThemeToggle'
 import { Timer } from './Timer'
+import { checkAnswer } from '@/lib/utils/testCalculation'
 import type { CEFRLevel } from './types'
 
 const LEVEL_ORDER: CEFRLevel[] = ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2']
@@ -30,6 +31,7 @@ export function AdaptivePlacementTest() {
     checkLevelPassed,
     restart,
     timeRemaining,
+    timeElapsed,
   } = useTest()
 
   if (questions.length === 0) {
@@ -49,6 +51,15 @@ export function AdaptivePlacementTest() {
       const passed = checkLevelPassed()
 
       if (passed) {
+        // Calculate correct answers count
+        let correctCount = 0
+        for (const question of questions) {
+          const answer = answers.get(question.id)
+          if (answer && checkAnswer(question, answer)) {
+            correctCount++
+          }
+        }
+
         // Store the level that was passed before loading next
         const passedLevel = currentLevel
 
@@ -57,7 +68,7 @@ export function AdaptivePlacementTest() {
 
         // Show success message after level loads
         setTimeout(() => {
-          setLevelSuccessMessage(`🎉 ${passedLevel} level passed!`)
+          setLevelSuccessMessage(`🎉 ${passedLevel} level passed! ${correctCount}/${questions.length} correct`)
 
           // Fade out message after 3 seconds
           setTimeout(() => {
@@ -88,10 +99,10 @@ export function AdaptivePlacementTest() {
             </p>
           </div>
           <div className="flex items-center gap-3">
-            {timeRemaining !== undefined && timeRemaining > 0 && (
+            {timeElapsed !== undefined && (
               <Timer
-                timeRemaining={timeRemaining}
-                onTimeUp={() => {/* Time's up */}}
+                timeElapsed={timeElapsed}
+                mode="elapsed"
               />
             )}
             <ThemeToggle />
