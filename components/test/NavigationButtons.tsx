@@ -12,6 +12,7 @@ interface NavigationButtonsProps {
   onPrevious: () => void
   onNext: () => void
   onComplete: () => void
+  useNextForLast?: boolean  // If true, use onNext instead of onComplete for last question
 }
 
 export function NavigationButtons({
@@ -21,6 +22,7 @@ export function NavigationButtons({
   onPrevious,
   onNext,
   onComplete,
+  useNextForLast = false,
 }: NavigationButtonsProps) {
   const currentQuestion = questions[currentIndex]
   const currentAnswer = answers.get(currentQuestion.id)
@@ -54,13 +56,13 @@ export function NavigationButtons({
 
       {isLastQuestion ? (
         <Button
-          onClick={onComplete}
+          onClick={useNextForLast ? onNext : onComplete}
           disabled={!canProceed}
           size="lg"
           className="bg-green-600 hover:bg-green-700"
         >
           <Check className="mr-2 h-4 w-4" />
-          Complete Test
+          {useNextForLast ? 'Next' : 'Complete Test'}
         </Button>
       ) : (
         <Button

@@ -155,6 +155,7 @@ export function AdaptivePlacementTest() {
             onPrevious={previousQuestion}
             onNext={handleNext}
             onComplete={completeTest}
+            useNextForLast={true}
           />
         </div>
       </div>
