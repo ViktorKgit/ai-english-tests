@@ -34,6 +34,13 @@ export function QuestionCard({ question, answer, onAnswerChange, showFeedback, o
     onAnswerChange({ type: question.type, value: newValue } as Answer)
   }
 
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' && onNext) {
+      e.preventDefault()
+      onNext()
+    }
+  }
+
   const renderQuestion = () => {
     switch (question.type) {
       case 'multiple-choice':
@@ -63,11 +70,6 @@ export function QuestionCard({ question, answer, onAnswerChange, showFeedback, o
                 type="text"
                 value={localValue as string || ''}
                 onChange={(e) => handleChange(e.target.value)}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter' && onNext) {
-                    onNext()
-                  }
-                }}
                 className="mx-2 px-3 py-1 border-b-2 border-slate-300 focus:border-slate-600 outline-none bg-transparent w-32"
                 placeholder="..."
                 autoFocus
@@ -121,7 +123,11 @@ export function QuestionCard({ question, answer, onAnswerChange, showFeedback, o
   }
 
   return (
-    <Card className="border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800">
+    <Card
+      className="border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800"
+      onKeyDown={handleKeyDown}
+      tabIndex={0}
+    >
       <CardHeader>
         <CardTitle className="flex items-center justify-between">
           <span className="dark:text-slate-100">Question</span>
