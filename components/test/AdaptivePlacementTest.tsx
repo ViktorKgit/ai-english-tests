@@ -47,7 +47,22 @@ export function AdaptivePlacementTest() {
     if (isLastQuestion) {
       // Last question - check level result
       const passed = checkLevelPassed()
-      console.log('[AdaptivePlacementTest] Last question, passed:', passed)
+
+      // Debug: calculate score manually
+      let correct = 0
+      for (const question of questions) {
+        const answer = answers.get(question.id)
+        if (!answer || answer.value === null || answer.value === '') continue
+
+        // Simple check for multiple-choice
+        if (question.type === 'multiple-choice' && answer.type === 'multiple-choice') {
+          if (answer.value === question.correctAnswer) correct++
+        }
+      }
+      const score = Math.round((correct / questions.length) * 100)
+      console.log('[AdaptivePlacementTest] Score:', score, '% (' + correct + '/' + questions.length + ' correct)')
+      console.log('[AdaptivePlacementTest] Passed:', passed)
+      console.log('[AdaptivePlacementTest] Answers:', Array.from(answers.entries()))
 
       if (passed) {
         // Store the level that was passed before loading next
@@ -59,7 +74,7 @@ export function AdaptivePlacementTest() {
 
         // Show success message after level loads (after brief delay for state to update)
         setTimeout(() => {
-          setLevelSuccessMessage(`🎉 ${passedLevel} level passed!`)
+          setLevelSuccessMessage(`🎉 ${passedLevel} level passed! (${score}%)`)
           console.log('[AdaptivePlacementTest] Showing success message for:', passedLevel)
 
           // Fade out message after 3 seconds
