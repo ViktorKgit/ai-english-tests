@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import type { Question, Answer } from './types'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -41,22 +41,56 @@ export function QuestionCard({ question, answer, onAnswerChange, showFeedback, o
     }
   }
 
+  // Shuffle answer options for multiple-choice questions
+  const shuffledOptionIndices = useMemo(() => {
+    if (question.type !== 'multiple-choice') return null
+
+    const options = (question as any).options
+    if (!options) return null
+
+    // Create array of indices [0, 1, 2, ...]
+    const indices = options.map((_: any, i: number) => i)
+
+    // Fisher-Yates shuffle
+    for (let i = indices.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1))
+      ;[indices[i], indices[j]] = [indices[j], indices[i]]
+    }
+
+    return indices
+  }, [question.id, question.type])
+
+  // Map to convert displayed index back to original index
+  const getOriginalIndex = (displayedIndex: number) => {
+    if (!shuffledOptionIndices) return displayedIndex
+    return shuffledOptionIndices[displayedIndex]
+  }
+
+  // Check if an option is selected based on original index
+  const isOptionSelected = (originalIndex: number) => {
+    if (question.type !== 'multiple-choice') return false
+    return localValue === originalIndex
+  }
+
   const renderQuestion = () => {
     switch (question.type) {
       case 'multiple-choice':
         return (
           <div className="space-y-3">
-            {question.options.map((option, index) => (
-              <Button
-                key={index}
-                onClick={() => handleChange(index)}
-                variant={localValue === index ? 'default' : 'outline'}
-                className="w-full justify-start text-left h-auto py-4 px-6"
-              >
-                <span className="font-medium mr-3">{String.fromCharCode(65 + index)}.</span>
-                {option}
-              </Button>
-            ))}
+            {(shuffledOptionIndices || (question as any).options.map((_: any, i: number) => i)).map((displayedIndex: number, i: number) => {
+              const originalIndex = getOriginalIndex(i)
+              return (
+                <Button
+                  key={originalIndex}
+                  onClick={() => handleChange(originalIndex)}
+                  variant={isOptionSelected(originalIndex) ? 'default' : 'outline'}
+                  className="w-full justify-start text-left h-auto py-4 px-6"
+                >
+                  <span className="font-medium mr-3">{String.fromCharCode(65 + i)}.</span>
+                  {(question as any).options[originalIndex]}
+                </Button>
+              )
+            })}
           </div>
         )
 
