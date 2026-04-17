@@ -48,6 +48,8 @@
     {"text": "The word 'sugar' comes from the Sanskrit word 'sharkara'.", "category": "english"},
     {"text": "The word 'candy' comes from the Sanskrit word 'khanda'.", "category": "english"},
     {"text": "The word 'pirate' comes from the Greek word 'peirates', meaning one who attacks.", "category": "english"},
+    {"text": "The word 'typewriter' can be typed using only the top row of a QWERTY keyboard.", "category": "english"},
+    {"text": "The sentence 'The quick brown fox jumps over the lazy dog' uses every letter of the alphabet.", "category": "english"},
     {"text": "Honey never spoils. Archaeologists have found 3000-year-old honey in Egyptian tombs that was still edible.", "category": "general"},
     {"text": "Octopuses have three hearts and blue blood.", "category": "general"},
     {"text": "A group of flamingos is called a 'flamboyance'.", "category": "general"},
@@ -97,14 +99,6 @@
     {"text": "The word 'WiFi' doesn't mean anything - it's a play on 'Hi-Fi'.", "category": "general"},
     {"text": "The average person will spend six months of their life waiting at red lights.", "category": "general"},
     {"text": "More people are killed annually by coconuts than by sharks.", "category": "general"},
-    {"text": "The average person walks the equivalent of five times around the Earth in their lifetime.", "category": "general"},
-    {"text": "The human brain can store 2.5 petabytes of data - equivalent to 3 million hours of TV.", "category": "general"},
-    {"text": "The average person blinks about 15-20 times per minute, totaling over 5 million blinks per year.", "category": "general"},
-    {"text": "The human nose can distinguish over 1 trillion different scents.", "category": "general"},
-    {"text": "Your heart beats about 100,000 times per day.", "category": "general"},
-    {"text": "The human body contains enough fat to make seven bars of soap.", "category": "general"},
-    {"text": "The strongest muscle in the human body relative to its size is the tongue.", "category": "general"},
-    {"text": "Humans share 60% of their DNA with bananas.", "category": "general"},
-    {"text": "The human eye can distinguish about 10 million different colors.", "category": "general"}
+    {"text": "The average person walks the equivalent of five times around the Earth in their lifetime.", "category": "general"}
   ]
 }
