@@ -85,7 +85,7 @@ export function AdaptivePlacementTest() {
         <div className="mb-8 flex items-start justify-between gap-4">
           <div className="flex-1">
             <h1 className="text-2xl font-bold text-slate-800 dark:text-slate-100 mb-2">
-              {currentLevel} Level • Question {currentQuestionIndex + 1} of {questions.length}
+              🚀 {currentLevel} Level • Question {currentQuestionIndex + 1} of {questions.length} [ADAPTIVE]
             </h1>
             <p className="text-slate-600 dark:text-slate-400">
               Answer each question to determine your level.
