@@ -1,12 +1,13 @@
 'use client'
 
+import { useState } from 'react'
 import { useTest } from './TestProvider'
 import { QuestionCard } from './QuestionCard'
 import { ProgressBar } from './ProgressBar'
 import { NavigationButtons } from './NavigationButtons'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
-import { Home, Check } from 'lucide-react'
+import { Home } from 'lucide-react'
 import { ThemeToggle } from '@/components/ThemeToggle'
 import { Timer } from './Timer'
 import type { CEFRLevel } from './types'
@@ -14,6 +15,8 @@ import type { CEFRLevel } from './types'
 const LEVEL_ORDER: CEFRLevel[] = ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2']
 
 export function AdaptivePlacementTest() {
+  const [levelSuccessMessage, setLevelSuccessMessage] = useState<string | null>(null)
+
   const {
     questions,
     currentQuestionIndex,
@@ -27,7 +30,6 @@ export function AdaptivePlacementTest() {
     checkLevelPassed,
     restart,
     timeRemaining,
-    startTimer
   } = useTest()
 
   if (questions.length === 0) {
@@ -39,22 +41,34 @@ export function AdaptivePlacementTest() {
   }
 
   const currentQuestion = questions[currentQuestionIndex]
-  const isLevelComplete = currentQuestionIndex === questions.length - 1 && answers.has(currentQuestion.id)
+  const isLastQuestion = currentQuestionIndex === questions.length - 1
 
-  const isLastLevel = currentLevel === 'C2'
-  const hasNextLevel = LEVEL_ORDER.indexOf(currentLevel!) < LEVEL_ORDER.length - 1
+  const handleNext = () => {
+    if (isLastQuestion) {
+      // Last question - check level result
+      const passed = checkLevelPassed()
 
-  const handleFinishLevel = () => {
-    const passed = checkLevelPassed()
-    return passed
-  }
+      if (passed) {
+        // Show success message, then load next level
+        setLevelSuccessMessage(`🎉 ${currentLevel} level passed!`)
 
-  const handleNextLevel = () => {
-    loadNextLevel()
-  }
+        // Load next level after a brief delay
+        setTimeout(() => {
+          loadNextLevel()
 
-  const handleCompleteTest = () => {
-    completeTest()
+          // Fade out message after 3 seconds
+          setTimeout(() => {
+            setLevelSuccessMessage(null)
+          }, 3000)
+        }, 1500)
+      } else {
+        // Failed - complete test and show results
+        completeTest()
+      }
+    } else {
+      // Not last question - normal next
+      nextQuestion()
+    }
   }
 
   return (
@@ -97,48 +111,30 @@ export function AdaptivePlacementTest() {
             question={currentQuestion}
             answer={answers.get(currentQuestion.id)}
             onAnswerChange={(answer) => answerQuestion(currentQuestion.id, answer)}
-            onNext={nextQuestion}
+            onNext={handleNext}
           />
         </div>
 
-        {/* Level complete or continue navigation */}
-        {isLevelComplete ? (
-          <div className="mt-6">
-            <Card className="border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800">
-              <CardContent className="pt-6">
-                <div className="text-center space-y-4">
-                  <p className="text-lg font-medium text-slate-700 dark:text-slate-300">
-                    Level complete! Ready to see your results?
-                  </p>
-                  <Button onClick={() => {
-                    const passed = handleFinishLevel()
-                    if (passed && hasNextLevel) {
-                      handleNextLevel()
-                    } else if (passed && isLastLevel) {
-                      handleCompleteTest()
-                    } else {
-                      handleCompleteTest()
-                    }
-                  }} size="lg" className="bg-green-600 hover:bg-green-700">
-                    <Check className="mr-2 h-4 w-4" />
-                    Finish Level
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        ) : (
-          <div className="mt-6">
-            <NavigationButtons
-              questions={questions}
-              currentIndex={currentQuestionIndex}
-              answers={answers}
-              onPrevious={previousQuestion}
-              onNext={nextQuestion}
-              onComplete={completeTest}
-            />
+        {/* Level success message with fade animation */}
+        {levelSuccessMessage && (
+          <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50">
+            <div className="bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg animate-fade-out">
+              <p className="font-medium">{levelSuccessMessage}</p>
+            </div>
           </div>
         )}
+
+        {/* Navigation buttons */}
+        <div className="mt-6">
+          <NavigationButtons
+            questions={questions}
+            currentIndex={currentQuestionIndex}
+            answers={answers}
+            onPrevious={previousQuestion}
+            onNext={handleNext}
+            onComplete={completeTest}
+          />
+        </div>
       </div>
     </div>
   )
