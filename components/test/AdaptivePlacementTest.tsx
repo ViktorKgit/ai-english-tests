@@ -48,24 +48,25 @@ export function AdaptivePlacementTest() {
       // Last question - check level result
       const passed = checkLevelPassed()
       console.log('[AdaptivePlacementTest] Last question, passed:', passed)
-      console.log('[AdaptivePlacementTest] Answers:', Array.from(answers.entries()))
-      console.log('[AdaptivePlacementTest] Questions:', questions.length)
 
       if (passed) {
-        // Show success message, then load next level
-        setLevelSuccessMessage(`🎉 ${currentLevel} level passed!`)
-        console.log('[AdaptivePlacementTest] Showing success message')
+        // Store the level that was passed before loading next
+        const passedLevel = currentLevel
+        console.log('[AdaptivePlacementTest] Loading next level after passing:', passedLevel)
 
-        // Load next level after a brief delay
+        // Load next level immediately
+        loadNextLevel()
+
+        // Show success message after level loads (after brief delay for state to update)
         setTimeout(() => {
-          console.log('[AdaptivePlacementTest] Loading next level')
-          loadNextLevel()
+          setLevelSuccessMessage(`🎉 ${passedLevel} level passed!`)
+          console.log('[AdaptivePlacementTest] Showing success message for:', passedLevel)
 
           // Fade out message after 3 seconds
           setTimeout(() => {
             setLevelSuccessMessage(null)
           }, 3000)
-        }, 1500)
+        }, 500)
       } else {
         // Failed - complete test and show results
         console.log('[AdaptivePlacementTest] Failed, completing test')
