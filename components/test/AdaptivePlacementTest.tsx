@@ -47,13 +47,18 @@ export function AdaptivePlacementTest() {
     if (isLastQuestion) {
       // Last question - check level result
       const passed = checkLevelPassed()
+      console.log('[AdaptivePlacementTest] Last question, passed:', passed)
+      console.log('[AdaptivePlacementTest] Answers:', Array.from(answers.entries()))
+      console.log('[AdaptivePlacementTest] Questions:', questions.length)
 
       if (passed) {
         // Show success message, then load next level
         setLevelSuccessMessage(`🎉 ${currentLevel} level passed!`)
+        console.log('[AdaptivePlacementTest] Showing success message')
 
         // Load next level after a brief delay
         setTimeout(() => {
+          console.log('[AdaptivePlacementTest] Loading next level')
           loadNextLevel()
 
           // Fade out message after 3 seconds
@@ -63,6 +68,7 @@ export function AdaptivePlacementTest() {
         }, 1500)
       } else {
         // Failed - complete test and show results
+        console.log('[AdaptivePlacementTest] Failed, completing test')
         completeTest()
       }
     } else {
