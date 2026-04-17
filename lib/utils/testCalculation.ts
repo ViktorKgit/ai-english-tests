@@ -99,7 +99,7 @@ export function checkLevelPassThreshold(questions: Question[], answers: Map<stri
 
   const correct = calculateCorrectCount(questions, answers)
   const score = correct / questions.length
-  return score >= 0.7
+  return score >= 0.5
 }
 
 /**
