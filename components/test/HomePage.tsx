@@ -4,6 +4,7 @@ import { useTest } from './TestProvider'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { ThemeToggle } from '@/components/ThemeToggle'
+import { FunFact } from '@/components/FunFact'
 import type { CEFRLevel } from './types'
 
 const levels: CEFRLevel[] = ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2']
@@ -80,6 +81,7 @@ export function HomePage() {
             </CardContent>
           </Card>
         </div>
+        <FunFact />
       </div>
     </div>
   )
