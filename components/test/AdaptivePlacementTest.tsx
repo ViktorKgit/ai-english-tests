@@ -39,7 +39,7 @@ export function AdaptivePlacementTest() {
   }
 
   const currentQuestion = questions[currentQuestionIndex]
-  const isLevelComplete = currentQuestionIndex === questions.length - 1
+  const isLevelComplete = currentQuestionIndex === questions.length - 1 && answers.has(currentQuestion.id)
 
   const isLastLevel = currentLevel === 'C2'
   const hasNextLevel = LEVEL_ORDER.indexOf(currentLevel!) < LEVEL_ORDER.length - 1
