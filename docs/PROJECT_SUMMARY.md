@@ -1,7 +1,7 @@
 # Adaptive Placement Test - Project Summary
 
-**Date:** 2026-04-16  
-**Status:** Completed - Version 1.0
+**Date:** 2026-04-17
+**Status:** Completed - Version 1.1
 
 ## Overview
 
@@ -12,18 +12,26 @@ Web application for testing English language proficiency according to the CEFR s
 1. **Adaptive Placement Test**
    - Sequential progression through levels: A0 → A1 → A2 → B1 → B2 → C1 → C2
    - Stops when student fails a level (70% threshold = 7 of 10 questions)
-   - Each level uses 10 randomly selected questions from a bank of 20 questions
+   - Each level uses 10 randomly selected questions from a bank of 45 questions
    - Progress display: "{Level} Level • Question X of 10"
+   - Shows elapsed time during test
+   - Success message includes correct answer count (e.g., "A0 level passed! 7/10 correct")
 
 2. **Level-Specific Tests**
    - Individual tests for each CEFR level (A0, A1, A2, B1, B2, C1, C2)
-   - Fixed set of questions per level
+   - Fixed set of 10 randomly selected questions per test
 
 3. **Question Types**
-   - Multiple choice (4 options)
-   - Fill in the blank
+   - Multiple choice (4 options, shuffled each time)
+   - Fill in the blank (supports multiple correct answers)
    - Matching pairs
    - Open-ended
+
+4. **User Experience Features**
+   - Press Enter to advance to next question
+   - Empty answers allowed for specific questions (e.g., "I like ___ pizza")
+   - Elapsed timer shows total time spent
+   - Randomized answer options prevent memorization
 
 ## Architecture
 
@@ -54,6 +62,7 @@ ai-english/
 │   │   ├── ProgressBar.tsx             # Progress indicator
 │   │   ├── NavigationButtons.tsx       # Next/Previous/Finish buttons
 │   │   ├── Results.tsx                 # Results page
+│   │   ├── Timer.tsx                   # Timer component (elapsed/remaining modes)
 │   │   └── types.ts                    # TypeScript definitions
 │   └── ui/                             # shadcn/ui components
 │
@@ -85,6 +94,8 @@ Manages global test state using React Context:
 - `isComplete`: boolean
 - `currentLevel`: CEFRLevel | null (for adaptive test)
 - `questionsBank`: Map<string, Question[]> | null (all loaded questions)
+- `timeElapsed`: number (seconds since test started)
+- `testStartTime`: number (timestamp for elapsed time calculation)
 
 **Key Methods:**
 - `startTest(testType, level?)`: Initiates a test
@@ -112,7 +123,8 @@ Utility functions:
 - `calculateCorrectCount(questions, answers)`: Counts correct answers
 - `checkLevelPassThreshold(questions, answers)`: Returns true if score ≥ 70%
 - `calculateLevelTestScore(questions, answers)`: Returns score and pass/fail
-- `determinePlacementLevel(results)`: Legacy function (not used in adaptive flow)
+- `checkAnswer(question, answer)`: Unified answer validation for all question types
+- `determinePlacementLevel(results)`: Determines CEFR level from test results
 - `generateRecommendations(level)`: Returns learning recommendations
 
 ## Question File Format
@@ -130,12 +142,22 @@ Utility functions:
       "options": ["am", "is", "are", "be"],
       "correctAnswer": 0,
       "explanation": "Use 'am' with 'I'."
+    },
+    {
+      "id": "a0-30",
+      "difficulty": 1,
+      "type": "fill-blank",
+      "prompt": "I like ___ pizza.",
+      "correctAnswer": ["", "some", "the"],
+      "explanation": "No article needed with general plural/uncountable nouns."
     }
   ]
 }
 ```
 
-**Difficulty levels:** 1=A0, 2=A1, 3=A2, 4=B1, 5=B2, 6=C1, 7=C2
+**Difficulty levels:** 1=A0, 2=A1, 3=A2, 4=B1, 5=B2, 6=C1
+
+**Note:** `correctAnswer` for fill-blank can be a string or an array of strings (multiple acceptable answers). An empty string `""` allows leaving the field blank.
 
 ## Development
 
@@ -162,21 +184,30 @@ npm start
 
 ## Future Improvements
 
-1. Add more questions per level (currently 20)
+1. Add more questions per level (currently 45)
 2. Add more question types (audio, video, drag-and-drop)
 3. Save progress during test (currently only saves final result)
-4. Add timer for each question
-5. Add detailed feedback per question
-6. Add review mode to see answers after test
-7. Backend integration for result tracking
-8. Multi-language support for interface
+4. Add detailed feedback per question after test completion
+5. Add review mode to see answers after test
+6. Backend integration for result tracking
+7. Multi-language support for interface
 
 ## Version History
+
+### v1.1 (2026-04-17)
+- Added elapsed timer showing time spent on test
+- Answer options now shuffle randomly each time
+- Added correct answer count to success messages (e.g., "7/10 correct")
+- Press Enter to advance to next question
+- Empty answers now allowed for specific questions
+- Removed duplicate answer validation logic
+- fill-blank questions support multiple correct answers
+- Improved placement test result calculation (returns lowest tested level on failure)
 
 ### v1.0 (2026-04-16)
 - Initial release with adaptive placement test
 - 7 CEFR levels (A0-C2)
-- 20 questions per level (140 total)
+- 20 questions per level
 - Sequential adaptive progression
 - 70% pass threshold
 - Randomized questions

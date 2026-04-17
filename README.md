@@ -8,7 +8,10 @@ A web application for testing English language proficiency according to the CEFR
 - **Level-Specific Tests**: Fixed tests for each CEFR level (A0, A1, A2, B1, B2, C1, C2)
 - **Multiple Question Types**: Multiple choice, fill in the blank, matching, and open-ended questions
 - **Instant Results**: Get your determined level or score immediately after completing the test
-- **Randomized Questions**: Each level randomly selects 10 questions from a bank of 20+ questions
+- **Randomized Questions**: Each level randomly selects 10 questions from a bank of 45 questions
+- **Shuffled Answer Options**: Multiple choice answers are randomly ordered each time
+- **Elapsed Timer**: Shows time spent on test during placement test
+- **Keyboard Navigation**: Press Enter to move to the next question
 
 ## Getting Started
 
