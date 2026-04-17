@@ -122,7 +122,7 @@ export function TestProvider({ children }: TestProviderProps) {
     } else if (level) {
       const response = await fetch(`/questions/${level.toLowerCase()}.json`)
       const data = await response.json()
-      questions = data.questions
+      questions = getRandomQuestionsFromUtil(data.questions, 10)
     }
 
     setState({
