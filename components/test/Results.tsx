@@ -7,6 +7,7 @@ import { CheckCircle2, XCircle, Award } from 'lucide-react'
 import { ThemeToggle } from '@/components/ThemeToggle'
 import { checkAnswer } from '@/lib/utils/testCalculation'
 import type { CEFRLevel } from './types'
+import { SkillBreakdown } from './SkillBreakdown'
 
 const CEFR_LEVELS: CEFRLevel[] = ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2']
 
@@ -131,6 +132,11 @@ export function Results() {
                 ))}
               </ul>
             </div>
+
+            {/* Skill breakdown */}
+            {result.skillBreakdown && result.skillBreakdown.length > 0 && (
+              <SkillBreakdown breakdown={result.skillBreakdown} />
+            )}
 
             <div className="flex gap-3 pt-4">
               <Button onClick={restart} variant="outline" className="flex-1">

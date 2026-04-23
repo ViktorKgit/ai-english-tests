@@ -1,10 +1,43 @@
 'use client'
 
 import React, { createContext, useContext, useState, useCallback, useEffect } from 'react'
-import type { TestState, TestType, CEFRLevel, Question, Answer, TestResult } from './types'
+import type { TestState, TestType, CEFRLevel, Question, Answer, TestResult, SkillBreakdownItem } from './types'
 import { calculateLevelTestScore, determinePlacementLevel, generateRecommendations, getRandomQuestions as getRandomQuestionsFromUtil, checkLevelPassThreshold, checkAnswer } from '@/lib/utils/testCalculation'
 
 const TIME_PER_QUESTION = 120 // 2 minutes per question in seconds
+
+/**
+ * Calculate skill breakdown from questions and answers
+ */
+function calculateSkillBreakdown(questions: Question[], answers: Map<string, Answer>): SkillBreakdownItem[] {
+  const skillMap = new Map<string, { correct: number; total: number; subskill?: string }>()
+
+  for (const question of questions) {
+    const skill = question.skill || 'general'
+    const answer = answers.get(question.id)
+    const isCorrect = answer ? checkAnswer(question, answer) : false
+
+    const current = skillMap.get(skill) || { correct: 0, total: 0, subskill: question.subskill }
+    current.total++
+    if (isCorrect) current.correct++
+
+    // Store subskill from first question with this skill
+    if (!current.subskill && question.subskill) {
+      current.subskill = question.subskill
+    }
+
+    skillMap.set(skill, current)
+  }
+
+  return Array.from(skillMap.entries()).map(([skill, data]) => ({
+    skill,
+    subskill: data.subskill,
+    correct: data.correct,
+    total: data.total,
+    percentage: Math.round((data.correct / data.total) * 100),
+  }))
+}
+
 
 interface TestContextType extends TestState {
   startTest: (testType: TestType, level?: CEFRLevel) => Promise<void>
@@ -218,12 +251,16 @@ export function TestProvider({ children }: TestProviderProps) {
           finalLevel = prev.lastPassedLevel ?? 'A0'
         }
 
+        // Calculate skill breakdown
+        const skillBreakdown = calculateSkillBreakdown(prev.questions, prev.answers)
+
         // Build result with failed level info if applicable
         result = {
           testType: 'placement',
           level: finalLevel,
           recommendations: generateRecommendations(finalLevel),
           completedAt: new Date(),
+          skillBreakdown,
         }
 
         // Add failed level info if test was failed
@@ -235,6 +272,10 @@ export function TestProvider({ children }: TestProviderProps) {
       } else {
         // Calculate level test result
         const scoreResult = calculateLevelTestScore(prev.questions, prev.answers)
+
+        // Calculate skill breakdown
+        const skillBreakdown = calculateSkillBreakdown(prev.questions, prev.answers)
+
         result = {
           testType: 'level',
           level: prev.level,
@@ -242,6 +283,7 @@ export function TestProvider({ children }: TestProviderProps) {
           passed: scoreResult.passed,
           recommendations: generateRecommendations(scoreResult),
           completedAt: new Date(),
+          skillBreakdown,
         }
       }
 

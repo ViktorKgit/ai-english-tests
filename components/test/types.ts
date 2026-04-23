@@ -36,6 +36,8 @@ export interface OpenEndedQuestion {
 export type Question = {
   id: string
   difficulty: 1 | 2 | 3 | 4 | 5 | 6 // 1=A0, 2=A1, 3=A2, 4=B1, 5=B2, 6=C1/C2
+  skill?: string  // Grammar skill category (e.g., 'conditionals', 'articles')
+  subskill?: string  // More specific skill (e.g., 'third-conditional')
 } & (MultipleChoiceQuestion | FillBlankQuestion | MatchingQuestion | OpenEndedQuestion)
 
 export type Answer =
@@ -57,6 +59,16 @@ export interface TestResult {
   failedLevelCorrect?: number
   // For placement test: total questions in the failed level
   failedLevelTotal?: number
+  // Breakdown of performance by skill
+  skillBreakdown?: SkillBreakdownItem[]
+}
+
+export interface SkillBreakdownItem {
+  skill: string
+  subskill?: string
+  correct: number
+  total: number
+  percentage: number
 }
 
 export interface TestState {

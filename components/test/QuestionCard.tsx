@@ -4,6 +4,7 @@ import { useState, useEffect, useMemo } from 'react'
 import type { Question, Answer } from './types'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { SkillBadge } from './SkillBadge'
 
 interface QuestionCardProps {
   question: Question
@@ -163,15 +164,20 @@ export function QuestionCard({ question, answer, onAnswerChange, showFeedback, o
       tabIndex={0}
     >
       <CardHeader>
-        <CardTitle className="flex items-center justify-between">
-          <span className="dark:text-slate-100">Question</span>
-          <span className="text-sm font-normal text-slate-500 dark:text-slate-400">
-            {question.type === 'multiple-choice' && 'Select one answer'}
-            {question.type === 'fill-blank' && 'Fill in the blank'}
-            {question.type === 'matching' && 'Match the pairs'}
-            {question.type === 'open-ended' && 'Open-ended response'}
-          </span>
-        </CardTitle>
+        <div className="space-y-2">
+          <CardTitle className="flex items-center justify-between gap-2">
+            <span className="dark:text-slate-100">Question</span>
+            <div className="flex-1 flex justify-center">
+              <SkillBadge question={question} />
+            </div>
+            <span className="text-sm font-normal text-slate-500 dark:text-slate-400">
+              {question.type === 'multiple-choice' && 'Select one answer'}
+              {question.type === 'fill-blank' && 'Fill in the blank'}
+              {question.type === 'matching' && 'Match the pairs'}
+              {question.type === 'open-ended' && 'Open-ended response'}
+            </span>
+          </CardTitle>
+        </div>
       </CardHeader>
       <CardContent>
         <div className="mb-6">
