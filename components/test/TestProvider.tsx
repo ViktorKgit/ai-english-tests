@@ -44,6 +44,7 @@ export function TestProvider({ children }: TestProviderProps) {
     timeRemaining: TIME_PER_QUESTION,
     timeElapsed: 0,
     testStartTime: undefined,
+    lastPassedLevel: undefined,
   })
 
   // Update elapsed time every second
@@ -107,6 +108,8 @@ export function TestProvider({ children }: TestProviderProps) {
         currentQuestionIndex: 0,
         answers: new Map(),
         timeRemaining: TIME_PER_QUESTION,
+        // Store the level that was just passed
+        lastPassedLevel: prev.currentLevel ?? undefined,
       }))
     }
   }, [state.currentLevel, getRandomQuestions])
@@ -193,27 +196,41 @@ export function TestProvider({ children }: TestProviderProps) {
       let result: TestResult
 
       if (prev.testType === 'placement') {
-        // Calculate placement result
-        const results = prev.questions.map((q) => {
-          let answer = prev.answers.get(q.id)
-
-          // For fill-blank questions, treat missing answer as empty string
-          if (!answer && q.type === 'fill-blank') {
-            answer = { type: 'fill-blank', value: '' } as Answer
+        // Calculate correct count for current level
+        let correctCount = 0
+        for (const question of prev.questions) {
+          const answer = prev.answers.get(question.id)
+          if (answer && checkAnswer(question, answer)) {
+            correctCount++
           }
+        }
 
-          return {
-            questionId: q.id,
-            correct: answer ? checkAnswer(q, answer) : false,
-            difficulty: q.difficulty,
-          }
-        })
-        const level = determinePlacementLevel(results)
+        // Check if current level was passed
+        const passed = checkLevelPassThreshold(prev.questions, prev.answers)
+
+        // Determine final level:
+        // - If passed: use current level
+        // - If failed: use lastPassedLevel (or 'A0' if null)
+        let finalLevel: CEFRLevel
+        if (passed) {
+          finalLevel = prev.currentLevel!
+        } else {
+          finalLevel = prev.lastPassedLevel ?? 'A0'
+        }
+
+        // Build result with failed level info if applicable
         result = {
           testType: 'placement',
-          level,
-          recommendations: generateRecommendations(level),
+          level: finalLevel,
+          recommendations: generateRecommendations(finalLevel),
           completedAt: new Date(),
+        }
+
+        // Add failed level info if test was failed
+        if (!passed) {
+          result.failedLevel = prev.currentLevel!
+          result.failedLevelCorrect = correctCount
+          result.failedLevelTotal = prev.questions.length
         }
       } else {
         // Calculate level test result
@@ -254,6 +271,7 @@ export function TestProvider({ children }: TestProviderProps) {
       timeRemaining: TIME_PER_QUESTION,
       timeElapsed: 0,
       testStartTime: undefined,
+      lastPassedLevel: undefined,
     })
   }, [])
 

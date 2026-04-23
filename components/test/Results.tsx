@@ -92,6 +92,18 @@ export function Results() {
                   Based on your performance, your English level is {result.level}
                 </p>
                 {result.level && <CEFRScale currentLevel={result.level} />}
+
+                {/* Show failed level info if applicable */}
+                {result.failedLevel && (
+                  <div className="mt-6 p-4 bg-amber-50 dark:bg-amber-950/30 rounded-lg border border-amber-200 dark:border-amber-800">
+                    <p className="text-amber-800 dark:text-amber-200 font-medium">
+                      {result.failedLevel} Level: {result.failedLevelCorrect} out of {result.failedLevelTotal} correct
+                    </p>
+                    <p className="text-sm text-amber-600 dark:text-amber-400 mt-1">
+                      You needed {Math.round(result.failedLevelTotal! * 0.7)} correct answers to pass this level.
+                    </p>
+                  </div>
+                )}
               </div>
             ) : (
               <div className="text-center">

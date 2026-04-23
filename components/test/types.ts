@@ -51,6 +51,12 @@ export interface TestResult {
   passed?: boolean
   recommendations: string[]
   completedAt: Date
+  // For placement test: the level that was failed (if any)
+  failedLevel?: CEFRLevel
+  // For placement test: correct count in the failed level
+  failedLevelCorrect?: number
+  // For placement test: total questions in the failed level
+  failedLevelTotal?: number
 }
 
 export interface TestState {
@@ -66,6 +72,7 @@ export interface TestState {
   timeRemaining?: number  // Seconds remaining for current question
   timeElapsed?: number  // Seconds elapsed since test started
   testStartTime?: number  // Timestamp when test started
+  lastPassedLevel?: CEFRLevel  // Last successfully passed level (for placement test)
 }
 
 export interface QuestionSet {
