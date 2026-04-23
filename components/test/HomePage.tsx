@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { ThemeToggle } from '@/components/ThemeToggle'
 import { FunFact } from '@/components/FunFact'
+import { BookOpen } from 'lucide-react'
 import type { CEFRLevel } from './types'
 
 const levels: CEFRLevel[] = ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2']
@@ -81,6 +82,41 @@ export function HomePage() {
             </CardContent>
           </Card>
         </div>
+
+        {/* Study Mode Section */}
+        <Card className="border-2 border-blue-200 dark:border-blue-800 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 mb-8">
+          <CardHeader>
+            <CardTitle className="text-2xl dark:text-slate-100 flex items-center gap-2">
+              <BookOpen className="h-6 w-6 text-blue-600 dark:text-blue-400" />
+              Study Mode
+            </CardTitle>
+            <CardDescription className="dark:text-slate-400">
+              Learn with instant feedback and explanations after each question
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-3">
+            <Button
+              onClick={() => startTest('placement', undefined, true)}
+              className="w-full"
+              size="lg"
+            >
+              Placement with Hints
+            </Button>
+            <div className="grid grid-cols-2 gap-2">
+              {levels.map(level => (
+                <Button
+                  key={level}
+                  onClick={() => startTest('level', level, true)}
+                  variant="outline"
+                  className="text-sm"
+                >
+                  {level} Level
+                </Button>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+
         <FunFact />
       </div>
     </div>

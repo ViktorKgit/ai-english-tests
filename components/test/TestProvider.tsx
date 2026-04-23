@@ -40,7 +40,7 @@ function calculateSkillBreakdown(questions: Question[], answers: Map<string, Ans
 
 
 interface TestContextType extends TestState {
-  startTest: (testType: TestType, level?: CEFRLevel) => Promise<void>
+  startTest: (testType: TestType, level?: CEFRLevel, studyMode?: boolean) => Promise<void>
   answerQuestion: (questionId: string, answer: Answer) => void
   goToQuestion: (index: number) => void
   nextQuestion: () => void
@@ -78,6 +78,7 @@ export function TestProvider({ children }: TestProviderProps) {
     timeElapsed: 0,
     testStartTime: undefined,
     lastPassedLevel: undefined,
+    isStudyMode: false,
   })
 
   // Update elapsed time every second
@@ -151,7 +152,7 @@ export function TestProvider({ children }: TestProviderProps) {
     return checkLevelPassThreshold(state.questions, state.answers)
   }, [state.questions, state.answers])
 
-  const startTest = useCallback(async (testType: TestType, level?: CEFRLevel) => {
+  const startTest = useCallback(async (testType: TestType, level?: CEFRLevel, studyMode?: boolean) => {
     let questions: Question[] = []
 
     if (testType === 'placement') {
@@ -173,6 +174,7 @@ export function TestProvider({ children }: TestProviderProps) {
         timeRemaining: TIME_PER_QUESTION,
         timeElapsed: 0,
         testStartTime: Date.now(),
+        isStudyMode: studyMode ?? false,
       })
       return
     } else if (level) {
@@ -193,6 +195,7 @@ export function TestProvider({ children }: TestProviderProps) {
       timeRemaining: TIME_PER_QUESTION,
       timeElapsed: 0,
       testStartTime: Date.now(),
+      isStudyMode: studyMode ?? false,
     })
   }, [loadAllLevelQuestions, getRandomQuestions])
 
@@ -314,6 +317,7 @@ export function TestProvider({ children }: TestProviderProps) {
       timeElapsed: 0,
       testStartTime: undefined,
       lastPassedLevel: undefined,
+      isStudyMode: false,
     })
   }, [])
 

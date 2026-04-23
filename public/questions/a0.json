@@ -390,7 +390,7 @@
       "type": "fill-blank",
       "skill": "present-simple",
       "prompt": "We ___ English every day.",
-      "correctAnswer": "study",
+      "correctAnswer": ["study", "speak"],
       "explanation": "Present simple uses base form for 'we'."
     },
     {
@@ -534,7 +534,7 @@
       "type": "fill-blank",
       "skill": "imperatives",
       "prompt": "___ the door, please.",
-      "correctAnswer": "Close",
+      "correctAnswer": ["Open", "Close"],
       "explanation": "Imperatives use base verb for requests."
     },
     {

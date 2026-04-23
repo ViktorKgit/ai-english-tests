@@ -5,16 +5,21 @@ import type { Question, Answer } from './types'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { SkillBadge } from './SkillBadge'
+import { checkAnswer } from '@/lib/utils/testCalculation'
+import { CheckCircle2, XCircle, Lightbulb } from 'lucide-react'
 
 interface QuestionCardProps {
   question: Question
   answer?: Answer
   onAnswerChange: (answer: Answer) => void
   showFeedback?: boolean
+  isStudyMode?: boolean
   onNext?: () => void
+  // Show feedback after answering (used in Study Mode)
+  showAnswerFeedback?: boolean
 }
 
-export function QuestionCard({ question, answer, onAnswerChange, showFeedback, onNext }: QuestionCardProps) {
+export function QuestionCard({ question, answer, onAnswerChange, showFeedback, isStudyMode, onNext, showAnswerFeedback }: QuestionCardProps) {
   // For fill-blank, use empty string as initial value instead of null
   const getInitialValue = () => {
     if (question.type === 'fill-blank') {
@@ -36,7 +41,8 @@ export function QuestionCard({ question, answer, onAnswerChange, showFeedback, o
   }
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter' && onNext) {
+    // Only handle Enter for normal mode (not Study Mode with feedback)
+    if (e.key === 'Enter' && onNext && !showAnswerFeedback) {
       e.preventDefault()
       onNext()
     }
@@ -73,6 +79,24 @@ export function QuestionCard({ question, answer, onAnswerChange, showFeedback, o
     return localValue === originalIndex
   }
 
+  // Check if answer is correct and if feedback should be shown
+  const isCorrect = answer ? checkAnswer(question, answer) : false
+  const shouldShowFeedback = (showFeedback || showAnswerFeedback || (isStudyMode && showAnswerFeedback))
+
+  // Global Enter handler for Study Mode when feedback is shown
+  useEffect(() => {
+    if (isStudyMode && shouldShowFeedback && onNext) {
+      const handleGlobalEnter = (e: KeyboardEvent) => {
+        if (e.key === 'Enter') {
+          e.preventDefault()
+          onNext()
+        }
+      }
+      document.addEventListener('keydown', handleGlobalEnter)
+      return () => document.removeEventListener('keydown', handleGlobalEnter)
+    }
+  }, [isStudyMode, shouldShowFeedback, onNext])
+
   const renderQuestion = () => {
     switch (question.type) {
       case 'multiple-choice':
@@ -80,15 +104,40 @@ export function QuestionCard({ question, answer, onAnswerChange, showFeedback, o
           <div className="space-y-3">
             {(shuffledOptionIndices || (question as any).options.map((_: any, i: number) => i)).map((displayedIndex: number, i: number) => {
               const originalIndex = getOriginalIndex(i)
+              const isSelected = isOptionSelected(originalIndex)
+              const isCorrectOption = originalIndex === (question as any).correctAnswer
+
+              // Determine button style
+              let buttonVariant: 'default' | 'outline' | 'destructive' = 'outline'
+              let extraClasses = ''
+
+              if (shouldShowFeedback) {
+                if (isCorrectOption) {
+                  buttonVariant = 'default'
+                  extraClasses = 'bg-green-600 hover:bg-green-700 border-green-600'
+                } else if (isSelected && !isCorrectOption) {
+                  buttonVariant = 'destructive'
+                }
+              } else if (isSelected) {
+                buttonVariant = 'default'
+              }
+
               return (
                 <Button
                   key={originalIndex}
                   onClick={() => handleChange(originalIndex)}
-                  variant={isOptionSelected(originalIndex) ? 'default' : 'outline'}
-                  className="w-full justify-start text-left h-auto py-4 px-6"
+                  variant={buttonVariant}
+                  className={`w-full justify-start text-left h-auto py-4 px-6 ${extraClasses}`}
+                  disabled={shouldShowFeedback}
                 >
                   <span className="font-medium mr-3">{String.fromCharCode(65 + i)}.</span>
                   {(question as any).options[originalIndex]}
+                  {shouldShowFeedback && isCorrectOption && (
+                    <CheckCircle2 className="ml-auto h-5 w-5" />
+                  )}
+                  {shouldShowFeedback && isSelected && !isCorrectOption && (
+                    <XCircle className="ml-auto h-5 w-5" />
+                  )}
                 </Button>
               )
             })}
@@ -186,6 +235,43 @@ export function QuestionCard({ question, answer, onAnswerChange, showFeedback, o
           </p>
         </div>
         {renderQuestion()}
+
+        {/* Feedback for Study Mode */}
+        {shouldShowFeedback && answer && (
+          <div className="mt-6 space-y-4">
+            {/* Correct/Incorrect indicator */}
+            <div className={`flex items-center gap-2 p-4 rounded-lg ${
+              isCorrect
+                ? 'bg-green-50 dark:bg-green-950/30 text-green-800 dark:text-green-200'
+                : 'bg-red-50 dark:bg-red-950/30 text-red-800 dark:text-red-200'
+            }`}>
+              {isCorrect ? (
+                <>
+                  <CheckCircle2 className="h-5 w-5" />
+                  <span className="font-medium">Correct!</span>
+                </>
+              ) : (
+                <>
+                  <XCircle className="h-5 w-5" />
+                  <span className="font-medium">Incorrect</span>
+                </>
+              )}
+            </div>
+
+            {/* Explanation */}
+            {(question as any).explanation && (
+              <div className="flex items-start gap-3 p-4 bg-amber-50 dark:bg-amber-950/30 rounded-lg border border-amber-200 dark:border-amber-800">
+                <Lightbulb className="h-5 w-5 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-medium text-amber-900 dark:text-amber-100 mb-1">Explanation</p>
+                  <p className="text-sm text-amber-800 dark:text-amber-200">
+                    {(question as any).explanation}
+                  </p>
+                </div>
+              </div>
+            )}
+          </div>
+        )}
       </CardContent>
     </Card>
   )

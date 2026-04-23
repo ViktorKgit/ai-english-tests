@@ -1,5 +1,6 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import { useTest } from './TestProvider'
 import { QuestionCard } from './QuestionCard'
 import { ProgressBar } from './ProgressBar'
@@ -10,7 +11,40 @@ import { ThemeToggle } from '@/components/ThemeToggle'
 import { Timer } from './Timer'
 
 export function LevelTest() {
-  const { questions, currentQuestionIndex, answers, answerQuestion, previousQuestion, nextQuestion, completeTest, level, restart, timeRemaining } = useTest()
+  const { questions, currentQuestionIndex, answers, answerQuestion, previousQuestion, nextQuestion, completeTest, level, restart, timeRemaining, isStudyMode } = useTest()
+  const [showQuestionFeedback, setShowQuestionFeedback] = useState(false)
+
+  const currentQuestion = questions[currentQuestionIndex]
+  const isLastQuestion = currentQuestionIndex === questions.length - 1
+
+  // Reset feedback state when question changes
+  useEffect(() => {
+    setShowQuestionFeedback(false)
+  }, [currentQuestionIndex])
+
+  const handleNext = () => {
+    // In Study Mode, show feedback first, then proceed
+    if (isStudyMode && showQuestionFeedback) {
+      // Feedback is shown, now proceed
+      setShowQuestionFeedback(false)
+
+      if (isLastQuestion) {
+        completeTest()
+      } else {
+        nextQuestion()
+      }
+    } else if (isStudyMode && answers.has(currentQuestion.id)) {
+      // Study Mode: show feedback before proceeding
+      setShowQuestionFeedback(true)
+    } else {
+      // Normal mode or no answer yet
+      if (isLastQuestion) {
+        completeTest()
+      } else {
+        nextQuestion()
+      }
+    }
+  }
 
   if (questions.length === 0) {
     return (
@@ -19,8 +53,6 @@ export function LevelTest() {
       </div>
     )
   }
-
-  const currentQuestion = questions[currentQuestionIndex]
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900 py-12 px-4">
@@ -57,19 +89,27 @@ export function LevelTest() {
             question={currentQuestion}
             answer={answers.get(currentQuestion.id)}
             onAnswerChange={(answer) => answerQuestion(currentQuestion.id, answer)}
-            onNext={nextQuestion}
+            onNext={handleNext}
+            isStudyMode={isStudyMode}
+            showAnswerFeedback={showQuestionFeedback}
           />
         </div>
 
         <div className="mt-6">
-          <NavigationButtons
-            questions={questions}
-            currentIndex={currentQuestionIndex}
-            answers={answers}
-            onPrevious={previousQuestion}
-            onNext={nextQuestion}
-            onComplete={completeTest}
-          />
+          {isStudyMode ? (
+            <Button onClick={handleNext} size="lg" className="w-full">
+              {showQuestionFeedback ? 'Next Question' : 'Check Answer'}
+            </Button>
+          ) : (
+            <NavigationButtons
+              questions={questions}
+              currentIndex={currentQuestionIndex}
+              answers={answers}
+              onPrevious={previousQuestion}
+              onNext={nextQuestion}
+              onComplete={completeTest}
+            />
+          )}
         </div>
       </div>
     </div>

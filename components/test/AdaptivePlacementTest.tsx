@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useTest } from './TestProvider'
 import { QuestionCard } from './QuestionCard'
 import { ProgressBar } from './ProgressBar'
@@ -17,6 +17,7 @@ const LEVEL_ORDER: CEFRLevel[] = ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2']
 
 export function AdaptivePlacementTest() {
   const [levelSuccessMessage, setLevelSuccessMessage] = useState<string | null>(null)
+  const [showQuestionFeedback, setShowQuestionFeedback] = useState(false)
 
   const {
     questions,
@@ -32,6 +33,7 @@ export function AdaptivePlacementTest() {
     restart,
     timeRemaining,
     timeElapsed,
+    isStudyMode,
   } = useTest()
 
   if (questions.length === 0) {
@@ -45,49 +47,108 @@ export function AdaptivePlacementTest() {
   const currentQuestion = questions[currentQuestionIndex]
   const isLastQuestion = currentQuestionIndex === questions.length - 1
 
+  // Reset feedback state when question changes
+  useEffect(() => {
+    setShowQuestionFeedback(false)
+  }, [currentQuestionIndex])
+
   const handleNext = () => {
-    if (isLastQuestion) {
-      // Last question - check level result
-      const passed = checkLevelPassed()
+    // In Study Mode, show feedback first, then proceed
+    if (isStudyMode && showQuestionFeedback) {
+      // Feedback is shown, now proceed
+      setShowQuestionFeedback(false)
 
-      if (passed) {
-        // Calculate correct answers count
-        let correctCount = 0
-        for (const question of questions) {
-          const answer = answers.get(question.id)
-          if (answer && checkAnswer(question, answer)) {
-            correctCount++
+      if (isLastQuestion) {
+        // Last question - check level result
+        const passed = checkLevelPassed()
+
+        if (passed) {
+          // Calculate correct answers count
+          let correctCount = 0
+          for (const question of questions) {
+            const answer = answers.get(question.id)
+            if (answer && checkAnswer(question, answer)) {
+              correctCount++
+            }
           }
-        }
 
-        // Store the level that was passed before loading next
-        const passedLevel = currentLevel
+          // Store the level that was passed before loading next
+          const passedLevel = currentLevel
 
-        // Check if this is the last level (C2)
-        if (passedLevel === 'C2') {
-          // Maximum level reached - complete test
-          completeTest()
-        } else {
-          // Load next level immediately
-          loadNextLevel()
+          // Check if this is the last level (C2)
+          if (passedLevel === 'C2') {
+            // Maximum level reached - complete test
+            completeTest()
+          } else {
+            // Load next level immediately
+            loadNextLevel()
 
-          // Show success message after level loads
-          setTimeout(() => {
-            setLevelSuccessMessage(`🎉 ${passedLevel} level passed! ${correctCount}/${questions.length} correct`)
-
-            // Fade out message after 3 seconds
+            // Show success message after level loads
             setTimeout(() => {
-              setLevelSuccessMessage(null)
-            }, 3000)
-          }, 500)
+              setLevelSuccessMessage(`🎉 ${passedLevel} level passed! ${correctCount}/${questions.length} correct`)
+
+              // Fade out message after 3 seconds
+              setTimeout(() => {
+                setLevelSuccessMessage(null)
+              }, 3000)
+            }, 500)
+          }
+        } else {
+          // Failed - complete test and show results
+          completeTest()
         }
       } else {
-        // Failed - complete test and show results
-        completeTest()
+        // Not last question - normal next
+        nextQuestion()
       }
+    } else if (isStudyMode && answers.has(currentQuestion.id)) {
+      // Study Mode: show feedback before proceeding
+      setShowQuestionFeedback(true)
     } else {
-      // Not last question - normal next
-      nextQuestion()
+      // Normal mode or no answer yet
+      if (isLastQuestion) {
+        // Last question - check level result
+        const passed = checkLevelPassed()
+
+        if (passed) {
+          // Calculate correct answers count
+          let correctCount = 0
+          for (const question of questions) {
+            const answer = answers.get(question.id)
+            if (answer && checkAnswer(question, answer)) {
+              correctCount++
+            }
+          }
+
+          // Store the level that was passed before loading next
+          const passedLevel = currentLevel
+
+          // Check if this is the last level (C2)
+          if (passedLevel === 'C2') {
+            // Maximum level reached - complete test
+            completeTest()
+          } else {
+            // Load next level immediately
+            loadNextLevel()
+
+            // Show success message after level loads
+            setTimeout(() => {
+              setLevelSuccessMessage(`🎉 ${passedLevel} level passed! ${correctCount}/${questions.length} correct`)
+
+              // Fade out message after 3 seconds
+              setTimeout(() => {
+                setLevelSuccessMessage(null)
+              }, 3000)
+            }, 500)
+          }
+        } else {
+          // Failed - complete test and show results
+          completeTest()
+        }
+      } else {
+        // Not last question - normal next
+        nextQuestion()
+      }
     }
   }
 
@@ -132,6 +193,8 @@ export function AdaptivePlacementTest() {
             answer={answers.get(currentQuestion.id)}
             onAnswerChange={(answer) => answerQuestion(currentQuestion.id, answer)}
             onNext={handleNext}
+            isStudyMode={isStudyMode}
+            showAnswerFeedback={showQuestionFeedback}
           />
         </div>
 
@@ -146,15 +209,21 @@ export function AdaptivePlacementTest() {
 
         {/* Navigation buttons */}
         <div className="mt-6">
-          <NavigationButtons
-            questions={questions}
-            currentIndex={currentQuestionIndex}
-            answers={answers}
-            onPrevious={previousQuestion}
-            onNext={handleNext}
-            onComplete={completeTest}
+          {isStudyMode ? (
+            <Button onClick={handleNext} size="lg" className="w-full">
+              {showQuestionFeedback ? 'Next Question' : 'Check Answer'}
+            </Button>
+          ) : (
+            <NavigationButtons
+              questions={questions}
+              currentIndex={currentQuestionIndex}
+              answers={answers}
+              onPrevious={previousQuestion}
+              onNext={handleNext}
+              onComplete={completeTest}
             useNextForLast={true}
           />
+          )}
         </div>
       </div>
     </div>

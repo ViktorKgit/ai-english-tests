@@ -85,6 +85,7 @@ export interface TestState {
   timeElapsed?: number  // Seconds elapsed since test started
   testStartTime?: number  // Timestamp when test started
   lastPassedLevel?: CEFRLevel  // Last successfully passed level (for placement test)
+  isStudyMode?: boolean  // Whether study mode is enabled (show hints and explanations)
 }
 
 export interface QuestionSet {
