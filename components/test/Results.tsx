@@ -43,7 +43,7 @@ function CEFRScale({ currentLevel }: { currentLevel: CEFRLevel }) {
 }
 
 export function Results() {
-  const { result, restart, questions, answers } = useTest()
+  const { result, restart, startTest, testType, level, questions, answers } = useTest()
 
   if (!result) return null
 
@@ -136,7 +136,14 @@ export function Results() {
               <Button onClick={restart} variant="outline" className="flex-1">
                 Take Another Test
               </Button>
-              <Button onClick={restart} className="flex-1">
+              <Button
+                onClick={async () => {
+                  if (testType) {
+                    await startTest(testType, level)
+                  }
+                }}
+                className="flex-1"
+              >
                 Retry Same Test
               </Button>
             </div>

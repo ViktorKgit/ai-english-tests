@@ -63,18 +63,24 @@ export function AdaptivePlacementTest() {
         // Store the level that was passed before loading next
         const passedLevel = currentLevel
 
-        // Load next level immediately
-        loadNextLevel()
+        // Check if this is the last level (C2)
+        if (passedLevel === 'C2') {
+          // Maximum level reached - complete test
+          completeTest()
+        } else {
+          // Load next level immediately
+          loadNextLevel()
 
-        // Show success message after level loads
-        setTimeout(() => {
-          setLevelSuccessMessage(`🎉 ${passedLevel} level passed! ${correctCount}/${questions.length} correct`)
-
-          // Fade out message after 3 seconds
+          // Show success message after level loads
           setTimeout(() => {
-            setLevelSuccessMessage(null)
-          }, 3000)
-        }, 500)
+            setLevelSuccessMessage(`🎉 ${passedLevel} level passed! ${correctCount}/${questions.length} correct`)
+
+            // Fade out message after 3 seconds
+            setTimeout(() => {
+              setLevelSuccessMessage(null)
+            }, 3000)
+          }, 500)
+        }
       } else {
         // Failed - complete test and show results
         completeTest()

@@ -21,7 +21,7 @@
     {
       "id": "b1-2",
       "difficulty": 4,
-      "type": "fill-blank",
+      "type": "multiple-choice",
       "skill": "conditionals",
       "subskill": "third-conditional",
       "prompt": "If I had known, I ___ you.",
